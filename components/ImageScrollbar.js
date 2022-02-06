@@ -12,7 +12,7 @@ const LeftArrow = () => {
             onClick={() => scrollPrev()}
             className="fs-1"
             cursor="pointer"
-            d={['none','none','none','block']}
+            //d={['none','none','none','block']}
             disabled={isLastItemVisible}
             />
         </div>
@@ -21,13 +21,12 @@ const LeftArrow = () => {
 
 const RightArrow = () => {
     const {  scrollNext } = useContext(VisibilityContext)
-    console.log(scrollNext);
-  return ( 
+    return ( 
         <div className="d-flex justify-content-center align-items-center ml-1">
             <FaArrowAltCircleRight 
-            onClick={() => (
-                scrollNext(),
-                console.log("clicked"))}
+            onClick={() => {
+                scrollNext()
+                console.log("clicked")}}
             className="fs-1"
             cursor="pointer"
            // d={['none','none','none','block']}
