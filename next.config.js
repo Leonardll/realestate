@@ -9,7 +9,7 @@ module.exports = {
       domains: ['bayut-production.s3.eu-central-1.amazonaws.com'],
     },
     env:{
-      NEXT_PUBLIC_BAYU_API : '8e90a4bc31msh0dc9fb6b55bb4f3p1becf6jsn6efb58d8b025',
+      NEXT_PUBLIC_BAYU_API : '1601d9b5f2msh29a3578e98c051fp126b5djsnc6a5004d881c',
     },
     module: {
       rules: [
