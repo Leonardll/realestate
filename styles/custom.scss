@@ -1,0 +1,92 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.container {
+  padding: 0 2rem;
+}
+main {
+  position: relative;
+  top: 3.5rem;
+  bottom: 3.5rem;
+}
+
+
+
+ a {
+  color: #000000;
+  text-decoration: none;
+  border: none  ;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+
+.btn {
+  background-color: #2fecc0;
+  border-color: #59c4ab;
+}
+
+
+.card {
+  width: 100% !important;
+ }
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  //border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.property {
+  width: 420px;
+  padding: 20px 0;
+  justify-content: start;
+  cursor: pointer;
+}
+
+.footer{ 
+  height: 40px;
+  bottom: 0;
+  margin-top: 3em;
+  //position:relative;
+  justify-content: center;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width:100%;
+  }
+}
+
+@media (min-width: 720px) {
+  .card {
+    width: 20rem !important;
+  }
+}
