@@ -40,8 +40,7 @@ const Navbar = () => {
                 aria-controls="navbarResponsive" 
                 aria-expanded="false" 
                 aria-label="Toggle navigation">
-                    Menu
-                    <i className="fas fa-bars ms-1"></i>
+                    <i className="fas fa-bars ms-1">Menu</i>
                 </button>
                 <div className={collapse ?"collapse navbar-collapse" : " navbar-collapse collapse show"} id="navbarResponsive">
                     <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
