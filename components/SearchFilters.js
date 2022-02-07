@@ -16,7 +16,10 @@ const SearchFilters = () => {
         const values = getFilterValues(filterValues);
 
         values.forEach((item) => {
-            query[item.name] = item.value
+            if(item.value && filterValues?.[item.name]) {
+                query[item.name] = item.value
+
+            }
         })
         router.push({pathname: path, query })
     }
@@ -29,7 +32,7 @@ const SearchFilters = () => {
             className="form-select py-3" 
             onChange={(e) => searchProperties({[filter.queryName]: e.target.value})}
             >
-  <option selected>{filter.placeholder}</option>
+  <option defaultValue={true}>{filter.placeholder}</option>
 
             {filter?.items?.map((item => (
                 <option value={item.value} key={item.value}>
