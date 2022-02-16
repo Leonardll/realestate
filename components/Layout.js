@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
+import MastHead from "./MastHead";
 import Navbar from "./Navbar";
 
 
@@ -9,9 +10,10 @@ import Navbar from "./Navbar";
     <Head>
         <title>Monec Barcelona</title>
     </Head>
-    <div className="container mw-3 m-auto">
+    <div className="container-fluid ps-0 mw-3 m-auto">
         <header>
             <Navbar />
+            <MastHead />
         </header>
         <main>
             {children}

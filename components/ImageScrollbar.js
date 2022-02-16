@@ -15,7 +15,7 @@ const ImageScrollbar = ({data}) => {
 <Carousel variant="dark">
     {
     data.map((item) =>  (
-        <Carousel.Item key={item.id} >
+        <Carousel.Item key={item.id}  >
     <Image
       className="d-block w-100"
       src={item.url}
