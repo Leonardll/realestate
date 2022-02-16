@@ -10,7 +10,7 @@ export const Services = () => {
               <h1 id="scrollspyHeading1">Services</h1>
           </div>
     <div className="row gx-5 d-flex justify-content-between">
-    <div className="col-6  p-5">
+    <div className="col-12 col-md-6 p-5">
         <Image 
         className='card-img-top img-fluid'
         src={Bell} 
@@ -23,7 +23,7 @@ export const Services = () => {
          <h3>Conciergerie</h3>
     </div>
     </div>
-    <div className="col-6  p-5">
+    <div className="col-12 col-md-6  p-5">
     <Image 
         className='card-img-top img-fluid'
         src={House} 
