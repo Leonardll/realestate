@@ -3,11 +3,11 @@ import Image from 'next/image'
 import Dummy from '../assets/images/dummy.png'
 export const Team = () => {
   return (
-    <div className='section'>
+    <div className='section my-5'>
         <div className="container">
 
         <div className=' d-flex justify-content-center'>
-        <h1>Team</h1>
+        <h1 className='my-5'>Team</h1>
        </div>   
   <div className="row g-4 d-flex justify-content-evenly">
       <div className="col-lg-4 d-flex justify-content-center">                                                                                                                                                                             

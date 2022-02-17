@@ -9,7 +9,7 @@ import { Contact } from '../components/Contact';
 
  const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
   return (
-  <div className='row flex-lg-row-reverse align-items-center g-5 py-5 justify-content-center mb-3'>
+  <div className='row flex-lg-row-reverse align-items-center g-5  justify-content-center'>
     <div className=" col-10 col-sm-8 col-lg-6">  
     <Image className='d-block img-fluid mx-lg-auto' src={imageUrl} width={700} height={500} alt='banner' />
     </div>
@@ -34,12 +34,12 @@ export default function Home({propertyForRent, propertyForSale}) {
     
     <div data-spy="scroll" data-bs-target="main-nav" data-offset="0" className="scrollspy-example" tabIndex="0"> 
     <Services />
-    <div className='d-flex justify-content-center mt-3'>
-    <h1 id="#scrollspyHeading2">Properties</h1>
+    <div className='section d-flex justify-content-center my-5'>
+    <h1 className='my-5' id="#scrollspyHeading2">Properties</h1>
     </div>
     <div 
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
-      <div className='section d-flex mt-3 '>
+      <div className='section d-flex  '>
       <Banner 
       purpose="Rent a Home"
       title1="Rental Homes for"
@@ -85,15 +85,15 @@ export default function Home({propertyForRent, propertyForSale}) {
 }
 
 
-export async function getStaticProps() {
-  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
+// export async function getStaticProps() {
+//   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
   
-  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
+//   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
 
-  return {
-    props: {
-      propertyForSale: propertyForSale?.hits,
-      propertyForRent: propertyForRent?.hits,
-    }
-  }
-}
+//   return {
+//     props: {
+//       propertyForSale: propertyForSale?.hits,
+//       propertyForRent: propertyForRent?.hits,
+//     }
+//   }
+// }

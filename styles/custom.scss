@@ -1,8 +1,8 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-.container {
-  padding: 0 2rem;
-}
+// .container {
+//   padding: 0 2rem;
+// }
 main {
   position: relative;
   top: 1.5rem;
@@ -102,6 +102,12 @@ main {
   padding: 20px 0;
   justify-content: start;
   cursor: pointer;
+}
+
+.form-header {
+   background-color: #2fecc0;
+   height: 50px;
+   margin-bottom: 30px;
 }
 
 .footer{ 
