@@ -6,7 +6,7 @@
 .pnp.js
 .env
 .env.local
-.next.config.js
+next.config.js
 
 
 # testing
