@@ -21,7 +21,6 @@ import { Contact } from '../components/Contact';
         <Link href={linkName}><a>{buttonText}</a></Link>
       </button>
     </div>
-
   </div>
   )
 };
