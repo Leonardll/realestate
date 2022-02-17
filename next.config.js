@@ -8,9 +8,7 @@ module.exports = {
     images: {
       domains: ['bayut-production.s3.eu-central-1.amazonaws.com'],
     },
-    env:{
-      NEXT_PUBLIC_BAYU_API : 'd479d654acmshfb02f70b2d2ed30p13e263jsn2b6928d6945c',
-    },
+   
     module: {
       rules: [
         //...
