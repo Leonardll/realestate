@@ -1,10 +1,54 @@
-import { React, useState } from "react";
+import { React, useState,useCallback } from "react";
+import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
 import { useForm } from "react-hook-form";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FormControl } from "react-bootstrap";
 import { AiFillMail } from "react-icons/ai";
 import { FaTag, FaUser, FaPencilAlt } from "react-icons/fa";
+
+const containerStyle = {
+    width: 'auto',
+    height: '400px'
+  };
+  
+  const center = {
+    lat: -3.745,
+    lng: -38.523
+  };
+const  MyComponent= () => {
+    const { isLoaded } = useJsApiLoader({
+      id: 'google-map-script',
+      googleMapsApiKey: process.env.googleMapsApiKey,
+      version: "weekly",
+      libraries: []                                                                                                                                                                                                                           
+    })
+  
+    const [map, setMap] = useState(null)
+  
+    const onLoad = useCallback(function callback(map) {
+      const bounds = new window.google.maps.LatLngBounds();
+      map.fitBounds(bounds);
+      setMap(map)
+    }, [])
+  
+    const onUnmount = useCallback(function callback(map) {
+      setMap(null)
+    }, [])
+  
+    return isLoaded ? (
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={10}
+          onLoad={onLoad}
+          onUnmount={onUnmount}
+        >
+          { /* Child components, such as markers, info windows, etc. */ }
+          <></>
+        </GoogleMap>
+    ) : <></>
+  }
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -120,12 +164,7 @@ const ContactForm = () => {
             className="z-depth-1-half map-container-section mb-4"
             
           >
-            <iframe
-              src="https://maps.google.com/maps?q=Manhatan&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              frameBorder="0"
-              
-              allowFullScreen
-            ></iframe>
+           <MyComponent/>
           </div>
 
           <div className="row text-center">
