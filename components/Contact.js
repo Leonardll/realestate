@@ -1,60 +1,126 @@
-import { React, useState,useCallback } from "react";
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { React, useState, useCallback } from "react";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
 import { useForm } from "react-hook-form";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FormControl } from "react-bootstrap";
 import { AiFillMail } from "react-icons/ai";
-import { FaTag, FaUser, FaPencilAlt } from "react-icons/fa";
+import {
+  FaTag,
+  FaUser,
+  FaPencilAlt,
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const containerStyle = {
-    width: 'auto',
-    height: '400px'
-  };
-  
-  const center = {
-    lat: -3.745,
-    lng: -38.523
-  };
-const  MyComponent= () => {
-    const { isLoaded } = useJsApiLoader({
-      id: 'google-map-script',
-      googleMapsApiKey: process.env.googleMapsApiKey,
-      version: "weekly",
-      libraries: []                                                                                                                                                                                                                           
-    })
-  
-    const [map, setMap] = useState(null)
-  
-    const onLoad = useCallback(function callback(map) {
-      const bounds = new window.google.maps.LatLngBounds();
-      map.fitBounds(bounds);
-      setMap(map)
-    }, [])
-  
-    const onUnmount = useCallback(function callback(map) {
-      setMap(null)
-    }, [])
-  
-    return isLoaded ? (
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={center}
-          zoom={10}
-          onLoad={onLoad}
-          onUnmount={onUnmount}
-        >
-          { /* Child components, such as markers, info windows, etc. */ }
-          <></>
-        </GoogleMap>
-    ) : <></>
-  }
+  width: "auto",
+  height: "400px",
+};
+
+const center = {
+  lat: -3.745,
+  lng: -38.523,
+};
+
+// Input content
+
+
+const MyComponent = () => {
+  const { isLoaded } = useJsApiLoader({
+    id: "google-map-script",
+    googleMapsApiKey: process.env.googleMapsApiKey,
+    //libraries: [],
+    //url:"https://maps.googleapis.com/maps/api/js"
+  });
+
+  const [map, setMap] = useState(null);
+
+  const onLoad = useCallback(function callback(map) {
+    const bounds = new window.google.maps.LatLngBounds();
+    map.fitBounds(bounds);
+    setMap(map);
+  }, []);
+
+  const onUnmount = useCallback(function callback(map) {
+    setMap(null);
+  }, []);
+
+  return isLoaded ? (
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={10}
+      onLoad={onLoad}
+      onUnmount={onUnmount}
+    >
+      {/* Child components, such as markers, info windows, etc. */}
+      <></>
+    </GoogleMap>
+  ) : (
+    <></>
+  );
+};
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const inputData = [
+    {
+      id: "firstName",
+      icon: <FaUser />,
+      type: "text",
+      placeholder: "First Name",
+      ariaLabel: "firstName",
+      ariaDescribedby: "firstName",
+      as: null,
+      fn: (e) => setFirstName(e.target.value),
+    },
+    {
+      id: "lastName",
+      icon: <FaUser />,
+      type: "text",
+      placeholder: "Last Name",
+      ariaLabel: "lastName",
+      ariaDescribedby: "lastName",
+      as: null,
+      fn: (e) => setLastName(e.target.value),
+    },
+    {
+      id: "email",
+      icon: <AiFillMail />,
+      type: "email",
+      placeholder: "Your Email",
+      ariaLabel: "email",
+      ariaDescribedby: "email",
+      as: null,
+      fn: (e) => setEmail(e.target.value),
+    },
+    {
+      id: "subject",
+      icon: <FaTag />,
+      type: "text",
+      placeholder: "Subject",
+      ariaLabel: "subject",
+      ariaDescribedby: "subject",
+      as: null,
+      fn: (e) => setSubject(e.target.value),
+    },
+    {
+      id: "message",
+      icon: <FaPencilAlt />,
+      type: "text",
+      placeholder: "Your Message",
+      ariaLabel: "firstName",
+      ariaDescribedby: "firstName",
+      as: "textarea",
+      fn: (e) => setMessage(e.target.value),
+    },
+  ];
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -79,78 +145,30 @@ const ContactForm = () => {
           <div className="card">
             <div className="card-body">
               <div className="d-flex align-items-center justify-content-center form-header text-center accent-1">
-                <h3 className="mt-2">
+                <h3 className="mt-2 text-light">
                   <i>
-                    <AiFillMail className="mb-1" />
+                    <AiFillMail fill="white" className="mb-1" />
                   </i>
                   Write to us:
                 </h3>
               </div>
               <Form onSubmit={handleSubmit}>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon1">
-                    <FaUser />
-                  </InputGroup.Text>
-                  <FormControl
-                    id="firstName"
-                    type="text"
-                    placeholder="First Name"
-                    aria-label="firstname"
-                    aria-describedby="basic-addon1"
-                    onChange={(e) => setFirstName(e.target.value)}
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon2">
-                    <FaUser />
-                  </InputGroup.Text>
-                  <FormControl
-                    onChange={(e) => setLastName(e.target.value)}
-                    id="lastName"
-                    type="text"
-                    placeholder="Last Name"
-                    aria-label="lastName"
-                    aria-describedby="basic-addon2"
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="basic-addon3">
-                    <AiFillMail />
-                  </InputGroup.Text>
-                  <FormControl
-                    onChange={(e) => setEmail(e.target.value)}
-                    id="email"
-                    type="email"
-                    placeholder="Your Email"
-                    aria-label="email"
-                    aria-describedby="basic-addon3"
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="subjet" type="text">
-                    <FaTag />
-                  </InputGroup.Text>
-                  <FormControl
-                    onChange={(e) => setSubject(e.target.value)}
-                    placeholder="Subject"
-                    aria-label="subject"
-                    aria-describedby="basic-addon4"
-                  />
-                </InputGroup>
-                <InputGroup className="mb-3">
-                  <InputGroup.Text id="message" type="text">
-                    <FaPencilAlt />
-                  </InputGroup.Text>
-                  <FormControl
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Your Message"
-                    aria-label="your message"
-                    as="textarea"
-                    aria-describedby="basic-addon4"
-                  />
-                </InputGroup>
-                <div className="text-center">
-                  <button className="btn btn-light-blue mb-3" type="submit">
+                {inputData.map((item) => (
+                  <InputGroup className="mb-3" key={item.id}>
+                    <InputGroup.Text id={item.id}>{item.icon}</InputGroup.Text>
+                    <FormControl
+                      id={item.id}
+                      type={item.type}
+                      placeholder={item.placeholder}
+                      aria-label={item.ariaLabel}
+                      aria-describedby={item.ariaDescribedby}
+                      onChange={item.fn}
+                    />
+                  </InputGroup>
+                ))}
+
+                <div className="text-center ">
+                  <button className="btn btn-light-blue text-light mb-3" type="submit">
                     Submit
                   </button>
                 </div>
@@ -162,29 +180,28 @@ const ContactForm = () => {
           <div
             id="map-container-section"
             className="z-depth-1-half map-container-section mb-4"
-            
           >
-           <MyComponent/>
+            <MyComponent />
           </div>
 
           <div className="row text-center">
             <div className="col-md-4">
-              <a className="btn-floating blue accent-1">
-                <i className="fas fa-map-marker-alt"></i>
+              <a className="btn btn rounded-pill btn-info accent-1">
+                <FaMapMarkerAlt fill="white" />
               </a>
               <p>New York, 94126</p>
               <p className="mb-md-0">United States</p>
             </div>
             <div className="col-md-4">
-              <a className="btn-floating blue accent-1">
-                <i className="fas fa-phone"></i>
+              <a className="btn rounded-pill btn-info accent-1">
+                <FaPhone fill="white" />
               </a>
               <p>+ 01 234 567 89</p>
               <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
             </div>
             <div className="col-md-4">
-              <a className="btn-floating blue accent-1">
-                <i className="fas fa-envelope"></i>
+              <a className="btn rounded-pill btn-info accent-1">
+                <FaEnvelope fill="white" />
               </a>
               <p>info@gmail.com</p>
               <p className="mb-0">sale@gmail.com</p>

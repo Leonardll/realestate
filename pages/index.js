@@ -13,7 +13,7 @@ import { Contact } from '../components/Contact';
     <div className=" col-10 col-sm-8 col-lg-6">  
     <Image className='d-block img-fluid mx-lg-auto' src={imageUrl} width={700} height={500} alt='banner' />
     </div>
-    <div className="col-lg-4 p-3 border-0">
+    <div className="col-lg-4 p-3 text-center text-lg-start border-0">
       <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
       <p className="fs-4">{title1}<br /> {title2}</p>
       <p className="lead">{desc1}</p>

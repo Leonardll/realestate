@@ -45,7 +45,7 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <FaBars className="fas ms-1">Menu</FaBars>
+            <FaBars className="fas ms-1" height={70} width={80}>Menu</FaBars>
           </button>
           <div
             className={

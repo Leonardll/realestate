@@ -17,7 +17,12 @@ main {
    
 }
 .navbar-light {
+  .fas{
+    height: 1.5em;
+    width: 1.5em;
+  }
 .navbar-nav {
+  
 .nav-link:hover {
   color: #2fecc0 ;
 
@@ -108,7 +113,11 @@ main {
    background-color: #2fecc0;
    height: 50px;
    margin-bottom: 30px;
+   position: relative;
+   top: -38px;
 }
+
+
 
 .footer{ 
   height: 40px;
