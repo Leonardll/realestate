@@ -48,6 +48,7 @@ const Navbar = () => {
             <FaBars className="fas ms-1" height={70} width={80}>Menu</FaBars>
           </button>
           <div
+            onClick={() => setcollapse(!collapse)}
             className={
               collapse
                 ? "collapse navbar-collapse mt-5"
@@ -78,7 +79,9 @@ const Navbar = () => {
               >
                 <a className="nav-link">Services</a>
               </Link>
-              <Link href="/search" className="nav-item">
+              <Link 
+              href="/search" 
+              className="nav-item">
                 <a className="nav-link">Search</a>
               </Link>
               <li className="nav-item dropdown">
@@ -110,12 +113,14 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <Link
+                    
                     href="/search?purpose=for-rent"
                     className="dropdown-item"
                   >
                     <a className="nav-link">Rent Property</a>
                   </Link>
                   <Link
+                  
                     href="/search?purpose=for-sale"
                     className="dropdown-item"
                     spy={true}
@@ -127,7 +132,8 @@ const Navbar = () => {
                   </Link>
                 </ul>
               </li>
-              <Link 
+              <Link
+              
               href="/#team"
               passHref
               className="nav-item"
@@ -139,6 +145,7 @@ const Navbar = () => {
                 <a className="nav-link">Team</a>
               </Link>
               <Link 
+             
               href="/#contact" 
               passHref
               className="nav-item"
