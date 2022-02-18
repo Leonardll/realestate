@@ -1,6 +1,5 @@
 import { React, useState, useCallback } from "react";
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
-import { useForm } from "react-hook-form";
+import {MyComponent} from '../contact/Map'
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { FormControl } from "react-bootstrap";
@@ -14,54 +13,9 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
-const containerStyle = {
-  width: "auto",
-  height: "400px",
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-};
-
-// Input content
 
 
-const MyComponent = () => {
-  const { isLoaded } = useJsApiLoader({
-    id: "google-map-script",
-    googleMapsApiKey: process.env.googleMapsApiKey,
-    //libraries: [],
-    //url:"https://maps.googleapis.com/maps/api/js"
-  });
 
-  const [map, setMap] = useState(null);
-
-  const onLoad = useCallback(function callback(map) {
-    const bounds = new window.google.maps.LatLngBounds();
-    map.fitBounds(bounds);
-    setMap(map);
-  }, []);
-
-  const onUnmount = useCallback(function callback(map) {
-    setMap(null);
-  }, []);
-
-  return isLoaded ? (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={10}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
-      {/* Child components, such as markers, info windows, etc. */}
-      <></>
-    </GoogleMap>
-  ) : (
-    <></>
-  );
-};
 const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -139,7 +93,7 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container" id="contact">
       <div className="row justify-content-center">
         <div className="col-lg-5 mb-lg-0 mb-4 w-auto">
           <div className="card">

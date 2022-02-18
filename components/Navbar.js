@@ -20,7 +20,7 @@ const Navbar = () => {
         id="mainNav"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#page-top">
+          <a className="navbar-brand" href="#/home">
             <Image
               fill="dark"
               priority
@@ -68,7 +68,7 @@ const Navbar = () => {
                 <a className="nav-link">Home</a>
               </Link>
               <Link
-                href="/#scrollspyHeading1"
+                href="/#services"
                 passHref
                 spy={true}
                 smooth={true}
@@ -83,15 +83,16 @@ const Navbar = () => {
               </Link>
               <li className="nav-item dropdown">
                 <Link
-                  href="/#scrollspyHeading2"
+                  href="/#property"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
                 >
                   <a
+                   
                     onClick={() => setShow(!show)}
-                    className="nav-link dropdown-toggle dropdown-toggle-split"
+                    className="nav-link dropdown-toggle  dropdown-toggle-split"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     id="navbarDropdow"
@@ -117,15 +118,35 @@ const Navbar = () => {
                   <Link
                     href="/search?purpose=for-sale"
                     className="dropdown-item"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
                   >
                     <a className="nav-link">Buy Property</a>
                   </Link>
                 </ul>
               </li>
-              <Link href="/team" className="nav-item">
+              <Link 
+              href="/#team"
+              passHref
+              className="nav-item"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              >
                 <a className="nav-link">Team</a>
               </Link>
-              <Link href="/contact" className="nav-item">
+              <Link 
+              href="/#contact" 
+              passHref
+              className="nav-item"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              >
                 <a className="nav-link">Contact</a>
               </Link>
             </ul>

@@ -4,7 +4,7 @@ import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from '../components/property';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
-import { Contact } from '../components/Contact';
+import { Contact } from '../components/contact/Contact';
 
 
  const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
