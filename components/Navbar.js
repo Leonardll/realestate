@@ -48,7 +48,7 @@ const Navbar = () => {
             <FaBars className="fas ms-1" height={70} width={80}>Menu</FaBars>
           </button>
           <div
-            onClick={() => setcollapse(!collapse)}
+            
             className={
               collapse
                 ? "collapse navbar-collapse mt-5"
@@ -66,7 +66,8 @@ const Navbar = () => {
                 duration={500}
                 className="nav-item"
               >
-                <a className="nav-link">Home</a>
+                <a 
+                className="nav-link">Home</a>
               </Link>
               <Link
                 href="/#services"
