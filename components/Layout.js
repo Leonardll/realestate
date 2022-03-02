@@ -21,7 +21,7 @@ import Navbar from "./Navbar";
        
     </div>
     <footer>
-            <Footer />
+    <Footer />
     </footer>
     </React.StrictMode>
 );

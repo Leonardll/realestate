@@ -24,7 +24,9 @@
     "react-horizontal-scrolling-menu": "^2.7.0",
     "react-icons": "^4.3.1",
     "react-image-gallery": "^1.2.7",
-    "sass": "^1.49.0"
+    "sass": "^1.49.0",
+    "xml-loader": "^1.2.1",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "eslint": "7.32.0",
