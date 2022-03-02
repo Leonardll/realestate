@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { baseUrl, fetchApi } from '../utils/fetchApi';
+import { baseUrl, fetchListing } from '../utils/fetchApi';
 import Property from '../components/property';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
 import { Contact } from '../components/contact/Contact';
-
+import { useState } from 'react';
 
  const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
   return (
@@ -28,6 +28,8 @@ import { Contact } from '../components/contact/Contact';
 
 
 export default function Home({propertyForRent, propertyForSale}) {
+  const [data, setData] = useState(fetchListing());
+
   //console.log(propertyForRent, propertyForSale)
   return (
     
@@ -48,6 +50,9 @@ export default function Home({propertyForRent, propertyForSale}) {
       buttonText="Explore Renting"
       linkName="/search?purpose=for-rent"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" />
+      </div>
+      <div>
+      
       </div>
       {/* <div className="section d-flex">
         <div className="row justify-items-center"> 
