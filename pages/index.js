@@ -84,15 +84,15 @@ export default function Home({propertyForRent, propertyForSale}) {
 }
 
 
-// export async function getStaticProps() {
-//   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
+export async function getStaticProps() {
+  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
   
-//   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
+  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
 
-//   return {
-//     props: {
-//       propertyForSale: propertyForSale?.hits,
-//       propertyForRent: propertyForRent?.hits,
-//     }
-//   }
-// }
+  return {
+    props: {
+      propertyForSale: propertyForSale?.hits,
+      propertyForRent: propertyForRent?.hits,
+    }
+  }
+}
