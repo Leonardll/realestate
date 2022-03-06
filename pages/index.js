@@ -79,7 +79,7 @@ console.log('index page results',secondhandListing);
       desc2="and more"
       buttonText="Explore Renting"
       linkName="/search?purpose=for-rent"
-      imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" />
+      src="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" />
       </div>
       <div className="section d-flex">
         <div className="row">
