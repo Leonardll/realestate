@@ -5,7 +5,12 @@ import Property from '../components/property';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
 import { Contact } from '../components/contact/Contact';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { AiOutlineConsoleSql } from 'react-icons/ai';
+import { render } from 'nprogress';
+
+
+
 
  const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
   return (
@@ -27,20 +32,34 @@ import { useState } from 'react';
 
 
 
-export default function Home({propertyForRent, propertyForSale}) {
-  const [data, setData] = useState(fetchListing());
 
-  //console.log(propertyForRent, propertyForSale)
+export default function Home({data,propertyForRent, propertyForSale}) {
+const { 
+  results: {
+  client: {
+    secondhandListing 
+  }   
+ 
+} 
+}= data
+console.log('index page results',secondhandListing);
+ 
+  
   return (
-    
+    <>
+  
     <div data-spy="scroll" data-bs-target="main-nav" data-offset="0" className="scrollspy-example" tabIndex="0"> 
     <Services />
+    
+      
+  
+
     <div className='section d-flex justify-content-center my-5'>
     <h1 className='my-5' id="#scrollspyHeading2">Properties</h1>
     </div>
     <div 
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
-      <div className='section d-flex  '>
+      <div className='section d-flex'>
       <Banner 
       purpose="Rent a Home"
       title1="Rental Homes for"
@@ -51,16 +70,19 @@ export default function Home({propertyForRent, propertyForSale}) {
       linkName="/search?purpose=for-rent"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" />
       </div>
-      <div>
-      
+      <div className="section d-flex">
+        <div className="row">
+
+        {/* <Property secondhandListing={secondhandListing}/> */}
+        </div>
       </div>
-      {/* <div className="section d-flex">
+       <div className="section d-flex">
         <div className="row justify-items-center"> 
         
         
-        {propertyForRent.map((property => <Property property={property} key={property.id}/>))}
+      
         </div>
-      </div> */}
+      </div> 
      
      <div className="section d-flex">
 
@@ -74,17 +96,18 @@ export default function Home({propertyForRent, propertyForSale}) {
       linkName="/search?purpose=for-sale"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"/>
       
-      {/* <div className="section d-flex flex-wrap">
-        <div className="row justify-items-center">
-        
-        {propertyForSale.map((property => <Property property={property} key={property.id}/>))}
-        </div>
-      </div> */}
       </div>
-    </div>
+    </div>       
+      <div className="section d-flex flex-wrap">
+        <div className="row justify-items-center">
+        {secondhandListing.property.map((property => <Property property={property} key={property.reference}/>))}
+   
+        </div>
+      </div>
     <Team />
     <Contact />
       </div>
+      </>
   )
 }
 
@@ -101,3 +124,17 @@ export default function Home({propertyForRent, propertyForSale}) {
 //     }
 //   }
 // }
+export async function getServerSideProps() {
+  const res = await fetchApi(`${baseUrl}/api/listing`)
+  // const data = await res.json()
+
+  // if (!data) {
+  //   return {
+  //     notFound: true,
+  //   }
+  // }
+
+  return {
+    props: { data : res }, // will be passed to the page component as props
+  }
+}
