@@ -11,6 +11,16 @@ import { render } from 'nprogress';
 
 
 
+const myLoader = ({ src, width, quality }) => {
+  return `https://bayut-production.s3.eu-central-1.amazonaws.com/${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
+const myLoader2 = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
 
  const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
   return (
@@ -61,6 +71,7 @@ console.log('index page results',secondhandListing);
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
       <div className='section d-flex'>
       <Banner 
+      loader = {myLoader}
       purpose="Rent a Home"
       title1="Rental Homes for"
       title2="Everyone"
