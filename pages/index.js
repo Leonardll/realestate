@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { baseUrl, fetchListing } from '../utils/fetchApi';
+import { baseUrl, fetchApi } from '../utils/fetchApi';
 import Property from '../components/property';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
