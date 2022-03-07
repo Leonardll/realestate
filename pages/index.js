@@ -111,7 +111,7 @@ console.log('index page results',secondhandListing);
     </div>       
       <div className="section d-flex flex-wrap">
         <div className="row justify-items-center">
-        {secondhandListing.property.map((property => <Property property={property} key={property.reference}/>))}
+        {secondhandListing.property.map((property => <Property property={property} loader={myLoader} key={property.reference}/>))}
    
         </div>
       </div>
