@@ -12,7 +12,7 @@ import { render } from 'nprogress';
 
 
 const myLoader = ({ src, width, quality }) => {
-  return `https://bayut-production.s3.eu-central-1.amazonaws.com/${src}?w=${width}&q=${
+  return `${src}?w=${width}&q=${
     quality || 75
   }`;
 };
