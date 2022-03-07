@@ -5,6 +5,11 @@ import Carousel from "react-bootstrap/Carousel";
 
 import Image from "next/image";
 
+const myLoader2 = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${
+    quality || 75
+  }`;
+};
 const ImageScrollbar = ({ data }) => {
   return (
     <div className="container">
@@ -12,6 +17,7 @@ const ImageScrollbar = ({ data }) => {
         {data.image.map((item) => (
           <Carousel.Item key={item.url}>
             <Image
+              loader={myLoader2}
               className="d-block w-100"
               src={item.url}
               alt="property"
