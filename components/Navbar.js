@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className="container-fluid">
       <nav
-        className="navbar navbar-expand-md navbar-light bg-light fixed-top"
+        className="navbar navbar-expand-md navbar-light bg-transp fixed-top"
         id="mainNav"
       >
         <div className="container-fluid">
