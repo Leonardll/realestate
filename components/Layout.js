@@ -8,7 +8,7 @@ import Navbar from "./Navbar";
  const Layout = ({children}) => (
     <React.StrictMode>
     <Head>
-        <title>Monec Barcelona</title>
+        <title>Unico Hogar</title>
     </Head>
     <div className="container-fluid ps-0 mw-3 m-auto">
         <header>
