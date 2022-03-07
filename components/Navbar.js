@@ -13,16 +13,17 @@ const Navbar = () => {
   const myLoader = ({ src, width, quality }) => {
     return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
   };
+  const changeBackground = () => {
+    console.log(window.scrollY, active);
+      window.scrollY >= 100 ? setActive(true)  : setActive(false)
+    }
   useEffect(() => {
     
-      const changeBackground = () => {
-        //console.log(window.scrollY);
-          window.scrollY > 100 ? setActive(true)  : setActive(prevActive => !prevActive)
-      }
-    window.addEventListener('scroll',changeBackground)
-  },[])
+        window.addEventListener('scroll',changeBackground)
+        return () => window.removeEventListener("scroll", changeBackground);
+      })
   
-
+     
   return (
     <div className="container-fluid">
       <nav
