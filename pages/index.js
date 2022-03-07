@@ -71,7 +71,7 @@ console.log('index page results',secondhandListing);
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
       <div className='section d-flex'>
       <Banner 
-      loader = {myLoader}
+      loader = {myLoader2}
       purpose="Rent a Home"
       title1="Rental Homes for"
       title2="Everyone"
