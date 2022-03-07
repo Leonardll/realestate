@@ -17,7 +17,7 @@ const ImageScrollbar = ({ data }) => {
         {data.image.map((item) => (
           <Carousel.Item key={item.url}>
             <Image
-              //loader={myLoader2}
+              loader={myLoader2}
               className="d-block w-100"
               src={item.url}
               alt="property"
