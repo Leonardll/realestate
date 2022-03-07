@@ -26,7 +26,13 @@ const myLoader2 = ({ src, width, quality }) => {
   return (
   <div className='row flex-lg-row-reverse align-items-center g-5  justify-content-center'>
     <div className=" col-10 col-sm-8 col-lg-6">  
-    <Image className='d-block img-fluid mx-lg-auto' src={imageUrl} width={700} height={500} alt='banner' />
+    <Image 
+    className='d-block img-fluid mx-lg-auto' 
+    src={imageUrl} 
+    width={700} 
+    height={500} 
+    alt='banner'
+    loader={myLoader} />
     </div>
     <div className="col-lg-4 p-3 text-center text-lg-start border-0">
       <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
@@ -70,8 +76,8 @@ console.log('index page results',secondhandListing);
     <div 
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
       <div className='section d-flex'>
-      <Banner 
-      loader = {myLoader}
+      <Banner
+           
       purpose="Rent a Home"
       title1="Rental Homes for"
       title2="Everyone"
@@ -79,7 +85,8 @@ console.log('index page results',secondhandListing);
       desc2="and more"
       buttonText="Explore Renting"
       linkName="/search?purpose=for-rent"
-      imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" />
+      imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" 
+      />
       </div>
       <div className="section d-flex">
         <div className="row">
