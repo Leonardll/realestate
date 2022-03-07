@@ -47,7 +47,7 @@ const Property = ({ property: {images,id, descriptions,operation, features} ,loa
                         <div className="d-flex align-items-centter justify-content-between">
                             <span>{features.bedrooms} <i><FaBed /></i></span> 
                             <span>{features.bathrooms} <i><FaBath /></i></span> 
-                            <span>{features.construtedArea} sqft<i> <BsGridFill /></i></span> 
+                            <span>{features.constructedArea} sqft<i> <BsGridFill /></i></span> 
                         </div>
           <div className="card-text border-top-1 pt-2">{descriptions.description.comment > 20 ? `${descriptions.description.comment.substring(0,30)}...` :descriptions.description[0].comment}</div>
           </div> 
