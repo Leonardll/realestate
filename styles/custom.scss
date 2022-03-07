@@ -17,28 +17,30 @@ main {
    
 }
 
-
-.navbar-dark {
-  .fas{
-    height: 1.5em;
-    width: 1.5em;
+.navbar.active {
+  background: linear-gradient(90deg, rgb(255, 255, 255)100%,rgba(255, 255, 255, 0)100%);
+  .navbar-dark {
+    .fas{
+      height: 1.5em;
+      width: 1.5em;
+    }
+    .navbar-nav {
+      .nav-link {
+        color: #91889f;
+      }
+      
+      .nav-link:hover {
+        color: #5ab4ab ;
+        
+      }
+      .dropdown-menu {
+        position: absolute;
+        /* z-index: -66; */
+        //right:0 ;
+        top: 33px;
+      }
+    }
   }
-.navbar-nav {
-  .nav-link {
-    color: #91889f;
-  }
-  
-.nav-link:hover {
-  color: #5ab4ab ;
-
-}
-.dropdown-menu {
-  position: absolute;
-  /* z-index: -66; */
-  //right:0 ;
-  top: 33px;
-}
-}
 }
 
 

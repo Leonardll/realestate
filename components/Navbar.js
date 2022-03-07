@@ -3,20 +3,30 @@ import Link from "next/link";
 // import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../assets/images/logo1.svg";
 
 const Navbar = () => {
   const [collapse, setcollapse] = useState(true);
   const [show, setShow] = useState(false);
+  const [active, setActive] = useState(false)
   const myLoader = ({ src, width, quality }) => {
     return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
   };
+  useEffect(() => {
+    
+      const changeBackground = () => {
+        //console.log(window.scrollY);
+          window.scrollY > 100 ? setActive(true)  : setActive(prevActive => !prevActive)
+      }
+    window.addEventListener('scroll',changeBackground)
+  },[])
+  
 
   return (
     <div className="container-fluid">
       <nav
-        className="navbar navbar-expand-md navbar-light bg-transp fixed-top"
+        className={active ? "navbar active navbar-expand-md navbar-light bg-transp  fixed-top" : "navbar  navbar-expand-md navbar-light bg-transp fixed-top"}
         id="mainNav"
       >
         <div className="container-fluid">
