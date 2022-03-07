@@ -3,7 +3,7 @@ import Image from "next/image";
 import {FaBed, Fabath, FaBath} from 'react-icons/fa'
 import {BsGridFill} from 'react-icons/bs'
 import {GoVerified} from 'react-icons/go'
-import millyfi from 'millify'
+import { millify } from 'millify'
 import defaultImage from '../assets/images/house.jpg';
 import Logo from '../assets/images/logo.svg'
 
@@ -31,7 +31,7 @@ const Property = ({ property: {images,id, descriptions,operation, features} ,loa
                    
                     <div className="d-flex">
 
-                     <p className="card-text fs-6 fw-bold">EUR {millyfi(operation.price)}</p>
+                     <p className="card-text fs-6 fw-bold">EUR {millify(operation.price)}</p>
                     </div>
                     <div className="ps-5">
                       <span>
