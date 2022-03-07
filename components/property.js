@@ -9,7 +9,7 @@ import Logo from '../assets/images/logo.svg'
 
 const Property = ({ property: {images,id, descriptions,operation, features} ,loader}) => (
  
-   <Link href={`/property/:[propertyId]`} passHref as ={`property/${id}`}> 
+   <Link href={`/property/:[propertyId]`} passHref as ={`/property/${id}`}> 
   
 
           <div className="card m-2" style={{width:'20rem'}}>
