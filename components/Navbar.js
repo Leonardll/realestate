@@ -20,7 +20,8 @@ const Navbar = () => {
         id="mainNav"
       >
         <div className="container-fluid">
-          <a className="navbar-brand" href="#/home">
+          <Link href="/" passHref>
+          <a className="navbar-brand" >
             <Image
               fill="dark"
               priority
@@ -31,8 +32,9 @@ const Navbar = () => {
               height={40}
               layout="responsive"
               alt="..."
-            />
+              />
           </a>
+            </Link>
           <button
             onClick={() => setcollapse(!collapse)}
             className={
