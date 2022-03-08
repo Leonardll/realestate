@@ -49,7 +49,7 @@ const Property = ({ property: {images,id, descriptions,operation, features} ,loa
                             <span>{features.bathrooms} <i><FaBath /></i></span> 
                             <span>{features.constructedArea} sqft<i> <BsGridFill /></i></span> 
                         </div>
-          <div className="card-text border-top-1 pt-2">{descriptions.description.comment > 20 ? `${descriptions.description.comment.substring(0,30)}...` :descriptions.description[0].comment}</div>
+          <div className="card-text border-top-1 pt-2">{descriptions.description[0].comment > 20 ? `${descriptions.description[0].comment.substring(0,30)}...` :descriptions.description[0].comment}</div>
           </div> 
           </div>
           </div>
