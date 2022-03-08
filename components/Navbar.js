@@ -2,6 +2,7 @@ import Link from "next/link";
 // import {FcMenu, FcHome, FcAbout} from' react-icons/fc'
 // import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
+import { ImCross } from "react-icons/im"
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Logo from "../assets/images/logo1.svg";
@@ -57,8 +58,10 @@ const Navbar = () => {
             aria-controls="navbarResponsive"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
-            <FaBars className="fas ms-1" height={70} width={80}>Menu</FaBars>
+          >{ collapse ?
+            <FaBars className="fas" height={70} width={80}>Menu</FaBars> :
+            <ImCross />
+            }
           </button>
           <div
             
@@ -80,6 +83,7 @@ const Navbar = () => {
                 className="nav-item"
               >
                 <a 
+                onClick={ () => { setcollapse(!collapse) } }
                 className="nav-link">Home</a>
               </Link>
               <Link

@@ -15,22 +15,29 @@ main {
     height: 120px;
     width: 200px;
    
-}
+  }
+  .navbar-toggler {
+    font-size: 2.25rem;
+  }
 
 .navbar.active {
-  background: linear-gradient(90deg, rgb(255, 255, 255)100%,rgba(255, 255, 255, 0)100%);
-  .navbar-dark {
+  background: linear-gradient(90deg, rgba(255, 255, 255,0.4)100%,rgba(255, 255, 255, 0)100%);
+  .navbar-light {
     .fas{
       height: 1.5em;
       width: 1.5em;
     }
+   
     .navbar-nav {
       .nav-link {
         color: #91889f;
       }
       
       .nav-link:hover {
-        color: #5ab4ab ;
+        color: #5AB48E ;
+        a:hover {
+          color: #e9ecef;
+      }
         
       }
       .dropdown-menu {
@@ -61,6 +68,12 @@ main {
   left: 0;
   top:0;
 }
+.fixed-bottom {
+  bottom: 3em;
+}
+  .btn-dark {
+  background-color: #5ab4ab;
+}
 
  a {
   color: #000000;
@@ -90,6 +103,10 @@ main {
   background-color: #5ab4ab;
   border-color: #5ab4ab;
    
+  a:hover {
+    color: #e9ecef;
+}
+
   &:hover {
     color: #fff;
     background-color: #5ab4ab;
@@ -101,6 +118,9 @@ main {
   color: #000;
   background-color: #5ab4ab;
   border-color: #5ab4ab;
+
+ 
+
 }
 
 

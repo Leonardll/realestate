@@ -36,7 +36,7 @@ const myLoader2 = ({ src, width, quality }) => {
     </div>
     <div className="col-lg-4 p-3 text-center text-lg-start border-0">
       <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
-      <p className="fs-4">{title1}<br /> {title2}</p>
+      <p className="lead">{title1}<br /> {title2}</p>
       <p className="lead">{desc1}</p>
       <button className="btn btn-primary btn-xl w-100">
         <Link href={linkName}><a>{buttonText}</a></Link>
@@ -106,8 +106,8 @@ console.log('index page results',secondhandListing);
 
       <Banner 
       purpose="Buy a Home"
-      title1="Find, Buy & Own Your"
-      title2="Dream Home"
+      title1="Find, Buy & Own"
+      title2="Your Dream Home"
       desc1="Explore Apartments, Villas, Homes"
       desc2="and more"
       buttonText="Explore Buying"
