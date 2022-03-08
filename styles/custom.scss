@@ -73,6 +73,10 @@ main {
 }
   .btn-dark {
   background-color: #5ab4ab;
+  border-color: #e9ecef;
+  &:hover {
+    background-color: #5ab4ab;
+  }
 }
 
  a {

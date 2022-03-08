@@ -95,12 +95,16 @@ const Navbar = () => {
                 duration={500}
                 className="nav-item"
               >
-                <a className="nav-link">Services</a>
+                <a 
+                onClick={ () => { setcollapse(!collapse) } }
+                className="nav-link">Services</a>
               </Link>
               <Link 
               href="/search" 
               className="nav-item">
-                <a className="nav-link">Search</a>
+                <a 
+                onClick={ () => { setcollapse(!collapse) } }
+                className="nav-link">Search</a>
               </Link>
               <li className="nav-item dropdown">
                 <Link
@@ -135,7 +139,9 @@ const Navbar = () => {
                     href="/search?purpose=for-rent"
                     className="dropdown-item"
                   >
-                    <a className="nav-link">Rent Property</a>
+                    <a 
+                    onClick={ () => { setcollapse(!collapse) } }
+                    className="nav-link">Rent Property</a>
                   </Link>
                   <Link
                   
@@ -146,7 +152,9 @@ const Navbar = () => {
                     offset={-70}
                     duration={500}
                   >
-                    <a className="nav-link">Buy Property</a>
+                    <a 
+                    onClick={ () => { setcollapse(!collapse) } }
+                    className="nav-link">Buy Property</a>
                   </Link>
                 </ul>
               </li>
@@ -160,7 +168,9 @@ const Navbar = () => {
               offset={-70}
               duration={500}
               >
-                <a className="nav-link">Team</a>
+                <a 
+                onClick={ () => { setcollapse(!collapse) } }
+                className="nav-link">Team</a>
               </Link>
               <Link 
              
@@ -172,7 +182,9 @@ const Navbar = () => {
               offset={-70}
               duration={500}
               >
-                <a className="nav-link">Contact</a>
+                <a 
+                onClick={ () => { setcollapse(!collapse) } }
+                className="nav-link">Contact</a>
               </Link>
             </ul>
           </div>
