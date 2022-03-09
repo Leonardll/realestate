@@ -21,7 +21,7 @@ const Property = ({
         alt=""
         loader={loader}
       />
-      {console.log(descriptions.description )}
+      {Object.keys(descriptions.description[0]).map(key => console.log( (key ==='language' ? key + descriptions.description[0][key] : '' )))}
 
       <div className="card-body">
         <div className="d-flex justify-content-between pt-2">
