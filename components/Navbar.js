@@ -15,7 +15,7 @@ const Navbar = () => {
     return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
   };
   const changeBackground = () => {
-    console.log(window.scrollY, active);
+    //console.log(window.scrollY, active);
       window.scrollY >= 100 ? setActive(true)  : setActive(false)
     }
   useEffect(() => {

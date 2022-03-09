@@ -9,7 +9,7 @@ export default function handler(req, res) {
   var parser = new xml2js.Parser({explicitArray : false});
   const data = fs.readFileSync(path.join(process.cwd(),'listing.xml'))
   parser.parseString(data,function (err, results){
-    console.log(results.client.secondhandListing.property)
+    //console.log(results.client.secondhandListing.property)
     res.status(200).json({results})
   })
 

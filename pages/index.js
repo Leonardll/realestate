@@ -58,7 +58,7 @@ const {
  
 } 
 }= data
-console.log('index page results',secondhandListing);
+//console.log('index page results',secondhandListing);
  
   
   return (
