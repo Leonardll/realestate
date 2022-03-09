@@ -49,7 +49,7 @@ const myLoader2 = ({ src, width, quality }) => {
 
 
 
-export default function Home({data,propertyForRent, propertyForSale}) {
+export default function Home({data}) {
 const { 
   results: {
   client: {
@@ -88,20 +88,6 @@ const {
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" 
       />
       </div>
-      <div className="section d-flex">
-        <div className="row">
-
-        {/* <Property secondhandListing={secondhandListing}/> */}
-        </div>
-      </div>
-       <div className="section d-flex">
-        <div className="row justify-items-center"> 
-        
-        
-      
-        </div>
-      </div> 
-     
      <div className="section d-flex">
 
       <Banner 
@@ -116,12 +102,6 @@ const {
       
       </div>
     </div>       
-      <div className="section d-flex flex-wrap">
-        <div className="row justify-items-center">
-        {secondhandListing.property.map((property => <Property property={property} loader={myLoader} key={property.reference}/>))}
-   
-        </div>
-      </div>
     <Team />
     <Contact />
       </div>
