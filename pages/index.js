@@ -84,7 +84,7 @@ console.log('index page results',secondhandListing);
       desc1="Explore Apartments, Villas, Homes"
       desc2="and more"
       buttonText="Explore Renting"
-      linkName="/search?purpose=for-rent"
+      linkName="/search?operationType=rent"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" 
       />
       </div>
@@ -111,7 +111,7 @@ console.log('index page results',secondhandListing);
       desc1="Explore Apartments, Villas, Homes"
       desc2="and more"
       buttonText="Explore Buying"
-      linkName="/search?purpose=for-sale"
+      linkName="/search?operationType=sale"
       imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"/>
       
       </div>

@@ -136,7 +136,7 @@ const Navbar = () => {
                 >
                   <Link
                     
-                    href="/search?purpose=for-rent"
+                    href="/search?operationType=rent"
                     className="dropdown-item"
                   >
                     <a 
@@ -145,7 +145,7 @@ const Navbar = () => {
                   </Link>
                   <Link
                   
-                    href="/search?purpose=for-sale"
+                    href="/search?operationType=sale"
                     className="dropdown-item"
                     spy={true}
                     smooth={true}
