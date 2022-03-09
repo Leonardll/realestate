@@ -5,16 +5,16 @@ import {BsFilter} from 'react-icons/bs'
 import Property from '../components/property'
 import SearchFilters from "../components/SearchFilters";
 import noresult from '../assets/images/noresult.svg'
-import { baseUrl, fetchApi } from "../utils/fetchApi";
+import { baseUrl, getProperties } from "../utils/fetchApi";
  const Search = ({ properties}) => {
-  //console.log(properties)
+  console.log(properties)
   const [searchFilters, setsearchFilters] = useState(false);
   const router = useRouter();
 
   
     return (
         <div className="container">
-            {/* <div 
+         <div 
             className="d-flex align-items-center fs-2 border-bottom-2 justify-content-center " 
             cursor="pointer"
             onClick={() => setsearchFilters((prevFilters) => !prevFilters) }>
@@ -22,7 +22,7 @@ import { baseUrl, fetchApi } from "../utils/fetchApi";
             <BsFilter className="ps-1 " />
             </div>
             {searchFilters && <SearchFilters />}
-            <p className="fs-1 p-3">Properties {router.query.purpose} </p>
+            <p className="fs-1 p-3">Properties {router.query.operationType} </p>
             <div className="d-flex flex-wrap">
                 {properties.map((property) => <Property property={property} key={property.id} />)}
             </div>
@@ -30,7 +30,7 @@ import { baseUrl, fetchApi } from "../utils/fetchApi";
                <div className="d-flex flex-col my-3 justify-content-center alig-items-center">
                    <Image alt="no result" src={noresult}/>
                </div> 
-            )} */}
+            )} 
         </div>
     );
 };
@@ -38,22 +38,22 @@ import { baseUrl, fetchApi } from "../utils/fetchApi";
 
 export async function getServerSideProps({query}) {
 const  operationType = query.operationType  || 'rent';  
-const  rentFrequency = query.rentFrequency  || 'yearly';  
-const  minPrice = query.minPrice  || '0';  
-const  maxPrice = query.maxPrice  || '1000000';  
-const  roomsMin = query.roomsMin  || '0';  
-const  bathsMin = query.bathsMin  || '0';  
-const  sort = query.sort  || 'price-desc';  
-const  areaMax = query.areaMax  || '35000';  
-const  locationExternalIDs = query.locationExternalIDs  || '5002';  
-const  categoryExternalID= query.categoryExternalID  || '4';  
+// const  rentFrequency = query.rentFrequency  || 'yearly';  
+// const  minPrice = query.minPrice  || '0';  
+// const  maxPrice = query.maxPrice  || '1000000';  
+// const  roomsMin = query.roomsMin  || '0';  
+// const  bathsMin = query.bathsMin  || '0';  
+// const  sort = query.sort  || 'price-desc';  
+// const  areaMax = query.areaMax  || '35000';  
+// const  locationExternalIDs = query.locationExternalIDs  || '5002';  
+// const  categoryExternalID= query.categoryExternalID  || '4';  
 
 
-const data = await fetchApi(`${baseUrl}/api/properties/operationType?=${operationType}`);
-  console.log("data", data)
+const data = await getProperties(`${baseUrl}/api/properties/${operationType}?`);
+  
 return {
       props: {
-        properties : data?.hits,
+        properties : data,
         
       }
     }

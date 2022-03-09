@@ -1,11 +1,11 @@
 export const filterData = [
     {
       items: [
-        { name: 'Buy', value: 'for-sale' },
-        { name: 'Rent', value: 'for-rent' },
+        { name: 'Buy', value: 'sale' },
+        { name: 'Rent', value: 'rent' },
       ],
-      placeholder: 'Purpose',
-      queryName: 'purpose',
+      placeholder: 'Operation Type',
+      queryName: 'operationType',
     },
     {
       items: [
@@ -136,7 +136,7 @@ export const filterData = [
   
   export const getFilterValues = (filterValues) => {
     const {
-      purpose,
+      operationType,
       rentFrequency,
       categoryExternalID,
       minPrice,
@@ -150,8 +150,8 @@ export const filterData = [
   
     const values = [
       {
-        name: 'purpose',
-        value: purpose,
+        name: 'operationType',
+        value: operationType,
       },
       {
         name: 'rentFrequency',
