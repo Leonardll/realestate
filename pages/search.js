@@ -14,7 +14,7 @@ import { baseUrl, fetchApi } from "../utils/fetchApi";
   
     return (
         <div className="container">
-            <div 
+            {/* <div 
             className="d-flex align-items-center fs-2 border-bottom-2 justify-content-center " 
             cursor="pointer"
             onClick={() => setsearchFilters((prevFilters) => !prevFilters) }>
@@ -30,14 +30,14 @@ import { baseUrl, fetchApi } from "../utils/fetchApi";
                <div className="d-flex flex-col my-3 justify-content-center alig-items-center">
                    <Image alt="no result" src={noresult}/>
                </div> 
-            )}
+            )} */}
         </div>
     );
 };
 
 
 export async function getServerSideProps({query}) {
-const  purpose = query.purpose  || 'for-rent';  
+const  operationType = query.operationType  || 'rent';  
 const  rentFrequency = query.rentFrequency  || 'yearly';  
 const  minPrice = query.minPrice  || '0';  
 const  maxPrice = query.maxPrice  || '1000000';  
@@ -49,8 +49,8 @@ const  locationExternalIDs = query.locationExternalIDs  || '5002';
 const  categoryExternalID= query.categoryExternalID  || '4';  
 
 
-const data = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
-    //console.log("data", data)
+const data = await fetchApi(`${baseUrl}/api/properties/operationType?=${operationType}`);
+  console.log("data", data)
 return {
       props: {
         properties : data?.hits,
@@ -61,3 +61,4 @@ return {
   }
   
 export default Search;
+//&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}
