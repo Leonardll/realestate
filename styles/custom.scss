@@ -120,6 +120,12 @@ main {
     border-color:#5ab4ab;
     transition: 2s;
   }
+  &:focus {
+      color: #fff;
+      background-color: #5AB48E;
+      border-color: #5ab4ab;
+      box-shadow: 0 0 0 0.25rem rgba(90, 180, 171, .5 );
+  }
 }
 
 .btn-info {
