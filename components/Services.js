@@ -3,7 +3,15 @@ import Image from 'next/image'
 import React from 'react'
 import Hands from '../assets/images/DSC_8081.jpg'
 import House from '../assets/images/casa.jpg'
+
+
 export const Services = () => {
+    const myLoader = ({ src, width, quality }) => {
+        return `${src}?w=${width}&q=${
+          quality || 75
+        }`;
+    }
+
   return (
       <div className='section my-5'>
           <div className="mt-3 d-flex justify-content-center">
@@ -13,7 +21,8 @@ export const Services = () => {
     <div className="col-12 col-md-6 p-5">
         <Image 
         className='card-img-top img-fluid'
-        src={Hands} 
+        src={Hands}
+        loader={myLoader} 
         layout='responsive'
         fill='cover' 
         height={300} 
@@ -27,6 +36,7 @@ export const Services = () => {
     <Image 
         className='card-img-top img-fluid'
         src={House} 
+        loader={myLoader}
         layout='responsive'
         fill='cover' 
         height={300} 
