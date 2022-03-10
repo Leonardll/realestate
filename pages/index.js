@@ -34,16 +34,16 @@ const myLoader2 = ({ src, width, quality }) => {
     alt='banner'
     loader={myLoader} />
     </div>
+    <Link href={linkName} passHref>
     <div className="col-lg-4 p-3 text-center text-lg-start border-0">
       <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
       <p className="lead">{title1}<br /> {title2}</p>
       <p className="lead">{desc1}</p>
-        <Link href={linkName} passHref>
       <button className="btn btn-primary btn-xl w-100">
-          <a>{buttonText}</a>
+          {buttonText}
       </button>
-        </Link>
     </div>
+    </Link>
   </div>
   )
 };
