@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import Bell from '../assets/images/bell.jpg'
+import Hands from '../assets/images/DSC_8081.jpg'
 import House from '../assets/images/casa.jpg'
 export const Services = () => {
   return (
@@ -13,7 +13,7 @@ export const Services = () => {
     <div className="col-12 col-md-6 p-5">
         <Image 
         className='card-img-top img-fluid'
-        src={Bell} 
+        src={Hands} 
         layout='responsive'
         fill='cover' 
         height={300} 

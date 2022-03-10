@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im"
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Logo from "../assets/images/logo1.svg";
+import Logo from "../assets/images/UnicoHogarTrs.png";
 
 const Navbar = () => {
   const [collapse, setcollapse] = useState(true);
@@ -33,15 +33,14 @@ const Navbar = () => {
       >
         <div className="container-fluid">
           <Link href="/" passHref>
-          <a className="navbar-brand" >
+          <a className="navbar-brand fs-1" >
             <Image
-              fill="dark"
               priority
               //loader={myLoader}
               className="d-inline-block align-text-top me-1 img-fluid"
               src={Logo}
-              width={90}
-              height={40}
+              width={70}
+              height={25}
               layout="responsive"
               alt="..."
               />
@@ -67,7 +66,7 @@ const Navbar = () => {
             
             className={
               collapse
-                ? "collapse navbar-collapse mt-5"
+                ? "collapse navbar-collapse"
                 : " navbar-collapse collapse show mt-1"
             }
             id="navbarResponsive"
