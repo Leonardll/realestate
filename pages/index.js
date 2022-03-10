@@ -39,8 +39,11 @@ const myLoader2 = ({ src, width, quality }) => {
       <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
       <p className="lead">{title1}<br /> {title2}</p>
       <p className="lead">{desc1}</p>
-      <button className="btn btn-primary btn-xl w-100">
-          {buttonText}
+          
+      <button className="btn link btn-primary btn-xl w-100">
+      <Link href={linkName} passHref >
+         <a> {buttonText}</a>
+      </Link>
       </button>
     </div>
     </Link>
