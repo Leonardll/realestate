@@ -109,22 +109,21 @@ export const ContactForm  =  () => {
               <a className="btn btn rounded-pill btn-info accent-1">
                 <FaMapMarkerAlt fill="white" />
               </a>
-              <p>New York, 94126</p>
-              <p className="mb-md-0">United States</p>
+              <p>Barcelona</p>
+              <p className="mb-md-0">Spain</p>
             </div>
             <div className="col-md-4">
               <a className="btn rounded-pill btn-info accent-1">
                 <FaPhone fill="white" />
               </a>
-              <p>+ 01 234 567 89</p>
+              <p>+ 34 606 279 778</p>
               <p className="mb-md-0">Mon - Fri, 8:00-22:00</p>
             </div>
             <div className="col-md-4">
               <a className="btn rounded-pill btn-info accent-1">
                 <FaEnvelope fill="white" />
               </a>
-              <p>info@gmail.com</p>
-              <p className="mb-0">sale@gmail.com</p>
+              <p>info@unicohogar.com</p>
             </div>
           </div>
         </div>

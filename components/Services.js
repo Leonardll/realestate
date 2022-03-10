@@ -28,11 +28,11 @@ export const Services = () => {
         height={300} 
         width={500} 
         alt='bell' />
-     <div className="p-3 border bg-light">
+     <div className="p-3 border">
          <h3>Conciergerie</h3>
     </div>
     </div>
-    <div className="col-12 col-md-6  p-5">
+    <div className="col-12 col-md-6 p-5">
     <Image 
         className='card-img-top img-fluid'
         src={House} 
@@ -42,7 +42,7 @@ export const Services = () => {
         height={300} 
         width={500} 
         alt='bell' />
-      <div className="p-3 border bg-light">
+      <div className="p-3 border">
           <h3>Real Estate</h3>
       </div>
       <div className="card-text">
