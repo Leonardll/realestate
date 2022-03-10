@@ -24,7 +24,7 @@ const myLoader2 = ({ src, width, quality }) => {
 
  const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
   return (
-  <div className='row flex-lg-row-reverse align-items-center g-5  justify-content-center'>
+  <div className='row flex-lg-row-reverse align-items-center   justify-content-center'>
     <div className=" col-10 col-sm-8 col-lg-6">  
     <Image 
     className='d-block img-fluid mx-lg-auto' 
@@ -77,7 +77,7 @@ const {
       
   
 
-    <div className='section d-flex justify-content-center my-5'>
+    <div className='section d-flex justify-content-center '>
     <h1 className='my-5' id="#scrollspyHeading2">Properties</h1>
     </div>
     <div 
