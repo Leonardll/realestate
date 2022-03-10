@@ -1,7 +1,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import Hands from '../assets/images/DSC_8081.jpg'
+import Hands from '../assets/images/DSC_8081.JPG'
 import House from '../assets/images/casa.jpg'
 
 
