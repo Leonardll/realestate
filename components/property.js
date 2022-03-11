@@ -46,7 +46,7 @@ const Property = ({
           </div>
         </div>
 
-        <div className="d-flex align-items-centter justify-content-between">
+        <div className="d-flex align-items-center justify-content-between">
           <span>
             {features.bedrooms}{" "}
             <i>

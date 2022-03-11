@@ -22,8 +22,8 @@ const PropertyDetails = ({
   return (
     <div className=" section m-auto p-3">
       {images && <ImageScrollbar data={images} />}
-      <div className="w-100">
-        <div className="d-flex pt-1 align-items-center">
+      <div className="w-100 ">
+        <div className="d-flex pt-1 align-items-center align-content-end">
           <div className="pe-2 text-success">
             {/* {isVerified && <GoVerified />} */}
           </div>
