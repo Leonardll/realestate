@@ -71,7 +71,7 @@ const Navbar = () => {
             }
             id="navbarResponsive"
           >
-            <ul className="navbar-nav text-uppercase ms-auto mt-1 py-4 py-lg-0">
+            <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
               <Link
                 href="/"
                 passHref
