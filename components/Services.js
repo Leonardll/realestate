@@ -29,8 +29,8 @@ export const Services = () => {
         height={300} 
         width={500} 
         alt='bell' />
-     <div className="p-3 border">
-         <h3>Conciergerie</h3>
+     <div className="p-3 border text-capitalize">
+         <h3>conciergerie</h3>
     </div>
     </div>
     <div className="col-12 col-md-6 p-3">
@@ -44,8 +44,8 @@ export const Services = () => {
         height={300} 
         width={500} 
         alt='bell' />
-      <div className="p-3 border">
-          <h3>Real Estate</h3>
+      <div className="p-3 border text-capitalize">
+          <h3>real estate</h3>
       </div>
       <div className="card-text">
           
