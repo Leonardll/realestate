@@ -5,7 +5,7 @@ import  InputGroup  from "react-bootstrap/InputGroup";
 import { FormControl  } from "react-bootstrap";
 export const FormCard = ({AiFillMail,inputData,handleSubmit}) => (
  
-    <div className="col-lg-5 mb-lg-0 mb-4 w-auto">
+    <div className="col-lg-5 mb-lg-0 m-4 w-auto">
           <div className="card">
             <div className="card-body">
               <div className="d-flex align-items-center justify-content-center form-header text-center accent-1">

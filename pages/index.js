@@ -82,7 +82,7 @@ const {
     </div>
     <div 
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
-      <div className='section d-flex'>
+      <div className='section d-flex my-2'>
       <Banner
            
       purpose="Rent a Home"

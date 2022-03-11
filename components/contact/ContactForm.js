@@ -91,7 +91,10 @@ export const ContactForm  =  () => {
 
   return (
     <div className="container" id="contact">
-      <div className="row mt-3 justify-content-center">
+      <div className=" d-flex flex-wrap justify-content-center mt-2">
+        <h1 className="font-weight-bold text-center my-3">Contact</h1>
+      </div>
+      <div className="row p-3 justify-content-center">
         <FormCard
           AiFillMail={AiFillMail}
           inputData={inputData}

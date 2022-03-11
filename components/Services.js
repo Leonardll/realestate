@@ -13,8 +13,8 @@ export const Services = () => {
     }
 
   return (
-      <div className='section my-3'>
-          <div className="mt-3 d-flex justify-content-center">
+      <div className='section my-2'>
+          <div className="mt-2 d-flex justify-content-center">
               <h1 className="my-3" id="services">Services</h1>
           </div>
     <div className="row d-flex justify-content-between">
