@@ -13,11 +13,11 @@ export const Services = () => {
     }
 
   return (
-      <div className='section my-5'>
+      <div className='section my-3'>
           <div className="mt-3 d-flex justify-content-center">
-              <h1 className="my-5" id="services">Services</h1>
+              <h1 className="my-3" id="services">Services</h1>
           </div>
-    <div className="row gx-5 d-flex justify-content-between">
+    <div className="row d-flex justify-content-between">
     <div className="col-12 col-md-6 p-5">
         <Image 
         className='card-img-top img-fluid'
