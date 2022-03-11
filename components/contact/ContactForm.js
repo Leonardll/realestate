@@ -96,7 +96,7 @@ export const ContactForm  =  () => {
           AiFillMail={AiFillMail}
           inputData={inputData}
           handleSubmit={handleSubmit} />
-        <div className="col-lg-7 p-5">
+        <div className="col-lg-7 p-3">
           <div
             id="map-container-section"
             className="z-depth-1-half map-container-section mb-4"
