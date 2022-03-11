@@ -40,7 +40,9 @@ main {
   // }
   // }
 .navbar {
-
+  .navbar-collapse {
+    align-items: center;
+  }
   .navbar-nav {
     .nav-link {
       color: #5AB48E !important;
@@ -94,6 +96,7 @@ main {
   position: relative;
   left: 0;
   top:0;
+  //opacity: .75;
 }
 .fixed-bottom {
   bottom: 3em;
