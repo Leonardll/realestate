@@ -86,8 +86,8 @@ const {
       <Banner
            
       purpose="Rent a Home"
-      title1="Rental Homes for"
-      title2="Everyone"
+      title1="Rental Homes"
+      title2=" For Everyone"
       desc1="Explore Apartments, Villas, Homes"
       desc2="and more"
       buttonText="Explore Renting"
