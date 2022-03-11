@@ -67,7 +67,7 @@ const Navbar = () => {
             className={
               collapse
                 ? "collapse navbar-collapse"
-                : " navbar-collapse collapse show mt-1"
+                : " navbar-collapse collapse show"
             }
             id="navbarResponsive"
           >
