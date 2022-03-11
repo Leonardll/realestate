@@ -21,7 +21,7 @@ export const Team = () => {
       width={250} 
       alt="..." 
       objectFit='cover'
-      className="card-img-top img-fluid mx-auto rounded-circle "
+      className="card-img-top img-fluid mx-auto "
       />
       
         <h4>Emmanuele Morin</h4>
@@ -39,7 +39,7 @@ export const Team = () => {
       height={300} 
       width={250} 
       alt="..."
-      className="card-img-top img-fluid mx-auto rounded-circle"
+      className="card-img-top img-fluid mx-auto"
        />
       
         <h4>Cristian Arcas</h4>
