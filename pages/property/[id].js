@@ -27,7 +27,7 @@ const PropertyDetails = ({
           <div className="pe-2 text-success">
             {/* {isVerified && <GoVerified />} */}
           </div>
-          <p className="card-text fs-6 pt-1 fw-bold">
+          <p className="card-text fs-6 pt-1 fw-bold d-flex">
             EUR {millify(operation.price)}
           </p>
           <div className="ps-5 d-flex flex-end">

@@ -33,7 +33,7 @@ const Property = ({
               EUR {millify(operation.price)}
             </p>
           </div>
-          <div className="ps-5 d-flex">
+          <div className="ps-5 d-flex flex-end">
             <span>
               <Image
                 className="rounded-circle img-fluid"
