@@ -83,7 +83,7 @@ const Navbar = () => {
               >
                 <a 
                 onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link">Home</a>
+                className="nav-link rounded">Home</a>
               </Link>
               <Link
                 href="/#services"
@@ -96,14 +96,14 @@ const Navbar = () => {
               >
                 <a 
                 onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link">Services</a>
+                className="nav-link rounded">Services</a>
               </Link>
               <Link 
               href="/search" 
               className="nav-item">
                 <a 
                 onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link">Search</a>
+                className="nav-link rounded">Search</a>
               </Link>
               <li className="nav-item dropdown">
                 <Link
@@ -116,7 +116,7 @@ const Navbar = () => {
                   <a
                    
                     onClick={() => setShow(!show)}
-                    className="nav-link dropdown-toggle  dropdown-toggle-split"
+                    className="nav-link rounded dropdown-toggle  dropdown-toggle-split"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                     id="navbarDropdow"
@@ -140,7 +140,7 @@ const Navbar = () => {
                   >
                     <a 
                     onClick={ () => { setcollapse(!collapse) } }
-                    className="nav-link">Rent Property</a>
+                    className="nav-link rounded">Rent Property</a>
                   </Link>
                   <Link
                   
@@ -153,7 +153,7 @@ const Navbar = () => {
                   >
                     <a 
                     onClick={ () => { setcollapse(!collapse) } }
-                    className="nav-link">Buy Property</a>
+                    className="nav-link rounded">Buy Property</a>
                   </Link>
                 </ul>
               </li>
@@ -169,7 +169,7 @@ const Navbar = () => {
               >
                 <a 
                 onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link">Team</a>
+                className="nav-link rounded">Team</a>
               </Link>
               <Link 
              
@@ -183,7 +183,7 @@ const Navbar = () => {
               >
                 <a 
                 onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link">Contact</a>
+                className="nav-link rounded">Contact</a>
               </Link>
             </ul>
           </div>
