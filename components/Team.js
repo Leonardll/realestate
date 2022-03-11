@@ -12,7 +12,7 @@ export const Team = () => {
         <div className=' d-flex justify-content-center'>
         <h1 className='my-2' id="team">Team</h1>
        </div>   
-  <div className="row g-4 d-flex justify-content-evenly">
+  <div className="row g-4 d-flex justify-content-evenly p-3">
       <div className="col-lg-4 d-flex justify-content-center">                                                                                                                                                                             
     <div className="h-100 text-center">
       <Image 
