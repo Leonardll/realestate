@@ -18,7 +18,7 @@ export const Services = () => {
               <h1 className="my-3" id="services">Services</h1>
           </div>
     <div className="row d-flex justify-content-between">
-    <div className="col-12 col-md-6 p-5">
+    <div className="col-12 col-md-6 p-3">
         <Image 
         className='card-img-top img-fluid'
         src={Hands}
@@ -33,7 +33,7 @@ export const Services = () => {
          <h3>Conciergerie</h3>
     </div>
     </div>
-    <div className="col-12 col-md-6 p-5">
+    <div className="col-12 col-md-6 p-3">
     <Image 
         className='card-img-top img-fluid'
         src={Boxman} 

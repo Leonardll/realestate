@@ -91,12 +91,12 @@ export const ContactForm  =  () => {
 
   return (
     <div className="container" id="contact">
-      <div className="row justify-content-center">
+      <div className="row mt-3 justify-content-center">
         <FormCard
           AiFillMail={AiFillMail}
           inputData={inputData}
           handleSubmit={handleSubmit} />
-        <div className="col-lg-7">
+        <div className="col-lg-7 p-5">
           <div
             id="map-container-section"
             className="z-depth-1-half map-container-section mb-4"

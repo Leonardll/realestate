@@ -78,7 +78,7 @@ const {
   
 
     <div className='section d-flex justify-content-center '>
-    <h1 className='my-5' id="#scrollspyHeading2">Properties</h1>
+    <h1 className='my-3' id="#scrollspyHeading2">Properties</h1>
     </div>
     <div 
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">

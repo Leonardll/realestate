@@ -24,7 +24,7 @@ const Property = ({
       {Object.keys(descriptions.description[0]).map(key => console.log( (key ==='language' ? key + descriptions.description[0][key] : '' )))}
 
       <div className="card-body">
-        <div className="d-flex justify-content-between pt-2">
+        <div className="d-flex justify-content-between pt-3">
           <div className="d-flex align-items-center align-content-end">
             <div className="card-text text-success pe-1">
               {/* {isVerified && <GoVerified />} */}

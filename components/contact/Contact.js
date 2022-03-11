@@ -7,7 +7,7 @@ import { ContactForm } from "./ContactForm";
 export const Contact = () => (
   
     <div className="section my-3">
-      <div className=" d-flex flex-wrap justify-content-center">
+      <div className=" d-flex flex-wrap justify-content-center mt-3">
         <h1 className="font-weight-bold text-center my-3">Contact</h1>
       </div>
       <ContactForm />
