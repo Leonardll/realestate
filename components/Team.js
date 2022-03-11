@@ -14,13 +14,14 @@ export const Team = () => {
        </div>   
   <div className="row g-4 d-flex justify-content-evenly">
       <div className="col-lg-4 d-flex justify-content-center">                                                                                                                                                                             
-    <div className="h-100">
+    <div className="h-100 text-center">
       <Image 
       src={Manu} 
       height={300} 
       width={250} 
       alt="..." 
-      className="card-img-top img-fluid mx-auto "
+      objectFit='cover'
+      className="card-img-top img-fluid mx-auto rounded-circle "
       />
       
         <h4>Emmanuel Morin</h4>
@@ -31,11 +32,15 @@ export const Team = () => {
     
   
       <div className="col-lg-4 d-flex justify-content-center">                                                                                                                                                                             
-    <div className="h-100 d-block">
+    <div className="h-100 text-center">
       <Image 
       src={Cris} 
-      
-      className="card-img-top img-fluid mx-auto " height={300} width={250} alt="..." />
+      objectFit='cover'
+      height={300} 
+      width={250} 
+      alt="..."
+      className="card-img-top img-fluid mx-auto rounded-circle"
+       />
       
         <h4>Cristian Arcas</h4>
         <p className="text-mute text-center"></p>
