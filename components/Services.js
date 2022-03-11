@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Hands from '../assets/images/DSC_8081.JPG'
-import House from '../assets/images/casa.jpg'
+import Boxman from '../assets/images/DSC_8155.jpg'
 
 
 export const Services = () => {
@@ -24,6 +24,7 @@ export const Services = () => {
         src={Hands}
         loader={myLoader} 
         layout='responsive'
+        objectFit='cover'
         fill='cover' 
         height={300} 
         width={500} 
@@ -35,10 +36,11 @@ export const Services = () => {
     <div className="col-12 col-md-6 p-5">
     <Image 
         className='card-img-top img-fluid'
-        src={House} 
+        src={Boxman} 
         loader={myLoader}
         layout='responsive'
-        fill='cover' 
+        objectFit='cover'
+        //fill='cover' 
         height={300} 
         width={500} 
         alt='bell' />
