@@ -34,11 +34,13 @@ main {
   }
   .navbar-nav {
     .nav-link {
-      color: #5ab4ab ;
+      color: #5ab4ab;
+      
     }
     
     .nav-link:hover {
       color: #245564 ;
+      transition: 2s;
       a:hover {
         color: #e9ecef;
         transition: 2s;
@@ -48,11 +50,25 @@ main {
     .dropdown-menu {
       position: absolute;
       /* z-index: -66; */
-      //right:0 ;
+      right:13px ;
       top: 33px;
       left: 0;
       background-color: #f9fafb;
       border: none;
+      .nav-link {
+          color:#5ab4ab;
+
+          &:hover {
+            color: #245564 ;
+            transition: 2s;
+          }
+
+          &:focus {
+            color: #245564 ;
+            transition: 2s;
+          }
+
+      }
     }
   }
 
@@ -139,10 +155,11 @@ main {
     transition: 2s;
   }
   &:focus {
-      color: #fff;
-      background-color: #245564;
-      border-color: #5ab4ab;
-      box-shadow: 0 0 0 0.25rem rgba(90, 180, 171, .5 );
+    color: #fff;
+    background-color: #245564;
+    border-color: #5ab4ab;
+    box-shadow: 0 0 0 0.25rem rgba(90, 180, 171, .5 );
+    transition: 2s;
   }
 }
 
@@ -209,13 +226,33 @@ main {
     .nav-link:hover {
       color:#245564 ;
       transition: 2s;
-    
+      :focus {
+        color: #245564 ;
+        transition: 2s;
+      
+      }
     }
     .dropdown-menu {
       position: absolute;
       /* z-index: -66; */
-      //right:0 ;
+      right:13px ;
       top: 33px;
+      left: 0;
+    background-color: white;
+    border: none;
+    .nav-link {
+      color:#5ab4ab;
+
+      &:hover {
+        color: #245564 ;
+        transition: 2s;
+      }
+      &:focus {
+        color: #245564 ;
+        transition: 2s;
+      
+      }
+    }
     }
     }
     }
@@ -229,8 +266,14 @@ main {
 
   .navbar-light {
     .navbar-nav {
-    .nav-link:hover {
+    .nav-link:hover  {
       color: #245564 ;
+      transition: 2s;
+    
+    }
+    &:focus {
+      color: #245564 ;
+      transition: 2s;
     
     }
   .dropdown-menu {
@@ -241,6 +284,19 @@ main {
     left: 0;
     background-color: transparent;
     border: none;
+    .nav-link {
+      color:#5ab4ab;
+
+      &:hover {
+        color: #245564 ;
+        transition: 2s;
+      }
+      &:focus {
+        color: #245564 ;
+        transition: 2s;
+      
+      }
+    }
 }
 } 
 }
