@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <div className="container-fluid">
       <nav
-        className={!active ? "navbar active navbar-expand-md navbar-light bg-transp shadow-sm fixed-top" : "navbar shadow-sm navbar-expand-md navbar-light bg-light  fixed-top"}
+        className={!active ? "navbar active navbar-expand-md navbar-light bg-transp fixed-top" : "navbar navbar-expand-md navbar-light bg-white fixed-top"}
         id="mainNav"
       >
         <div className="container-fluid">
