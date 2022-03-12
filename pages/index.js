@@ -78,11 +78,11 @@ const {
   
 
     <div className='section d-flex justify-content-center '>
-    <h1 className='my-3' id="#scrollspyHeading2">Properties</h1>
+    <h1 className='my-3 fw-bold' id="#scrollspyHeading2">Properties</h1>
     </div>
     <div 
     className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
-      <div className='section d-flex my-2'>
+      <div className='section d-flex my-3'>
       <Banner
            
       purpose="Rent a Home"
