@@ -54,7 +54,7 @@ const  operationType = query.operationType  || 'rent';
 // const  categoryExternalID= query.categoryExternalID  || '4';  
 
 
-const data = await getProperties(`${baseUrl}/api/properties/${operationType}`);
+const data = await getProperties(`${baseUrl}/api/properties/operation/${operationType}`);
   
 return {
       props: {
