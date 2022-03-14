@@ -7,7 +7,7 @@ import SearchFilters from "../components/SearchFilters";
 import noresult from '../assets/images/noresult.svg'
 import { baseUrl, getProperties } from "../utils/fetchApi";
  const Search = ({ properties}) => {
-  //console.log(properties)
+  console.log(properties)
   const [searchFilters, setsearchFilters] = useState(false);
   const router = useRouter();
   
@@ -27,7 +27,7 @@ import { baseUrl, getProperties } from "../utils/fetchApi";
             <BsFilter className="ps-1 " />
             </div>
             {searchFilters && <SearchFilters />}
-            <p className="fs-1 p-3">Properties for {router.query.operationType} </p>
+            <p className="fs-1 p-3">Properties {` for ${router.query.operationType } `} </p>
             <div className="d-flex flex-wrap">
                 {properties.map((property) => <Property property={property} key={property.id} loader={myLoader} />)}
             </div>
@@ -54,7 +54,7 @@ const  operationType = query.operationType  || 'rent';
 // const  categoryExternalID= query.categoryExternalID  || '4';  
 
 
-const data = await getProperties(`${baseUrl}/api/properties/${operationType}?`);
+const data = await getProperties(`${baseUrl}/api/properties/${operationType}`);
   
 return {
       props: {

@@ -99,7 +99,7 @@ const Navbar = () => {
                 className="nav-link rounded">Services</a>
               </Link>
               <Link 
-              href="/search" 
+              href="/search?operationType=rent" 
               className="nav-item">
                 <a 
                 onClick={ () => { setcollapse(!collapse) } }
