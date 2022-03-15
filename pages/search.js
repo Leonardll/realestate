@@ -4,7 +4,7 @@ import { useState } from "react";
 import {BsFilter} from 'react-icons/bs'
 import Property from '../components/property'
 import SearchFilters from "../components/SearchFilters";
-import noresult from '../assets/images/noresult.svg'
+import Noresult from '../assets/images/noresult.svg'
 import { baseUrl, getDetails,fetchApi } from "../utils/fetchApi";
  const Search = ({ properties}) => {
   console.log('search page',properties)
@@ -29,11 +29,12 @@ import { baseUrl, getDetails,fetchApi } from "../utils/fetchApi";
             {searchFilters && <SearchFilters />}
             <p className="fs-1 p-3">Properties {` for ${router.query.operationType }`} </p>
             <div className="d-flex flex-wrap">
-                { properties.filteredProp.map((property) => <Property property={property} key={property.id} loader={myLoader} />)}
+                { properties.filteredProp && properties.filteredProp.map((property) => <Property property={property} key={property.id} loader={myLoader} />)}
             </div>
-            {properties.filteredProp.length === 0 && (
+            {properties.filteredProp === undefined && (
                <div className="d-flex flex-col my-3 justify-content-center alig-items-center">
-                   <Image alt="no result" src={noresult}/>
+                   <Image alt="no result" src={Noresult}/>
+                   <p className="fs-2 mt-3">No result Found</p>
                </div> 
             )} 
         </div>
