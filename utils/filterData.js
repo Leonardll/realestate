@@ -119,9 +119,9 @@ export const filterData = [
     },
     {
       items: [
-        { name: 'Apartment', value: '4' },
-        { name: 'Townhouses', value: '16' },
-        { name: 'Villas', value: '3' },
+        { name: 'flat', value: 'flat' },
+        { name: 'Townhouses', value: 'townhouses' },
+        { name: 'Garage', value: 'garage' },
         { name: 'Penthouses', value: '18' },
         { name: 'Hotel Apartments', value: '21' },
         { name: 'Villa Compound', value: '19' },
@@ -130,7 +130,7 @@ export const filterData = [
         { name: 'Residential Building', value: '17' },
       ],
       placeholder: 'Property Type',
-      queryName: 'categoryExternalID',
+      queryName: 'propertyType',
     },
   ];
   
@@ -138,7 +138,7 @@ export const filterData = [
     const {
       operationType,
       rentFrequency,
-      categoryExternalID,
+      propertyType,
       minPrice,
       maxPrice,
       areaMax,
@@ -186,8 +186,8 @@ export const filterData = [
         value: locationExternalIDs,
       },
       {
-        name: 'categoryExternalID',
-        value: categoryExternalID,
+        name: 'propertyType',
+        value: propertyType,
       },
     ];
   
