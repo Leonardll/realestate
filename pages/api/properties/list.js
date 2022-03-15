@@ -12,7 +12,7 @@ export default function propertyForRentHandler (req,res) {
     results = results.client.secondhandListing.property
 
     const filteredProp = results.filter((property) =>( 
-        operationType || propertyType ? property.operation.$.type === operationType && property.features.$.type === propertyType : null
+        operationType || propertyType ? property.operation.$.type === operationType || property.features.$.type === propertyType : null
         ))
     filteredProp.length > 0 ?  res.status(200).json({filteredProp, nbHits: filteredProp.length}) : res.status(404).json({message: `No property for: ${propertyType
             } at the moment.`

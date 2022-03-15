@@ -27,7 +27,7 @@ import { baseUrl, getDetails,fetchApi } from "../utils/fetchApi";
             <BsFilter className="ps-1 " />
             </div>
             {searchFilters && <SearchFilters />}
-            <p className="fs-1 p-3">Properties {` for ${router.query.operationType } `} </p>
+            <p className="fs-1 p-3">Properties {` for ${router.query.operationType }`} </p>
             <div className="d-flex flex-wrap">
                 { properties.filteredProp.map((property) => <Property property={property} key={property.id} loader={myLoader} />)}
             </div>
