@@ -11,9 +11,10 @@ const Property = ({
   property: { images, id, descriptions, operation, features },
   loader,
 }) => (
+ 
   <Link href={`/property/:[propertyId]`} passHref as={`/property/${id}`}>
     <div className="card m-2" style={{ width: "20rem" }}>
-      <Image
+       <Image
         className="card-img pt-2 img-fluid"
         src={images.image[0].url ? images.image[0].url : defaultImage}
         height={700}
@@ -21,7 +22,8 @@ const Property = ({
         alt=""
         loader={loader}
       />
-      {Object.keys(descriptions.description[0]).map(key => console.log( (key ==='language' ? key + descriptions.description[0][key] : '' )))}
+      { 
+      Object.keys(descriptions.description[0]).map(key => console.log( (key ==='language' ? key + descriptions.description[0][key] : '' )))}
 
       <div className="card-body">
         <div className="d-flex justify-content-between pt-3">
