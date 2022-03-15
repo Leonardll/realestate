@@ -19,11 +19,10 @@ export default function propertyForRentHandler (req,res) {
         }
         if (propertyType) {
         }
-        return property.features.$.type === propertyType || property.operation.$.type === operationType
+        return property.features.$.type === propertyType && property.operation.$.type === operationType
       
     })
-    filteredProp.length > 0 ?  res.status(200).json({filteredProp, nbHits: filteredProp.length}) : res.status(404).json({message: `No property for: ${propertyType
-            } at the moment.`
+    filteredProp.length > 0 ?  res.status(200).json({filteredProp, nbHits: filteredProp.length}) : res.status(404).json({message: `No ${propertyType ? propertyType : 'property'} for: ${operationType} at the moment.`
         })
     })
 }
