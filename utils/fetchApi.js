@@ -15,6 +15,7 @@
 export const getDetails = async(baseUrl) => {
     const res = await fetch(baseUrl)
     const data  = await res.json()
+    
     return data
     
 };

@@ -94,7 +94,7 @@ export default PropertyDetails;
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  const data = await getDetails(`${baseUrl}/api/property/${id}`);
+  const data = await getDetails(`${baseUrl}/api/properties/details/${id}`);
   console.log(id);
   return {
     props: {
