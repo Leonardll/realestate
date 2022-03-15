@@ -119,7 +119,7 @@ export const filterData = [
     },
     {
       items: [
-        { name: 'flat', value: 'flat' },
+        { name: 'Flat', value: 'flat' },
         { name: 'Townhouses', value: 'townhouses' },
         { name: 'Garage', value: 'garage' },
         { name: 'Penthouses', value: '18' },
