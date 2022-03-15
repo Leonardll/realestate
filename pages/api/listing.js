@@ -13,6 +13,7 @@ export default function Propertyhandler(req, res) {
   parser.parseString(data,function (err, results){
 
     results = results.client.secondhandListing.property
+    
     res.status(200).json({results})
   })
 
