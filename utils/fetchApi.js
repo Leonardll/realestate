@@ -1,5 +1,5 @@
 
- export const baseUrl = ' https://realestate-eosin-xi.vercel.app/'
+ export const baseUrl = ' https://realestate-eosin-xi.vercel.app'
 
 
   
