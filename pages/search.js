@@ -29,22 +29,21 @@ import { baseUrl, getDetails,fetchApi } from "../utils/fetchApi";
             {searchFilters && <SearchFilters />}
             <p className="fs-1 p-3">Properties {` for ${router.query.operationType } `} </p>
             <div className="d-flex flex-wrap">
-                {properties.filteredProp.map((property) => <Property property={property} key={property.id} loader={myLoader} />)}
+                { properties.filteredProp.map((property) => <Property property={property} key={property.id} loader={myLoader} />)}
             </div>
-            {properties.length === 0 && (
+            {properties.filteredProp.length === 0 && (
                <div className="d-flex flex-col my-3 justify-content-center alig-items-center">
                    <Image alt="no result" src={noresult}/>
                </div> 
             )} 
         </div>
-        //.map((property) => <Property property={property} key={property.id} loader={myLoader} />)
     );
 };
 
 
 export async function getServerSideProps({query}) {
 const  operationType = query.operationType  || 'rent'; 
-const propertyType = query.propertyType || 'flat' 
+const propertyType = query.propertyType || 'flat';
 // const  rentFrequency = query.rentFrequency  || 'yearly';  
 // const  minPrice = query.minPrice  || '0';  
 // const  maxPrice = query.maxPrice  || '1000000';  
