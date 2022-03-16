@@ -35,7 +35,7 @@ const Navbar = () => {
       >
         <div className="container-fluid">
           <Link href="/" passHref>
-            <a className="navbar-brand fs-1">
+            <a className="navbar-brand display-1">
               <Image
                 priority
                 //loader={myLoader}
@@ -71,12 +71,12 @@ const Navbar = () => {
           <div
             className={
               collapse
-                ? "collapse navbar-collapse"
-                : " navbar-collapse collapse show"
+                ? "collapse navbar-collapse mb-2"
+                : "navbar-collapse collapse show mb-2"
             }
             id="navbarResponsive"
           >
-            <ul className="navbar-nav align-items-center text-uppercase ms-auto">
+            <ul className="navbar-nav align-items-center text-capitalize ms-auto">
               <Link
                 href="/"
                 passHref

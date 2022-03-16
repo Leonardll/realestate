@@ -25,7 +25,7 @@ export const Team = () => {
                 className="card-img-top img-fluid mx-auto "
               />
 
-              <h4>Emmanuele Morin</h4>
+              <h4>Emanuele Morin</h4>
               <p className="text-mute"></p>
             </div>
           </div>
