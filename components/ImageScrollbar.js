@@ -18,7 +18,7 @@ const ImageScrollbar = ({ data }) => {
           <Carousel.Item key={item.url}>
             <Image
               loader={myLoader2}
-              className="d-block w-100"
+              className="d-block w-100 img-fluid"
               src={item.url}
               alt="property"
               width='100%'

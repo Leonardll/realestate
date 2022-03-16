@@ -2,7 +2,7 @@ import Link from "next/link";
 // import {FcMenu, FcHome, FcAbout} from' react-icons/fc'
 // import { BsSearch } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
-import { ImCross } from "react-icons/im"
+import { ImCross } from "react-icons/im";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Logo from "../assets/images/UnicoHogarTrs.png";
@@ -10,42 +10,44 @@ import Logo from "../assets/images/UnicoHogarTrs.png";
 const Navbar = () => {
   const [collapse, setcollapse] = useState(true);
   const [show, setShow] = useState(false);
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(false);
   const myLoader = ({ src, width, quality }) => {
     return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
   };
   const changeBackground = () => {
     //console.log(window.scrollY, active);
-      window.scrollY >= 100 ? setActive(true)  : setActive(false)
-    }
+    window.scrollY >= 100 ? setActive(true) : setActive(false);
+  };
   useEffect(() => {
-    
-        window.addEventListener('scroll',changeBackground)
-        return () => window.removeEventListener("scroll", changeBackground);
-      })
-  
-     
+    window.addEventListener("scroll", changeBackground);
+    return () => window.removeEventListener("scroll", changeBackground);
+  });
+
   return (
     <div className="container-fluid">
       <nav
-        className={!active ? "navbar active navbar-expand-md navbar-light bg-transp fixed-top" : "navbar navbar-expand-md navbar-light bg-white fixed-top"}
+        className={
+          !active
+            ? "navbar active navbar-expand-md navbar-light bg-transp fixed-top"
+            : "navbar navbar-expand-md navbar-light bg-white fixed-top"
+        }
         id="mainNav"
       >
         <div className="container-fluid">
           <Link href="/" passHref>
-          <a className="navbar-brand fs-1" >
-            <Image
-              priority
-              //loader={myLoader}
-              className="d-inline-block align-text-top me-1 img-fluid"
-              src={Logo}
-              width={70}
-              height={25}
-              layout="responsive"
-              alt="..."
+            <a className="navbar-brand fs-1">
+              <Image
+                priority
+                //loader={myLoader}
+                className="d-inline-block align-text-top me-1 img-fluid"
+                src={Logo}
+                width={70}
+                height={25}
+                layout="responsive"
+                alt="..."
               />
-          </a>
-            </Link>
+            </a>
+          </Link>
           <button
             onClick={() => setcollapse(!collapse)}
             className={
@@ -57,13 +59,16 @@ const Navbar = () => {
             aria-controls="navbarResponsive"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >{ collapse ?
-            <FaBars className="fas" height={70} width={80}>Menu</FaBars> :
-            <ImCross />
-            }
+          >
+            {collapse ? (
+              <FaBars className="fas" height={70} width={80}>
+                Menu
+              </FaBars>
+            ) : (
+              <ImCross />
+            )}
           </button>
           <div
-            
             className={
               collapse
                 ? "collapse navbar-collapse"
@@ -81,9 +86,14 @@ const Navbar = () => {
                 duration={500}
                 className="nav-item"
               >
-                <a 
-                onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link rounded">Home</a>
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                  Home
+                </a>
               </Link>
               <Link
                 href="/#services"
@@ -94,16 +104,24 @@ const Navbar = () => {
                 duration={500}
                 className="nav-item"
               >
-                <a 
-                onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link rounded">Services</a>
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                  Services
+                </a>
               </Link>
-              <Link 
-              href="/search?operationType=rent" 
-              className="nav-item">
-                <a 
-                onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link rounded">Search</a>
+              <Link href="/search?operationType=rent" className="nav-item">
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                  Search
+                </a>
               </Link>
               <li className="nav-item dropdown">
                 <Link
@@ -114,7 +132,6 @@ const Navbar = () => {
                   duration={500}
                 >
                   <a
-                   
                     onClick={() => setShow(!show)}
                     className="nav-link rounded dropdown-toggle  dropdown-toggle-split"
                     data-bs-toggle="dropdown"
@@ -134,16 +151,19 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <Link
-                    
                     href="/search?operationType=rent"
                     className="dropdown-item"
                   >
-                    <a 
-                    onClick={ () => { setShow(!show) } }
-                    className="nav-link rounded">Rent Property</a>
+                    <a
+                      onClick={() => {
+                        setShow(!show);
+                      }}
+                      className="nav-link rounded"
+                    >
+                      Rent Property
+                    </a>
                   </Link>
                   <Link
-                  
                     href="/search?operationType=sale"
                     className="dropdown-item"
                     spy={true}
@@ -151,39 +171,52 @@ const Navbar = () => {
                     offset={-70}
                     duration={500}
                   >
-                    <a 
-                    onClick={ () => { setShow(!show) } }
-                    className="nav-link rounded">Buy Property</a>
+                    <a
+                      onClick={() => {
+                        setShow(!show);
+                      }}
+                      className="nav-link rounded"
+                    >
+                      Buy Property
+                    </a>
                   </Link>
                 </ul>
               </li>
               <Link
-              
-              href="/#team"
-              passHref
-              className="nav-item"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+                href="/#team"
+                passHref
+                className="nav-item"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
               >
-                <a 
-                onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link rounded">Team</a>
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                  Team
+                </a>
               </Link>
-              <Link 
-             
-              href="/#contact" 
-              passHref
-              className="nav-item"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
+              <Link
+                href="/#contact"
+                passHref
+                className="nav-item"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
               >
-                <a 
-                onClick={ () => { setcollapse(!collapse) } }
-                className="nav-link rounded">Contact</a>
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                  Contact
+                </a>
               </Link>
             </ul>
           </div>

@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { MyComponent } from '../contact/Map';
+import { MyComponent } from "../contact/Map";
 import { FormCard } from "./FormCard";
 import { AiFillMail } from "react-icons/ai";
 import {
@@ -8,12 +8,10 @@ import {
   FaPencilAlt,
   FaMapMarkerAlt,
   FaPhone,
-  FaEnvelope
+  FaEnvelope,
 } from "react-icons/fa";
 
-export const ContactForm  =  () => {
-  
-  
+export const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
@@ -98,7 +96,8 @@ export const ContactForm  =  () => {
         <FormCard
           AiFillMail={AiFillMail}
           inputData={inputData}
-          handleSubmit={handleSubmit} />
+          handleSubmit={handleSubmit}
+        />
         <div className="col-lg-7 p-3">
           <div
             id="map-container-section"
@@ -133,4 +132,4 @@ export const ContactForm  =  () => {
       </div>
     </div>
   );
-}
+};

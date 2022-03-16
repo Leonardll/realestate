@@ -1,111 +1,111 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { baseUrl, fetchApi } from '../utils/fetchApi';
-import { Services } from '../components/Services';
-import { Team } from '../components/Team';
-import { Contact } from '../components/contact/Contact';
-
-
+import Image from "next/image";
+import Link from "next/link";
+import { baseUrl, fetchApi } from "../utils/fetchApi";
+import { Services } from "../components/Services";
+import { Team } from "../components/Team";
+import { Contact } from "../components/contact/Contact";
 
 const myLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${
-    quality || 75
-  }`;
+  return `${src}?w=${width}&q=${quality || 75}`;
 };
 const myLoader2 = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${
-    quality || 75
-  }`;
+  return `${src}?w=${width}&q=${quality || 75}`;
 };
 
- const Banner = ({purpose, imageUrl, title1, title2,desc1, linkName,buttonText}) => {
+const Banner = ({
+  purpose,
+  imageUrl,
+  title1,
+  title2,
+  desc1,
+  linkName,
+  buttonText,
+}) => {
   return (
-  <div className='row flex-lg-row-reverse align-items-center   justify-content-center'>
-    <div className=" col-10 col-sm-8 col-lg-6">  
-    <Image 
-    className='d-block img-fluid mx-lg-auto' 
-    src={imageUrl} 
-    width={700} 
-    height={500} 
-    alt='banner'
-    loader={myLoader} />
-    </div>
-    <div className="col-lg-4 p-3 text-center text-lg-start border-0">
-      <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
-      <p className="lead">{title1}<br /> {title2}</p>
-      <p className="lead">{desc1}</p>
-          
-      <Link href={linkName} passHref >
-         <a> 
-      <button className="btn link btn-primary btn-xl w-100">
-           {buttonText}
-      </button>
+    <div className="row flex-lg-row-reverse align-items-center   justify-content-center">
+      <div className=" col-10 col-sm-8 col-lg-6">
+        <Image
+          className="d-block img-fluid mx-lg-auto"
+          src={imageUrl}
+          width={700}
+          height={500}
+          alt="banner"
+          loader={myLoader}
+        />
+      </div>
+      <div className="col-lg-4 p-3 text-center text-lg-start border-0">
+        <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
+        <p className="lead">
+          {title1}
+          <br /> {title2}
+        </p>
+        <p className="lead">{desc1}</p>
+
+        <Link href={linkName} passHref>
+          <a>
+            <button className="btn link btn-primary btn-xl w-100">
+              {buttonText}
+            </button>
           </a>
-      </Link>
+        </Link>
+      </div>
     </div>
-  </div>
-  )
+  );
 };
 
-
-
-
-export default function Home({data}) {
-
- 
-  
+export default function Home({ data }) {
   return (
     <>
-  
-    <div data-spy="scroll" data-bs-target="main-nav" data-offset="0" className="scrollspy-example" tabIndex="0"> 
-    <Services />
-    
-      
-  
+      <div
+        data-spy="scroll"
+        data-bs-target="main-nav"
+        data-offset="0"
+        className="scrollspy-example"
+        tabIndex="0"
+      >
+        <Services />
 
-    <div className='section d-flex justify-content-center '>
-    <h1 className='my-3 fw-bold' id="#scrollspyHeading2">Properties</h1>
-    </div>
-    <div 
-    className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
-      <div className='section d-flex my-3'>
-      <Banner
-           
-      purpose="Rent a Home"
-      title1="Rental Homes"
-      title2=" For Everyone"
-      desc1="Explore Apartments, Villas, Homes"
-      desc2="and more"
-      buttonText="Explore Renting"
-      linkName="/search?operationType=rent"
-      imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4" 
-      />
+        <div className="section d-flex justify-content-center ">
+          <h1 className="my-3 fw-bold" id="#scrollspyHeading2">
+            Properties
+          </h1>
+        </div>
+        <div className="container-fluid d-flex  justify-content-xxl-between align-items-center flex-wrap flex-lg-nowrap">
+          <div className="section d-flex my-3">
+            <Banner
+              purpose="Rent a Home"
+              title1="Rental Homes"
+              title2=" For Everyone"
+              desc1="Explore Apartments, Villas, Homes"
+              desc2="and more"
+              buttonText="Explore Renting"
+              linkName="/search?operationType=rent"
+              imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+            />
+          </div>
+          <div className="section d-flex">
+            <Banner
+              purpose="Buy a Home"
+              title1="Find, Buy & Own"
+              title2="Your Dream Home"
+              desc1="Explore Apartments, Villas, Homes"
+              desc2="and more"
+              buttonText="Explore Buying"
+              linkName="/search?operationType=sale"
+              imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"
+            />
+          </div>
+        </div>
+        <Team />
+        <Contact />
       </div>
-     <div className="section d-flex">
-
-      <Banner 
-      purpose="Buy a Home"
-      title1="Find, Buy & Own"
-      title2="Your Dream Home"
-      desc1="Explore Apartments, Villas, Homes"
-      desc2="and more"
-      buttonText="Explore Buying"
-      linkName="/search?operationType=sale"
-      imageUrl="https://bayut-production.s3.eu-central-1.amazonaws.com/image/145426814/33973352624c48628e41f2ec460faba4"/>
-      
-      </div>
-    </div>       
-    <Team />
-    <Contact />
-      </div>
-      </>
-  )
+    </>
+  );
 }
-
 
 // export async function getStaticProps() {
 //   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
-  
+
 //   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
 
 //   return {
@@ -116,7 +116,7 @@ export default function Home({data}) {
 //   }
 // }
 export async function getServerSideProps() {
-  const res = await fetchApi(`${baseUrl}/api/listing`)
+  const res = await fetchApi(`${baseUrl}/api/listing`);
   // const data = await res.json()
 
   // if (!data) {
@@ -126,6 +126,6 @@ export async function getServerSideProps() {
   // }
 
   return {
-    props: { data : res }, // will be passed to the page component as props
-  }
+    props: { data: res }, // will be passed to the page component as props
+  };
 }

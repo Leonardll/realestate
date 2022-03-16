@@ -11,10 +11,9 @@ const Property = ({
   property: { images, id, descriptions, operation, features },
   loader,
 }) => (
- 
   <Link href={`/property/:[propertyId]`} passHref as={`/property/${id}`}>
     <div className="card m-2" style={{ width: "20rem" }}>
-       <Image
+      <Image
         className="card-img pt-2 img-fluid"
         src={images.image[0].url ? images.image[0].url : defaultImage}
         height={700}
@@ -22,8 +21,11 @@ const Property = ({
         alt=""
         loader={loader}
       />
-      { 
-      Object.keys(descriptions.description[0]).map(key => console.log( (key ==='language' ? key + descriptions.description[0][key] : '' )))}
+      {Object.keys(descriptions.description[0]).map((key) =>
+        console.log(
+          key === "language" ? key + descriptions.description[0][key] : ""
+        )
+      )}
 
       <div className="card-body">
         <div className="d-flex justify-content-between pt-3">
@@ -70,11 +72,13 @@ const Property = ({
           </span>
         </div>
         <div className="card-text border-top-1 pt-2">
-        <p className="text mb-2 fs-4 fw-bold text-capitalize pt-1">{features.$.type}</p>
+          <p className="text mb-2 fs-4 fw-bold text-capitalize pt-1">
+            {features.$.type}
+          </p>
           <p>
-          {descriptions.description[0].comment > 20
-            ? `${descriptions.description[0].comment.substring(0, 30)}...`
-            : descriptions.description[0].comment}
+            {descriptions.description[0].comment > 20
+              ? `${descriptions.description[0].comment.substring(0, 30)}...`
+              : descriptions.description[0].comment}
           </p>
         </div>
       </div>
