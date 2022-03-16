@@ -22,6 +22,8 @@ const PropertyDetails = ({
   return (
     <div className=" section m-auto p-3">
       {images && <ImageScrollbar data={images} />}
+      <div className="container">
+
       <div className="w-100 ">
         <div className="d-flex pt-1 align-items-center align-content-end">
           <div className="pe-2 text-success">
@@ -65,7 +67,7 @@ const PropertyDetails = ({
             </i>
           </span>
         </div>
-        <p className="text mb-2 fs-4 fw-bold  pt-1">{features.$.type}</p>
+        <p className="text mb-2 fs-4 fw-bold text-capitalize pt-1">{features.$.type}</p>
         <p className="text mb-2 lh-lg  pt-1">
           {descriptions.description[0].comment}
         </p>
@@ -76,15 +78,16 @@ const PropertyDetails = ({
           {Object.keys(features).map((item, index) => {
             console.log("type", item);
             console.log(features[item]);
-
+            
             return (
               <p
-                key={item}
-                className="fw-bold bg-light fs-6 text-primary m-1 p-2"
+              key={item}
+              className="fw-bold bg-light fs-6 text-primary m-1 p-2"
               >{`${[item]} : ${features[item]}`}</p>
-            );
-          })}
+              );
+            })}
         </div>
+      </div>
       </div>
     </div>
   );

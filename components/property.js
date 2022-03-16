@@ -70,9 +70,12 @@ const Property = ({
           </span>
         </div>
         <div className="card-text border-top-1 pt-2">
+        <p className="text mb-2 fs-4 fw-bold text-capitalize pt-1">{features.$.type}</p>
+          <p>
           {descriptions.description[0].comment > 20
             ? `${descriptions.description[0].comment.substring(0, 30)}...`
             : descriptions.description[0].comment}
+          </p>
         </div>
       </div>
     </div>

@@ -1,13 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { baseUrl, fetchApi } from '../utils/fetchApi';
-import Property from '../components/property';
 import { Services } from '../components/Services';
 import { Team } from '../components/Team';
 import { Contact } from '../components/contact/Contact';
-import { useState, useEffect } from 'react';
-import { AiOutlineConsoleSql } from 'react-icons/ai';
-import { render } from 'nprogress';
 
 
 
@@ -34,7 +30,6 @@ const myLoader2 = ({ src, width, quality }) => {
     alt='banner'
     loader={myLoader} />
     </div>
-    {/* <Link href={linkName} passHref> */}
     <div className="col-lg-4 p-3 text-center text-lg-start border-0">
       <h1 className="display-6 fw-bold lh-1 mb-3">{purpose}</h1>
       <p className="lead">{title1}<br /> {title2}</p>
@@ -48,7 +43,6 @@ const myLoader2 = ({ src, width, quality }) => {
           </a>
       </Link>
     </div>
-    {/* </Link> */}
   </div>
   )
 };
@@ -58,7 +52,6 @@ const myLoader2 = ({ src, width, quality }) => {
 
 export default function Home({data}) {
 
-//console.log('index page results',secondhandListing);
  
   
   return (

@@ -21,9 +21,11 @@ const ImageScrollbar = ({ data }) => {
               className="d-block w-100"
               src={item.url}
               alt="property"
-              width={1000}
-              height={500}
+              width='100%'
+              height='100%'
               layout="responsive"
+              objectFit="contain"
+              objectPosition="50% 50%"
               placeholder="blur"
               blurDataURL={item.url}
               sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"

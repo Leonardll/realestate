@@ -37,6 +37,10 @@ main {
       color: #5ab4ab;
       
     }
+    .nav-link:focus {
+      color: #245564;
+      transition:2s;
+  }
     
     .nav-link:hover {
       color: #245564 ;

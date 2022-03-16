@@ -139,7 +139,7 @@ const Navbar = () => {
                     className="dropdown-item"
                   >
                     <a 
-                    onClick={ () => { setcollapse(!collapse) } }
+                    onClick={ () => { setShow(!show) } }
                     className="nav-link rounded">Rent Property</a>
                   </Link>
                   <Link
@@ -152,7 +152,7 @@ const Navbar = () => {
                     duration={500}
                   >
                     <a 
-                    onClick={ () => { setcollapse(!collapse) } }
+                    onClick={ () => { setShow(!show) } }
                     className="nav-link rounded">Buy Property</a>
                   </Link>
                 </ul>
