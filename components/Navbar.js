@@ -132,7 +132,7 @@ const Navbar = () => {
                   duration={500}
                 >
                   <a
-                    onClick={() => setShow(!show)}
+                    onClick={() => { setShow(!show)}}
                     className="nav-link rounded dropdown-toggle  dropdown-toggle-split"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
@@ -156,7 +156,7 @@ const Navbar = () => {
                   >
                     <a
                       onClick={() => {
-                        setShow(!show);
+                        setShow(!show) ,setcollapse(!collapse)
                       }}
                       className="nav-link rounded"
                     >
@@ -173,7 +173,7 @@ const Navbar = () => {
                   >
                     <a
                       onClick={() => {
-                        setShow(!show);
+                        setShow(!show) , setcollapse(!collapse)
                       }}
                       className="nav-link rounded"
                     >
