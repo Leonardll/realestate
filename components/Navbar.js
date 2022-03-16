@@ -113,16 +113,6 @@ const Navbar = () => {
                   Services
                 </a>
               </Link>
-              <Link href="/search?operationType=rent" className="nav-item">
-                <a
-                  onClick={() => {
-                    setcollapse(!collapse);
-                  }}
-                  className="nav-link rounded"
-                >
-                  Search
-                </a>
-              </Link>
               <li className="nav-item dropdown">
                 <Link
                   href="/#property"
@@ -182,6 +172,16 @@ const Navbar = () => {
                   </Link>
                 </ul>
               </li>
+              <Link href="/search?operationType=rent" className="nav-item">
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                  Search
+                </a>
+              </Link>
               <Link
                 href="/#team"
                 passHref
