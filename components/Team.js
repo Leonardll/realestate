@@ -28,7 +28,7 @@ export const Team = () => {
           </div>
           <div className="col-lg-6 d-flex">
             <div className="team-card">
-              <h4 className="text-center text-lg-start">Emanuele Marin</h4>
+              <h4 className="text-center text-hogar2 text-lg-start">Emanuele Marin</h4>
               <p className="lead">
                 Le caracteriza su implicación y su escucha activa hacia las
                 necesidades de sus clientes. Te atenderá siempre con una
@@ -54,7 +54,7 @@ export const Team = () => {
           </div>
           <div className="col-lg-6 d-flex flex-row-reverse">
             <div className="team-card">
-              <h4 className=" text-center text-lg-start">Cristian Arcas</h4>
+              <h4 className=" text-center text-hogar2 text-lg-start">Cristian Arcas</h4>
               <p className="lead">
                 Le define su carácter extrovertido y entusiasta, gracias al cual
                 ha logrado siempre que sus relaciones interpersonales sean su
