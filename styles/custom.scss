@@ -50,9 +50,10 @@ main {
       /* z-index: -66; */
       right: 13px;
       top: 33px;
-      left: 0;
+      left: -7px;
       background-color: #f9fafb;
       border: none;
+      
       .nav-link {
         color: #5ab4ab;
 
@@ -241,7 +242,7 @@ a {
         /* z-index: -66; */
         right: 13px;
         top: 33px;
-        left: 0;
+        left: -7px;
         background-color: white;
         border: none;
         .nav-link {
@@ -285,6 +286,7 @@ a {
         background-color: white;
         border: none;
         
+     
         .nav-link {
           color: #5ab4ab;
           padding: 0.4rem 0.5rem;

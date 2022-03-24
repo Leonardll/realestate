@@ -124,8 +124,8 @@ const Navbar = () => {
               <ul
                   className={
                     !show1
-                      ? "dropdown-menu"
-                      : "dropdown-menu dropdown-menu-start show"
+                      ? "dropdown-menu service"
+                      : "dropdown-menu service dropdown-menu-start show"
                   }
                   aria-labelledby="navbarDropdownMenuLink"
                 >
