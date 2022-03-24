@@ -16,7 +16,7 @@ export default (req, res) => {
 `;
 
   const data = {
-    to: "lonardlator@yahoo.fr",
+    to: "info@unicohogar.com",
     from: "lonardlator@yahoo.fr",
     subject: `New message from ${body.firstName}`,
     text: message,
