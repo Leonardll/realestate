@@ -6,10 +6,10 @@ import Manu from "../assets/images/manu.jpg";
 
 export const Team = () => {
   return (
-    <div className="section my-2">
+    <div className="section">
       <div className="container">
         <div className=" d-flex justify-content-center">
-          <h1 className="my-3 fw-bold text-capitalize" id="team">
+          <h1 className="my-4 fw-bold text-capitalize" id="team">
             Team
           </h1>
         </div>
