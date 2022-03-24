@@ -1,89 +1,32 @@
 import Link from "next/link";
-import Image from "next/image";
-import { FaBed, Fabath, FaBath } from "react-icons/fa";
-import { BsGridFill } from "react-icons/bs";
-import { GoVerified } from "react-icons/go";
-import { millify } from "millify";
-import defaultImage from "../assets/images/house.jpg";
-import Logo from "../assets/images/logo.svg";
 
-const Property = ({
-  property: { images, id, descriptions, operation, features },
-  loader,
-}) => (
-  <Link href={`/property/:[propertyId]`} passHref as={`/property/${id}`}>
-    <div className="card m-2" style={{ width: "20rem" }}>
-      <Image
-        className="card-img pt-2 img-fluid"
-        src={images.image[0].url ? images.image[0].url : defaultImage}
-        height={700}
-        width={900}
-        alt=""
-        loader={loader}
-      />
-      {Object.keys(descriptions.description[0]).map((key) =>
-        console.log(
-          key === "language" ? key + descriptions.description[0][key] : ""
-        )
-      )}
 
-      <div className="card-body">
-        <div className="d-flex justify-content-between pt-3">
-          <div className="d-flex align-items-center align-content-end">
-            <div className="card-text text-success pe-1">
-              {/* {isVerified && <GoVerified />} */}
-            </div>
-            <p className="card-text text-success fs-6 fw-bold d-flex">
-              EUR {millify(operation.price)}
-            </p>
-          </div>
-          <div className="ps-5 d-flex flex-end">
-            <span>
-              <Image
-                className="rounded-circle img-fluid"
-                height={40}
-                width={70}
-                alt=""
-                src={Logo}
-              />
-            </span>
-          </div>
-        </div>
+const Properties = () => (
+  <div className="section d-flex justify-content-center">
+    <div className="container property">
+    <div className="mt-2 d-flex justify-content-center">
+    <h1 className="my-3 fw-bold text-center" id="properties">
+    Properties
+    </h1>
+    </div>
+    <div className="row d-flex">
 
-        <div className="d-flex align-items-center justify-content-between">
-          <span>
-            {features.bedrooms}{" "}
-            <i>
-              <FaBed />
-            </i>
-          </span>
-          <span>
-            {features.bathrooms}{" "}
-            <i>
-              <FaBath />
-            </i>
-          </span>
-          <span>
-            {features.constructedArea} sqft
-            <i>
-              {" "}
-              <BsGridFill />
-            </i>
-          </span>
-        </div>
-        <div className="card-text border-top-1 pt-2">
-          <p className="text mb-2 fs-4 fw-bold text-capitalize pt-1">
-            {features.$.type}
-          </p>
-          <p>
-            {descriptions.description[0].comment > 20
-              ? `${descriptions.description[0].comment.substring(0, 30)}...`
-              : descriptions.description[0].comment}
-          </p>
-        </div>
-      </div>
+  <Link href="https://www.idealista.com/pro/unico-hogar/venta-viviendas/" passHref >
+    <div className=" banner col-12 col-md-6 p-3 bg-success">
+      <h3 className="text-center">Buy</h3>
     </div>
   </Link>
+  
+  
+  <Link href="https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/" passHref >
+    <div className=" banner col-12 col-md-6 p-3">
+      <h3 className="text-center">Rent</h3>
+    </div>
+  </Link>
+    </div>
+  
+    </div>
+  </div>
 );
 
-export default Property;
+export default Properties;

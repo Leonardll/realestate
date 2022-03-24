@@ -115,7 +115,8 @@ const Navbar = () => {
               </Link>
               <li className="nav-item dropdown">
                 <Link
-                  href="/#property"
+                  href="/#properties"
+                  passHref
                   spy={true}
                   smooth={true}
                   offset={-70}
@@ -129,7 +130,7 @@ const Navbar = () => {
                     id="navbarDropdow"
                     role="button"
                   >
-                    Property
+                    Properties
                   </a>
                 </Link>
                 <ul
@@ -141,7 +142,8 @@ const Navbar = () => {
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <Link
-                    href="/search?operationType=rent"
+                    href="https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/"
+                    passHref
                     className="dropdown-item"
                   >
                     <a
@@ -154,7 +156,8 @@ const Navbar = () => {
                     </a>
                   </Link>
                   <Link
-                    href="/search?operationType=sale"
+                    href="https://www.idealista.com/pro/unico-hogar/venta-viviendas/"
+                    passHref
                     className="dropdown-item"
                     spy={true}
                     smooth={true}
@@ -172,18 +175,8 @@ const Navbar = () => {
                   </Link>
                 </ul>
               </li>
-              <Link href="/search?operationType=rent" className="nav-item">
-                <a
-                  onClick={() => {
-                    setcollapse(!collapse);
-                  }}
-                  className="nav-link rounded"
-                >
-                  Search
-                </a>
-              </Link>
               <Link
-                href="/#team"
+                href="/#about-us"
                 passHref
                 className="nav-item"
                 spy={true}
@@ -191,6 +184,19 @@ const Navbar = () => {
                 offset={-70}
                 duration={500}
               >
+                <a
+                  onClick={() => {
+                    setcollapse(!collapse);
+                  }}
+                  className="nav-link rounded"
+                >
+                 About Us
+                </a>
+              </Link>
+              <Link 
+              href="/#team" 
+              passHref 
+              className="nav-item">
                 <a
                   onClick={() => {
                     setcollapse(!collapse);

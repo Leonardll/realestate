@@ -98,8 +98,15 @@ main {
   //opacity: .75;
 }
 
-.featureText {
-  color: #5ab4ab;
+.masthead-header {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  width:300px;
+}
+
+.text-span {
+  color: #245564;
 }
 
 .fixed-bottom {
@@ -183,10 +190,15 @@ a {
 }
 
 .property {
-  width: 420px;
-  padding: 20px 0;
-  justify-content: start;
-  cursor: pointer;
+  //width: 420px;
+  height: 30vh;
+  .banner {
+    height: 200px;
+  }
+}
+
+.team-card {
+  border-bottom: #5ab4ab solid;
 }
 
 .form-header {

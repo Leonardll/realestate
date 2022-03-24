@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import Hands from "../assets/images/DSC_8081.JPG";
-import Boxman from "../assets/images/DSC_8155.jpg";
+import Hands from "../assets/images/hands.jpg";
+import Couple from "../assets/images/couple.jpg";
 
 export const Services = () => {
   const myLoader = ({ src, width, quality }) => {
@@ -36,7 +36,7 @@ export const Services = () => {
           <div className="col-12 col-md-6 p-3">
             <Image
               className="card-img-top img-fluid"
-              src={Boxman}
+              src={Couple}
               loader={myLoader}
               layout="responsive"
               objectFit="cover"

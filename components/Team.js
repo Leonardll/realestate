@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Dummy from "../assets/images/dummy.png";
-import Cris from "../assets/images/DSC_8245.JPG";
-import Manu from "../assets/images/IMG-20220310.jpg";
+import Cris from "../assets/images/cris.jpg";
+import Manu from "../assets/images/manu.jpg";
 
 export const Team = () => {
   return (
     <div className="section my-2">
       <div className="container">
         <div className=" d-flex justify-content-center">
-          <h1 className="my-3 fw-bold" id="team">
+          <h1 className="my-3 fw-bold text-capitalize" id="team">
             Team
           </h1>
         </div>
-        <div className="row g-4 d-flex justify-content-evenly p-3">
+        <div className="row g-4 d-flex flex-row p-3">
           <div className="col-lg-4 d-flex justify-content-center">
             <div className="h-100 text-center">
               <Image
@@ -24,13 +24,23 @@ export const Team = () => {
                 objectFit="cover"
                 className="card-img-top img-fluid mx-auto "
               />
-
-              <h4>Emanuele Morin</h4>
-              <p className="text-mute"></p>
             </div>
           </div>
-
-          <div className="col-lg-4 d-flex justify-content-center">
+          <div className="col-lg-6 d-flex">
+            <div className="team-card">
+              <h4 className="text-center text-lg-start">Emanuele Marin</h4>
+              <p className="lead">
+                Le caracteriza su implicación y su escucha activa hacia las
+                necesidades de sus clientes. Te atenderá siempre con una
+                sonrisa. Tiene don de gentes y una capacidad de comunicación
+                fuera de lo común. ¡Y en varios idiomas! Le gustan los retos y
+                superarse en cada momento. Para ti, siempre aquí y ahora.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="row d-flex flex-row-reverse">
+          <div className="col-lg-4 flex-row-reverse justify-content-center">
             <div className="h-100 text-center">
               <Image
                 src={Cris}
@@ -40,9 +50,18 @@ export const Team = () => {
                 alt="..."
                 className="card-img-top img-fluid mx-auto"
               />
-
-              <h4>Cristian Arcas</h4>
-              <p className="text-mute text-center"></p>
+            </div>
+          </div>
+          <div className="col-lg-6 d-flex flex-row-reverse">
+            <div className="team-card">
+              <h4 className=" text-center text-lg-start">Cristian Arcas</h4>
+              <p className="lead">
+                Le define su carácter extrovertido y entusiasta, gracias al cual
+                ha logrado siempre que sus relaciones interpersonales sean su
+                punto fuerte. Es un experto y enamorado de su trabajo, junto a
+                su lado más humano, consigue dar lo mejor de sí para que sus
+                clientes queden siempre satisfechos.
+              </p>
             </div>
           </div>
         </div>
