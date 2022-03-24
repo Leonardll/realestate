@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link"
 import React from "react";
 import Hands from "../assets/images/hands.jpg";
 import Couple from "../assets/images/couple.jpg";
@@ -17,6 +18,7 @@ export const Services = () => {
           </h1>
         </div>
         <div className="row d-flex justify-content-between">
+          <Link href={'/ourServices/conciergerie'} passHref>
           <div className="col-12 col-md-6 p-3">
             <Image
               className="card-img-top img-fluid"
@@ -33,6 +35,8 @@ export const Services = () => {
               <h3>conciergerie</h3>
             </div>
           </div>
+          </Link>
+          <Link href={'/ourServices/realEstate'} passHref>
           <div className="col-12 col-md-6 p-3">
             <Image
               className="card-img-top img-fluid"
@@ -50,6 +54,7 @@ export const Services = () => {
             </div>
             <div className="card-text"></div>
           </div>
+          </Link>
         </div>
       </div>
     </div>
