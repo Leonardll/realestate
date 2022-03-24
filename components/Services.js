@@ -10,10 +10,10 @@ export const Services = () => {
   };
 
   return (
-    <div className="section my-2">
+    <div className="section">
       <div className="container">
-        <div className="mt-2 d-flex justify-content-center">
-          <h1 className="my-3 fw-bold" id="services">
+        <div className="d-flex justify-content-center">
+          <h1 className="my-4 fw-bold" id="services">
             Services
           </h1>
         </div>

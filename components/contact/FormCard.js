@@ -34,10 +34,10 @@ export const FormCard = ({ AiFillMail, inputData, handleSubmit }) => (
 
           <div className="text-center ">
             <button
-              className="btn btn-light-blue text-light mb-3"
+              className="btn btn-lg btn-hogar text-light mb-3"
               type="submit"
             >
-              Submit
+              Send
             </button>
           </div>
         </Form>

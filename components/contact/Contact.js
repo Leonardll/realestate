@@ -6,7 +6,7 @@ import { ContactForm } from "./ContactForm";
 
 export const Contact = () => (
   
-    <div className="section my-2">
+    <div className="section">
       <ContactForm />
     </div>
   

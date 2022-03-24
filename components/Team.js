@@ -39,7 +39,7 @@ export const Team = () => {
             </div>
           </div>
         </div>
-        <div className="row d-flex flex-row-reverse">
+        <div className="row d-flex flex-row-reverse p-3">
           <div className="col-lg-4 flex-row-reverse justify-content-center">
             <div className="h-100 text-center">
               <Image

@@ -144,7 +144,7 @@ const Navbar = () => {
                     </a>
                   </Link>
                   <Link
-                    href={'/ourServices/realEstate'}
+                    href={'/ourServices/property-management'}
                     passHref
                     className="dropdown-item"
                     spy={true}

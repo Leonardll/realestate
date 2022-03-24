@@ -63,7 +63,7 @@ export const ContactForm = () => {
       id: "message",
       icon: <FaPencilAlt />,
       type: "text",
-      placeholder: "Your Message",
+      placeholder: "Message",
       ariaLabel: "message",
       ariaDescribedby: "message",
       as: "textarea",
@@ -89,8 +89,8 @@ export const ContactForm = () => {
 
   return (
     <div className="container" id="contact">
-      <div className=" d-flex flex-wrap justify-content-center mt-2">
-        <h1 className="fw-bold text-center my-3">Contact</h1>
+      <div className=" d-flex flex-wrap justify-content-center">
+        <h1 className="fw-bold text-center my-4">Contact</h1>
       </div>
       <div className="row p-3 justify-content-center">
         <FormCard

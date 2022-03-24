@@ -202,11 +202,11 @@ a {
   }
 }
 
-.concierge-subheading {
+.concierge-subheading ,.property-subheading{
   color: #5ab4ab;
   
 }
-.concierge-subheading-text {
+.concierge-subheading-text ,.property-subheading-text {
   color: #245564;
 }
 
@@ -250,6 +250,9 @@ svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
 .text-hogar {
   color: #5ab4ab;
 }
+.text-hogar2 {
+  color: #245564;
+}
 
 .team-card {
   border-bottom: #5ab4ab solid;
@@ -262,7 +265,9 @@ svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
   position: relative;
   top: -38px;
 }
-
+.btn-hogar {
+  background-color: #5ab4ab;
+}
 .footer {
   height: 40px;
   bottom: 0;

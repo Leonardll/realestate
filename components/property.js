@@ -4,8 +4,8 @@ import Link from "next/link";
 const Properties = () => (
   <div className="section">
     <div className="container property">
-    <div className="mt-2 d-flex justify-content-center">
-    <h1 className="my-3 fw-bold text-center" id="properties">
+    <div className="d-flex justify-content-center">
+    <h1 className="my-4 fw-bold text-center" id="properties">
     Properties
     </h1>
     </div>
