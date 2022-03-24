@@ -36,7 +36,7 @@ export const Services = () => {
             </div>
           </div>
           </Link>
-          <Link href={'/ourServices/realEstate'} passHref>
+          <Link href={'/ourServices/propertyManagement'} passHref>
           <div className="col-12 col-md-6 p-3">
             <Image
               className="card-img-top img-fluid"
