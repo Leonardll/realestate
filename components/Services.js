@@ -32,7 +32,7 @@ export const Services = () => {
               alt="bell"
             />
             <div className="p-3 text-center text-capitalize">
-              <h3>conciergerie</h3>
+              <h3 className="service-heading">conciergerie</h3>
             </div>
           </div>
           </Link>
@@ -49,8 +49,8 @@ export const Services = () => {
               width={500}
               alt="bell"
             />
-            <div className="p-3 ">
-              <h3 className="text-center text-capitalize">Property Management</h3>
+            <div className="p-3 text-center text-capitalize">
+              <h3 className="service-heading">Property Management</h3>
             </div>
             <div className="card-text"></div>
           </div>
