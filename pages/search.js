@@ -1,47 +1,47 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { BsFilter } from "react-icons/bs";
-import Property from "../components/property";
-import SearchFilters from "../components/SearchFilters";
-const Search = ({ properties }) => {
-  console.log("search page", properties);
-  const [searchFilters, setsearchFilters] = useState(false);
-  const router = useRouter();
+// import Image from "next/image";
+// import { useRouter } from "next/router";
+// import { useState } from "react";
+// import { BsFilter } from "react-icons/bs";
+// import Property from "../components/property";
+// import SearchFilters from "../components/SearchFilters";
+// const Search = ({ properties }) => {
+//   console.log("search page", properties);
+//   const [searchFilters, setsearchFilters] = useState(false);
+//   const router = useRouter();
 
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
+//   const myLoader = ({ src, width, quality }) => {
+//     return `${src}?w=${width}&q=${quality || 75}`;
+//   };
 
-  return (
-    <div className="container">
-      <div
-        className="d-flex align-items-center fs-2 border-bottom-2 justify-content-center "
-        cursor="pointer"
-        onClick={() => setsearchFilters((prevFilters) => !prevFilters)}
-      >
-        <p>Search Property by filter</p>
-        <BsFilter className="ps-1 " />
-      </div>
-      {searchFilters && <SearchFilters />}
-      <p className="fs-1 p-3">
-        Properties {` for ${router.query.operationType}`}{" "}
-      </p>
-      <div className="d-flex flex-wrap">
-        {properties.filteredProp &&
-          properties.filteredProp.map((property) => (
-            <Property property={property} key={property.id} loader={myLoader} />
-          ))}
-      </div>
-      {properties.filteredProp === undefined && (
-        <div className="d-flex flex-col my-3 justify-content-center alig-items-center">
-          <Image alt="no result" src={Noresult} />
-          <p className="fs-2 mt-3">No result Found</p>
-        </div>
-      )}
-    </div>
-  );
-};
+//   return (
+//     <div className="container">
+//       <div
+//         className="d-flex align-items-center fs-2 border-bottom-2 justify-content-center "
+//         cursor="pointer"
+//         onClick={() => setsearchFilters((prevFilters) => !prevFilters)}
+//       >
+//         <p>Search Property by filter</p>
+//         <BsFilter className="ps-1 " />
+//       </div>
+//       {searchFilters && <SearchFilters />}
+//       <p className="fs-1 p-3">
+//         Properties {` for ${router.query.operationType}`}{" "}
+//       </p>
+//       <div className="d-flex flex-wrap">
+//         {properties.filteredProp &&
+//           properties.filteredProp.map((property) => (
+//             <Property property={property} key={property.id} loader={myLoader} />
+//           ))}
+//       </div>
+//       {properties.filteredProp === undefined && (
+//         <div className="d-flex flex-col my-3 justify-content-center alig-items-center">
+//           <Image alt="no result" src={Noresult} />
+//           <p className="fs-2 mt-3">No result Found</p>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
 //export async function getServerSideProps({ query }) {
  // const operationType = query.operationType || "rent";
@@ -67,5 +67,5 @@ const Search = ({ properties }) => {
 //   };
 // }
 
-export default Search;
+// export default Search;
 //&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}
