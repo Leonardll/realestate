@@ -10,6 +10,8 @@ import Logo from "../assets/images/UnicoHogarTrs.png";
 const Navbar = () => {
   const [collapse, setcollapse] = useState(true);
   const [show, setShow] = useState(false);
+  const [show1, setShow1] = useState(false);
+
   const [active, setActive] = useState(false);
   const myLoader = ({ src, width, quality }) => {
     return `http://localhost:3000/${src}?w=${width}&q=${quality || 75}`;
@@ -72,7 +74,7 @@ const Navbar = () => {
             className={
               collapse
                 ? "collapse navbar-collapse mb-2"
-                : "navbar-collapse collapse show mb-2"
+                : "navbar-collapse collapse show1 mb-2"
             }
             id="navbarResponsive"
           >
@@ -95,6 +97,8 @@ const Navbar = () => {
                   Home
                 </a>
               </Link>
+              <li className="nav-item dropdown">
+
               <Link
                 href="/#services"
                 passHref
@@ -102,17 +106,63 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="nav-item"
-              >
+                //className="nav-item"
+                >
                 <a
                   onClick={() => {
-                    setcollapse(!collapse);
+                    setShow1(!show1);
                   }}
-                  className="nav-link rounded"
-                >
+                  className="nav-link rounded dropdown-toggle dropdown-toggle-split"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  id="navbarDropdown"
+                  role="button"
+                  >
                   Services
                 </a>
               </Link>
+              <ul
+                  className={
+                    !show1
+                      ? "dropdown-menu"
+                      : "dropdown-menu dropdown-menu-start show"
+                  }
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <Link
+                    href={'/ourServices/conciergerie'}
+                    passHref
+                    className="dropdown-item"
+                  >
+                    <a
+                      onClick={() => {
+                        setShow1(!show1) ,setcollapse(!collapse)
+                      }}
+                      className="nav-link rounded"
+                    >
+                      Conciergerie
+                    </a>
+                  </Link>
+                  <Link
+                    href={'/ourServices/conciergerie'}
+                    passHref
+                    className="dropdown-item"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                  >
+                    <a
+                      onClick={() => {
+                        setShow1(!show1) , setcollapse(!collapse)
+                      }}
+                      className="nav-link rounded"
+                    >
+                      Property Management
+                    </a>
+                  </Link>
+                </ul>
+              </li>
               <li className="nav-item dropdown">
                 <Link
                   href="/#properties"
@@ -127,7 +177,7 @@ const Navbar = () => {
                     className="nav-link rounded dropdown-toggle  dropdown-toggle-split"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    id="navbarDropdow"
+                    id="navbarDropdown"
                     role="button"
                   >
                     Properties

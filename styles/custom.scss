@@ -280,12 +280,14 @@ a {
         position: absolute;
         /* z-index: -66; */
         right: 13px;
-        top: 33px;
+        top: 30px;
         left: 0;
-        background-color: transparent;
+        background-color: white;
         border: none;
+        
         .nav-link {
           color: #5ab4ab;
+          padding: 0.4rem 0.5rem;
 
           &:hover {
             color: #245564;
