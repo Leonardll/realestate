@@ -1,19 +1,29 @@
-import React from "react";
+import React, {useRef} from "react";
+import { motion, AnimatePresence} from "framer-motion";
 import Image from "next/image";
 import Dummy from "../assets/images/dummy.png";
 import Cris from "../assets/images/cris.jpg";
 import Manu from "../assets/images/manu.jpg";
 
-export const Team = () => {
+export const Team = ({isVisible}) => {
+  
   return (
-    <div className="section">
+    <div className="section" >
       <div className="container">
         <div className=" d-flex justify-content-center">
           <h1 className="my-4 fw-bold text-capitalize" id="team">
             Team
           </h1>
         </div>
-        <div className="row g-4 d-flex flex-row p-3">
+        <AnimatePresence>
+        
+        <motion.div
+        initial={{ opacity: 0, x: 150 }}
+        whileInView={{ opacity: 1, x:0 }}
+        //animate={{ opacity: 1, x:0}}
+        transition={{duration: 1, ease:"easeOut",delay:.5}}
+        //viewport={{ once: true }} 
+        className="row g-4 d-flex flex-row p-3">
           <div className="col-lg-4 d-flex justify-content-center">
             <div className="h-100 text-center">
               <Image
@@ -23,7 +33,7 @@ export const Team = () => {
                 alt="..."
                 objectFit="cover"
                 className="card-img-top img-fluid mx-auto "
-              />
+                />
             </div>
           </div>
           <div className="col-lg-6 d-flex">
@@ -38,8 +48,14 @@ export const Team = () => {
               </p>
             </div>
           </div>
-        </div>
-        <div className="row d-flex flex-row-reverse p-3">
+        </motion.div>
+        </AnimatePresence>
+        <motion.div 
+        initial={{ opacity: 0, x: -150 }}
+        whileInView={{opacity: 1, x:0 }}
+        //animate={{ opacity: 1, x:[100,0]}}
+        transition={{duration: 1, ease:"easeOut",delay:.5}}
+        className="row d-flex flex-row-reverse p-3">
           <div className="col-lg-4 flex-row-reverse justify-content-center">
             <div className="h-100 text-center">
               <Image
@@ -64,7 +80,7 @@ export const Team = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
