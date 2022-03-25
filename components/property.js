@@ -20,7 +20,7 @@ const Properties = () => (
   
   <Link href="https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/" passHref >
     <div className=" banner d-flex align-items-center justify-content-center col-12 col-md-6 p-3 bg-white">
-      <h3 className="text-center text-capitalize text-hogar">Rent</h3>
+      <h3 className="text-center text-capitalize text-hogar2">Rent</h3>
     </div>
   </Link>
     </div>
