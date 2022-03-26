@@ -90,7 +90,7 @@ export const ContactForm = () => {
   return (
     <div className="container" id="contact">
       <div className=" d-flex flex-wrap justify-content-center">
-        <h1 className="text-center text-capitalise my-4">Contact</h1>
+        <h1 className="text-center text-capitalise text-white my-4">Contact</h1>
       </div>
       <div className="row p-3 justify-content-center">
         <FormCard

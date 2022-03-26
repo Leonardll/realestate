@@ -4,14 +4,6 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { FormControl } from "react-bootstrap";
 export const FormCard = ({ AiFillMail, inputData, handleSubmit }) => (
   <div className="col-lg-8 mb-lg-0 m-4 w-100">
-        <div className="d-flex align-items-center justify-content-center form-header text-center accent-1">
-          <h3 className="mt-2 text-light">
-            <i>
-              <AiFillMail fill="white" className="mb-1" />
-            </i>
-            Write to us {' '}:
-          </h3>
-        </div>
         <Form onSubmit={handleSubmit}>
           <div className="form-floating mb-3">
           {inputData.map((item) => (
@@ -31,7 +23,7 @@ export const FormCard = ({ AiFillMail, inputData, handleSubmit }) => (
 
           <div className="text-center ">
             <button
-              className="btn btn-lg btn-hogar text-light mb-3"
+              className="btn btn-lg btn-hogar2 text-light mb-3"
               type="submit"
             >
               Send

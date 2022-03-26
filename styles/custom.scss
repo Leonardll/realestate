@@ -4,13 +4,14 @@ main {
   position: relative;
   top: 1.5rem;
   bottom: 3.5rem;
+
 }
 
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
 
@@ -36,7 +37,7 @@ main {
       color: #245564;
       transition: 2s;
     }
-
+    
     .nav-link:hover {
       color: #245564;
       transition: 2s;
@@ -269,16 +270,26 @@ svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
 .team-card {
   border-bottom: #5ab4ab solid;
 }
+.contact {
+  background-color: #5ab4ab;
+}
 
 .form-header {
-  background-color: #5ab4ab;
+  background-color: #fff;
   height: 50px;
   margin-bottom: 30px;
   position: relative;
   top: -38px;
 }
+.input-group-text {
+  background-color: #5ab4ab;
+  border: 1px solid #fff;
+}
 .btn-hogar {
   background-color: #5ab4ab;
+}
+.btn-hogar2 {
+  background-color: #245564;
 }
 .footer {
   height: 40px;
