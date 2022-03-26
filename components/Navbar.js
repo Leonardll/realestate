@@ -7,6 +7,46 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Logo from "../assets/images/UnicoHogarTrs.png";
 
+// const menuItems = [
+//   {
+//     id:"home",
+//    title:"home",
+//    href:"/",
+//    submenu: false,},
+//   {
+//    id:"services",
+//    title:"services",
+//    href:"/#services",
+//    submenu:true,
+//    submenuItems: [
+//      {
+//       id:"conciergerie",
+//       title:"conciergerie",
+//       href:"/ourServices/conciergerie"
+//     },
+//     {
+//       id:"property management",
+//       title:"property management",
+//       href:"/ourServices/conciergerie"
+//     }
+//    ]},
+//   {id:"properties",
+//    title:"properties",
+//    href:"/",
+//    submenu:,},
+//   {id:,
+//    title:,
+//    href:,
+//    submenu:,},
+//   {id:,
+//    title:,
+//    href:,
+//    submenu:,},
+//   {id:,
+//    title:,
+//    href:,
+//    submenu:,},
+// ]
 const Navbar = () => {
   const [collapse, setcollapse] = useState(true);
   const [show, setShow] = useState(false);
@@ -110,7 +150,7 @@ const Navbar = () => {
                 >
                 <a
                   onClick={() => {
-                    setShow1(!show1);
+                    setShow1(!show1), show === true ? setShow(false) : null
                   }}
                   className="nav-link rounded dropdown-toggle dropdown-toggle-split"
                   data-bs-toggle="dropdown"
@@ -173,7 +213,7 @@ const Navbar = () => {
                   duration={500}
                 >
                   <a
-                    onClick={() => { setShow(!show)}}
+                    onClick={() => { setShow(!show), show1 === true ? setShow1(false) : null}}
                     className="nav-link rounded dropdown-toggle  dropdown-toggle-split"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"

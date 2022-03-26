@@ -3,7 +3,7 @@ export const AboutUs = () => {
     <div className="section">
       <div className="container">
         <div className="d-flex justify-content-center">
-          <h1 className="my-4 fw-bold text-capitalize" id="about-us">
+          <h1 className="my-4 text-capitalize" id="about-us">
             About Us
           </h1>
         </div>

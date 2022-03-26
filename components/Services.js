@@ -13,13 +13,13 @@ export const Services = () => {
     <div className="section">
       <div className="container">
         <div className="d-flex justify-content-center">
-          <h1 className="my-4 fw-bold" id="services">
+          <h1 className="my-4" id="services">
             Services
           </h1>
         </div>
         <div className="row d-flex justify-content-between">
           <Link href={'/ourServices/conciergerie'} passHref>
-          <div className="col-12 col-md-6 p-3">
+          <div className="col-12 col-md-6 p-3 p-lg-5">
             <Image
               className="card-img-top img-fluid"
               src={Hands}
@@ -37,7 +37,7 @@ export const Services = () => {
           </div>
           </Link>
           <Link href={'/ourServices/property-management'} passHref>
-          <div className="col-12 col-md-6 p-3">
+          <div className="col-12 col-md-6 p-3 p-lg-5">
             <Image
               className="card-img-top img-fluid"
               src={Couple}
