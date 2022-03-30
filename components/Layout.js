@@ -2,7 +2,8 @@ import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
 import MastHead from "./MastHead";
-import Navbar from "./Navbar";
+
+import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
 
 const Layout = ({ children }) => (
@@ -14,7 +15,7 @@ const Layout = ({ children }) => (
     </Head>
     <div className="container-fluid px-0 mw-3 m-auto">
       <header>
-        <Navbar />
+        <Navbar /> 
         <MastHead />
       </header>
       <main>{children}</main>

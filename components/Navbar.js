@@ -7,46 +7,66 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Logo from "../assets/images/UnicoHogarTrs.png";
 
-// const menuItems = [
-//   {
-//     id:"home",
-//    title:"home",
-//    href:"/",
-//    submenu: false,},
-//   {
-//    id:"services",
-//    title:"services",
-//    href:"/#services",
-//    submenu:true,
-//    submenuItems: [
-//      {
-//       id:"conciergerie",
-//       title:"conciergerie",
-//       href:"/ourServices/conciergerie"
-//     },
-//     {
-//       id:"property management",
-//       title:"property management",
-//       href:"/ourServices/conciergerie"
-//     }
-//    ]},
-//   {id:"properties",
-//    title:"properties",
-//    href:"/",
-//    submenu:,},
-//   {id:,
-//    title:,
-//    href:,
-//    submenu:,},
-//   {id:,
-//    title:,
-//    href:,
-//    submenu:,},
-//   {id:,
-//    title:,
-//    href:,
-//    submenu:,},
-// ]
+const menuItems = [
+  {
+   id:"home",
+   title:"home",
+   href:"/",
+   submenu: false,
+  },
+  {
+   id:"services",
+   title:"services",
+   href:"/#services",
+   submenu:true,
+   submenuItems: [
+     {
+      id:"conciergerie",
+      title:"conciergerie",
+      href:"/ourServices/conciergerie"
+    },
+    {
+      id:"property management",
+      title:"property management",
+      href:"/ourServices/conciergerie"
+    }
+   ]},
+  {id:"properties",
+   title:"properties",
+   href:"/#properties",
+   submenu:true,
+   submenuItems: [
+     {
+     id:"buy",
+     title:"buy",
+     href:"https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/",
+    },
+    {
+      id:"rent",
+      title:"rent",
+      href:"https://www.idealista.com/pro/unico-hogar/venta-viviendas/"
+    }
+  ],
+  },
+  {
+   id:"about-us",
+   title:"about us",
+   href:"/#about-us",
+   submenu:false,
+  },
+  {
+   id:"team",
+   title:"team",
+   href:"/#team",
+   submenu:false,
+  },
+  {
+   id:"contact",
+   title:"contact",
+   href:"/#contact",
+   submenu:false,
+  },
+]
 const Navbar = () => {
   const [collapse, setcollapse] = useState(true);
   const [show, setShow] = useState(false);
