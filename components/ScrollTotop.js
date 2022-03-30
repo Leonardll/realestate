@@ -3,17 +3,17 @@ import { BiArrowFromBottom } from "react-icons/bi";
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   const toggleVisibility = () => {
     window.scrollY >= 300 ? setIsVisible(true) : setIsVisible(false);
   };
-
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility, { passive: true });

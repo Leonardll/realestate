@@ -10,8 +10,6 @@ function MastHead() {
                 Por confianza se entiende la esperanza que se tiene en alguien o en alguna cosa.
                 Es un término que proviene del latín confidere que significa tener fe (fides) en alguien.
                 </p>
-                {/* <p className='mb-5 text-align-left text-wrap'>
-                </p> */}
             </div>
             </div>
         </div>

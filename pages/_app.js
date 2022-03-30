@@ -23,7 +23,6 @@ function MyApp({ Component, pageProps }) {
     </Head>
     <Layout className="container-fluid">
       <Component {...pageProps} />
-
     </Layout>
       
     </React.StrictMode>
