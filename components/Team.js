@@ -1,7 +1,6 @@
-import React, {useRef} from "react";
+import React from "react";
 import { motion, AnimatePresence} from "framer-motion";
 import Image from "next/image";
-import Dummy from "../assets/images/dummy.png";
 import Cris from "../assets/images/cris.jpg";
 import Manu from "../assets/images/manu.jpg";
 
