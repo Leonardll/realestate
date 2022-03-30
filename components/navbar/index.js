@@ -72,7 +72,7 @@ export const menuItems = [
   },
 ];
 
-export const Navbar = () => {
+ const Navbar = () => {
   const changeBackground = () => {
     //console.log(window.scrollY, active);
     window.scrollY >= 100 ? setActive(true) : setActive(false);
@@ -135,3 +135,5 @@ export const Navbar = () => {
     </div>
   );
 };
+
+export default Navbar;
