@@ -2,7 +2,7 @@ import Link from "next/link";
 export const Dropdown = (submenuItems, show, setShow) => {
   return (
     <ul
-      className="dropdown-menu  dropdown-menu-start"
+      className={ !show ? "dropdown-menu  dropdown-menu-start": "dropdown-menu  dropdown-menu-start show"}
       aria-labelledby="navbarDropdownMenuLink"
     >
       {submenuItems.submenuItems.map((subitem) => {
