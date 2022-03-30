@@ -12,13 +12,12 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
       }
     };
     document.addEventListener("click", handler);
-    document.addEventListener("touchstart", handler);
     return () => {
       // Cleanup the event listener
       document.removeEventListener("click", handler);
-      document.removeEventListener("touchstart", handler);
     };
   }, [show]);
+  
   console.log(item);
   return (
     <li className={item.submenu ? "nav-item dropdown" : "nav-item"} ref={ref}>
