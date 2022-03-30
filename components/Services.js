@@ -4,6 +4,24 @@ import React from "react";
 import Hands from "../assets/images/hands.jpg";
 import Couple from "../assets/images/couple.jpg";
 
+const serviceData = [
+  {
+    id:"conciergerie",
+    title: "conciergerie",
+    href:"/ourServices/conciergerie",
+    image: Hands,
+    alt:"hands"
+
+  },
+  {
+    id:"propertyManagement",
+    title: "property management",
+    href:"/ourServices/property-management",
+    image: Couple,
+    alt:"couple"
+
+  },
+]
 export const Services = () => {
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
@@ -18,43 +36,31 @@ export const Services = () => {
           </h1>
         </div>
         <div className="row d-flex justify-content-between">
-          <Link href={'/ourServices/conciergerie'} passHref>
+         { 
+          serviceData.map((item) => {
+            return (
+
+          <Link href={item.href} passHref key={item.id}>
           <div className="col-12 col-md-6 p-3 p-lg-5">
             <Image
               className="card-img-top img-fluid"
-              src={Hands}
+              src={item.image}
               loader={myLoader}
               layout="responsive"
               objectFit="cover"
               fill="cover"
               height={300}
               width={500}
-              alt="bell"
+              alt={item.alt}
             />
             <div className="p-3 text-center text-capitalize">
-              <h3 className="service-heading">conciergerie</h3>
+              <h3 className="service-heading">{item.title}</h3>
             </div>
           </div>
           </Link>
-          <Link href={'/ourServices/property-management'} passHref>
-          <div className="col-12 col-md-6 p-3 p-lg-5">
-            <Image
-              className="card-img-top img-fluid"
-              src={Couple}
-              loader={myLoader}
-              layout="responsive"
-              objectFit="cover"
-              //fill='cover'
-              height={300}
-              width={500}
-              alt="bell"
-            />
-            <div className="p-3 text-center text-capitalize">
-              <h3 className="service-heading">Property Management</h3>
-            </div>
-            <div className="card-text"></div>
-          </div>
-          </Link>
+            )
+          })
+          }
         </div>
       </div>
     </div>
