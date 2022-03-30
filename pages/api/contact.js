@@ -9,9 +9,7 @@ export default (req, res) => {
 
   const message = `
   FirstName: ${body.firstName}\r\n
-  LastName: ${body.lastName}\r\n
   Email: ${body.email}\r\n
-  Subject: ${body.subject}
   Message: ${body.message}
 `;
 
