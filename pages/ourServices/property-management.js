@@ -94,7 +94,7 @@ const PropertyManagement = () => {
                                 item.text.map((content)=> {
                                     return (
                                 <li key={content.id}>
-                                    <p className="m-0 text-muted ">{content.content}</p>
+                                    <p className="m-0 text-muted text-list">{content.content}</p>
                                 </li>
                                     )
                                 })

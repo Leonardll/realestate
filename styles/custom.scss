@@ -54,9 +54,11 @@ main {
       left: -7px;
       background-color: #f9fafb;
       border: none;
+      min-width: 130px !important;
       
       .nav-link {
         color: #5ab4ab;
+        padding: 0.4rem 0.5rem;
 
         &:hover {
           color: #245564;
@@ -209,6 +211,10 @@ a {
    
   }
 }
+
+.text-list:first-letter {
+  text-transform: capitalize;
+}
 .service-heading {
   color:#245564;
 }
@@ -319,11 +325,12 @@ svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
         /* z-index: -66; */
         right: 13px;
         top: 33px;
-        left: -7px;
+        left: 6px;
         background-color: white;
         border: none;
         .nav-link {
           color: #5ab4ab;
+          padding: 0.4rem 0.5rem;
 
           &:hover {
             color: #245564;
@@ -359,7 +366,7 @@ svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
         /* z-index: -66; */
         right: 13px;
         top: 30px;
-        left: 0;
+        left: 6px;
         background-color: white;
         border: none;
         

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useState } from "react";
-export const Dropdown = (submenuItems, collapse, setcollapse) => {
+export const Dropdown = (submenuItems,{setcollapse, collapse}) => {
  
-  
+  console.log(setcollapse);
  return (
     <ul
       className="dropdown-menu  dropdown-menu-start show" 

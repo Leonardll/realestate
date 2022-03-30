@@ -135,12 +135,12 @@ const Conciergerie = () => {
                     role="img"
                   />
                 </span>
-                <h4 className="my-3 text-hogar2">{item.title}</h4>
+                <h4 className="my-3 text-hogar2 text-uppercase">{item.title}</h4>
                 <ul>
                   {item.text.map((text) => {
                     return (
                       <li key={text.id} className="list-unstyled">
-                        <p className="m-0 text-muted">
+                        <p className="m-0 text-muted text-list">
                           {text.content}
                         </p>
                       </li>
