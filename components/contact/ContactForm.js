@@ -11,7 +11,7 @@ export const ContactForm = () => {
   const inputData = [
     {
       id: "firstName",
-      icon: <FaUser />,
+      icon: <FaUser fill="#245564" />,
       type: "text",
       placeholder: "First Name",
       ariaLabel: "firstName",
@@ -21,7 +21,7 @@ export const ContactForm = () => {
     },
     {
       id: "email",
-      icon: <AiFillMail />,
+      icon: <AiFillMail fill="#245564" />,
       type: "email",
       placeholder: "Your Email",
       ariaLabel: "email",
@@ -31,7 +31,7 @@ export const ContactForm = () => {
     },
     {
       id: "message",
-      icon: <FaPencilAlt />,
+      icon: <FaPencilAlt fill="#245564" />,
       type: "text",
       placeholder: "Message",
       ariaLabel: "message",
