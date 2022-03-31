@@ -204,6 +204,7 @@ a {
     
     &:hover,:active {
      background-color:#5ab4ab;
+     transition: 1s;
      h3 {
        color:white;
      }
