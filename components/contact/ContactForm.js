@@ -33,7 +33,7 @@ export const ContactForm = () => {
     {
       id: "number",
       icon: <FaPhone fill="#245564" />,
-      type: "phone",
+      type: "tel",
       placeholder: "Phone Number",
       ariaLabel: "phone",
       ariaDescribedby: "phone",
