@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {motion} from "framer-motion"
 
 const propertyData = [
   {
@@ -12,6 +13,10 @@ const propertyData = [
     href:"https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/"
   },
 ]
+
+const easing = [0.6, -0.05, 0.01, 0.99];
+  
+
 
 const Properties = () => (
   <div className="section">
@@ -27,9 +32,13 @@ const Properties = () => (
         return (
 
   <Link href={item.href} passHref key={item.id} >
-    <div className=" banner shadow-lg d-flex align-items-center justify-content-center col-12 col-md-6 p-3">
+    <motion.div 
+    whileHover={{ scale: 1.1, originX: 0 }}
+    whileTap={{ scale: 0.9 }}
+    transition={{ type: 'spring', duration: 0.6, ease:easing, stiffness: 300}}
+    className=" banner shadow-lg d-flex align-items-center justify-content-center col-12 col-md-6 p-3">
       <h3 className="text-center text-capitalize text-hogar2">{item.title}</h3>
-    </div>
+    </motion.div>
   </Link>
         )
       })

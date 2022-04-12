@@ -20,7 +20,7 @@ export const Team = ({isVisible}) => {
         initial={{ opacity: 0, x: 150 }}
         whileInView={{ opacity: 1, x:0 }}
         //animate={{ opacity: 1, x:0}}
-        transition={{duration: 1, ease:"easeInOut",delay:.3}}
+        transition={{duration: 1, ease:"easeOut",delay:.3}}
         //viewport={{ once: true }} 
         className="row g-4 d-flex flex-row p-3">
           <div className="col-lg-4 d-flex justify-content-center">

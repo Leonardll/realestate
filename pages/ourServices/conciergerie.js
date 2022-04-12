@@ -2,7 +2,7 @@ import Image from "next/image";
 import ShitIcon3 from "../../assets/images/3.svg";
 import ShitIcon4 from "../../assets/images/4.svg";
 import ShitIcon5 from "../../assets/images/5.svg";
-
+import { useEffect } from "react";
 const conciergerieData = [
   {
     id: "es personal",
@@ -101,11 +101,22 @@ const conciergerieData = [
   },
 ];
 const Conciergerie = () => {
+  const scrollToConciergerie = () => {
+    window.scrollTo({
+      top: 1200,
+      behavior: "smooth",
+    });
+  }
+  useEffect(() => {
+    window.addEventListener("load", scrollToConciergerie);
+    return () => window.removeEventListener("load", scrollToConciergerie);
+  });
+
   return (
-    <div className="section">
+    <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
         <div className="text-center">
-          <h1 className=" my-4 text-capitalize">Conciergerie</h1>
+          <h1 className=" my-4 text-capitalize" id="conciergerie">Conciergerie</h1>
         </div>
         <h3 className="text-capitalize concierge-subheading mt-3">
           ¿QUÉ NECESITAS?

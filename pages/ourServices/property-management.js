@@ -2,6 +2,7 @@
  import ShitIcon from '../../assets/images/1.svg'
  import ShitIcon2 from '../../assets/images/2.svg'
  import ShitIcon3 from '../../assets/images/3.svg'
+ import { useEffect } from 'react'
 
 const propertyData = [
     {
@@ -70,11 +71,22 @@ const propertyData = [
       },
 ]
 const PropertyManagement = () => {
+ 
+  const scrollToProperty = () => {
+    window.scrollTo({
+      top: 1200,
+      behavior: "smooth",
+    });
+  }
+  useEffect(() => {
+    window.addEventListener("load", scrollToProperty);
+    return () => window.removeEventListener("load", scrollToProperty);
+  });
     return (
         <div className="section">
         <div className="container">
         <div className="text-center">
-        <h1 className=" my-4 text-capitalize">Property Management</h1>
+        <h1 className=" my-4 text-capitalize" id='property-management'>Property Management</h1>
         </div>
         <h3 className="text-capitalize property-subheading mt-3">¿QUÉ BUSCAS?</h3>
         <p className="lead property-subheading-text">Aquí verás varias de las gestiones que realizamos, pero si no encuentras lo que buscas ¡no te alarmes! haremos lo posible para solventarlo. Somos capaces de encontrar el hogar de tus sueños y hasta el mejor profesor de Yoga.</p>    

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-export const Dropdown = (submenuItems,{setcollapse, collapse}) => {
+export const Dropdown = (submenuItems,{collapse, setcollapse }) => {
  
  return (
     <ul
@@ -9,7 +9,7 @@ export const Dropdown = (submenuItems,{setcollapse, collapse}) => {
     >
       {submenuItems.submenuItems.map((subitem) => {
         return (
-          <li key={subitem.id}>
+          <li key={subitem.id} href={subitem.href}>
             <Link href={subitem.href} passHref className="dropdown-item">
               <a
                 onClick={() => {

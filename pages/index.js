@@ -21,11 +21,7 @@ export default function Home() {
   return (
     <>
       <div
-        data-spy="scroll"
-        data-bs-target="main-nav"
-        data-offset="0"
-        className="scrollspy-example"
-        tabIndex="0"
+  
       >
         <Services />
         <Properties />

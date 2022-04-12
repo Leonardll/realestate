@@ -25,7 +25,7 @@ export const menuItems = [
         href: "/ourServices/conciergerie",
       },
       {
-        id: "property management",
+        id: "property-management",
         title: "property management",
         href: "/ourServices/property-management",
       },
@@ -73,6 +73,7 @@ export const menuItems = [
 ];
 
  const Navbar = () => {
+  const [active, setActive] = useState(false);
   const changeBackground = () => {
     //console.log(window.scrollY, active);
     window.scrollY >= 100 ? setActive(true) : setActive(false);
@@ -83,7 +84,6 @@ export const menuItems = [
   });
 
   const [collapse, setcollapse] = useState(true);
-  const [active, setActive] = useState(false);
 
   return (
     <div className="container-fluid">
