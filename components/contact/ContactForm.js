@@ -34,7 +34,7 @@ export const ContactForm = () => {
       id: "number",
       icon: <FaPhone fill="#245564" />,
       type: "tel",
-      placeholder: "Phone Number",
+      placeholder: "Phone",
       ariaLabel: "phone",
       ariaDescribedby: "phone",
       as: null,

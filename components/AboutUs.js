@@ -17,14 +17,14 @@ export const AboutUs = () => {
           <p className="lead">
             Sabemos que estás buscando tu lugar en Barcelona en el que construir
             tu hogar, o por el contrario, que estás dejando en nuestras manos el
-            que un día lo fue. <span className=" fw-bold text-span">Te acompañaremos y asesoraremos de principio a
-            fin</span>, tanto para la venta o alquiler de tu piso con el cariño que
+            que un día lo fue. <span className=" fw-bold text-span">Te acompañaremos y asesoraremos </span>de principio a
+            fin, tanto para la venta o alquiler de tu piso con el cariño que
             merece.
           </p>
           <p className="lead">
             Contamos con más de 10 años de experiencia en el sector y queremos
-            ofrecerte un servicio integral inmobiliario. <span className=" fw-bold text-span">Queremos hacer tu vida
-            más liviana </span> y que te despreocupes de los <span className=" fw-bold text-span">“tengo que…”</span>. Podemos
+            ofrecerte un servicio integral inmobiliario. Queremos hacer <span className=" fw-bold text-span"> tu vida
+            más liviana </span> y que <span className=" fw-bold text-span">te despreocupes de los “tengo que…”</span>. Podemos
             asesorarte con reformas, diseño de interiores, decoración, gestión
             de alquileres y valoración de inversiones, entre otros servicios.
           </p>

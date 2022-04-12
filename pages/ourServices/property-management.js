@@ -89,7 +89,7 @@ const PropertyManagement = () => {
         <h1 className=" my-4 text-capitalize" id='property-management'>Property Management</h1>
         </div>
         <h3 className="text-capitalize property-subheading mt-3">¿QUÉ BUSCAS?</h3>
-        <p className="lead property-subheading-text">Aquí verás varias de las gestiones que realizamos, pero si no encuentras lo que buscas ¡no te alarmes! haremos lo posible para solventarlo. Somos capaces de encontrar el hogar de tus sueños y hasta el mejor profesor de Yoga.</p>    
+        <p className="lead property-subheading-text">Estas son las gestiones más comunes en las que te podemos ayudar, pero recuerda, nosotros como conserje inmobiliarios te ofrecemos un servicio mucho más amplio del que tenemos aquí detallado. Si no ves reﬂejado lo que necesitas, ¡no dudes en contactarnos!</p>    
         </div>
         <div className="container">
             <div className="row text-center mt-5">
