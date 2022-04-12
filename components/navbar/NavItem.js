@@ -28,7 +28,7 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
       <Link
         key={item.id}
         href={item.href}
-        passHref
+        //passHref
         spy={true}
         smooth={true}
         offset={-70}

@@ -105,8 +105,11 @@ main {
 .masthead-header {
   position: absolute;
   bottom: 8px;
-  left: 16px;
-  width:300px;
+  left:16px;
+  width: 300px;
+  background-color: rgb(90, 181, 172, .7);
+  //height: calc(60px - 10%);
+  
 }
 
 .text-span {

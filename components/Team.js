@@ -22,7 +22,7 @@ export const Team = ({isVisible}) => {
         //animate={{ opacity: 1, x:0}}
         transition={{duration: 1, ease:"easeOut",delay:.3}}
         //viewport={{ once: true }} 
-        className="row g-4 d-flex flex-row p-3">
+        className="row g-4 d-flex flex-row p-5">
           <div className="col-lg-4 d-flex justify-content-center">
             <div className="h-100 text-center">
               <Image

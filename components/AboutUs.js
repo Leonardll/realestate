@@ -7,7 +7,7 @@ export const AboutUs = () => {
             About Us
           </h1>
         </div>
-        <div className="container">
+        <div className="container pt-3">
           <p className=" text-wrap lead">
             Somos una agencia cercana y con gran empatía hacia nuestros
             clientes. Nos definimos como <span className=" fw-bold text-span">los concierges inmobiliarios</span>, somos la
