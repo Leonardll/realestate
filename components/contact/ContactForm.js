@@ -1,12 +1,13 @@
 import { React, useState } from "react";
 import { FormCard } from "./FormCard";
 import { AiFillMail } from "react-icons/ai";
-import { FaUser, FaPencilAlt} from "react-icons/fa";
+import { FaUser, FaPencilAlt,FaPhone} from "react-icons/fa";
 
 export const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [phone, setPhone] = useState("");
 
   const inputData = [
     {
@@ -30,6 +31,16 @@ export const ContactForm = () => {
       fn: (e) => setEmail(e.target.value),
     },
     {
+      id: "number",
+      icon: <FaPhone fill="#245564" />,
+      type: "phone",
+      placeholder: "Phone Number",
+      ariaLabel: "phone",
+      ariaDescribedby: "phone",
+      as: null,
+      fn: (e) => setPhone(e.target.value),
+    },
+    {
       id: "message",
       icon: <FaPencilAlt fill="#245564" />,
       type: "text",
@@ -46,6 +57,7 @@ export const ContactForm = () => {
     const data = {
       firstName,
       email,
+      number,
       message,
     };
     fetch("/api/contact", {
