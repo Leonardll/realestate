@@ -27,7 +27,7 @@ export const menuItems = [
       {
         id: "property-management",
         title: "property management",
-        href: "/ourServices/property-management",
+        href: "/ourServices/realEstate",
       },
     ],
   },
