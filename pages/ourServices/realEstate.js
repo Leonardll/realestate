@@ -70,7 +70,7 @@ const propertyData = [
         ],
       },
 ]
-const PropertyManagement = () => {
+const RealEstate = () => {
  
   const scrollToProperty = () => {
     window.scrollTo({
@@ -86,7 +86,7 @@ const PropertyManagement = () => {
         <div className="section">
         <div className="container">
         <div className="text-center">
-        <h1 className=" my-4 text-capitalize" id='property-management'>Property Management</h1>
+        <h1 className=" my-4 text-capitalize" id='property-management'>Real Estate</h1>
         </div>
         <h3 className="text-capitalize property-subheading mt-3">¿QUÉ BUSCAS?</h3>
         <p className="lead property-subheading-text">Estas son las gestiones más comunes en las que te podemos ayudar, pero recuerda, nosotros como conserje inmobiliarios te ofrecemos un servicio mucho más amplio del que tenemos aquí detallado. Si no ves reﬂejado lo que necesitas, ¡no dudes en contactarnos!</p>    
@@ -125,4 +125,4 @@ const PropertyManagement = () => {
     
 }
 
-export default PropertyManagement;
+export default RealEstate;

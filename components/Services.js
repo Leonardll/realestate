@@ -14,9 +14,9 @@ const serviceData = [
 
   },
   {
-    id:"propertyManagement",
-    title: "property management",
-    href:"/ourServices/property-management",
+    id:"realestate",
+    title: "real estate",
+    href:"/ourServices/realEstate",
     image: Couple,
     alt:"couple"
 
