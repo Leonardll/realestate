@@ -2,7 +2,12 @@ import Image from "next/image";
 import ShitIcon3 from "../../assets/images/3.svg";
 import ShitIcon4 from "../../assets/images/4.svg";
 import ShitIcon5 from "../../assets/images/5.svg";
+import { AiOutlinePlus } from "react-icons/ai";
+import { useState } from "react";
+import { Contact } from "../../components/contact/Contact";
+
 import { useEffect } from "react";
+import Link from "next/link";
 const conciergerieData = [
   {
     id: "es personal",
@@ -106,7 +111,8 @@ const Conciergerie = () => {
       top: 1200,
       behavior: "smooth",
     });
-  }
+  };
+  const [showform, setshowform] = useState(false);
   useEffect(() => {
     window.addEventListener("load", scrollToConciergerie);
     return () => window.removeEventListener("load", scrollToConciergerie);
@@ -116,7 +122,9 @@ const Conciergerie = () => {
     <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
         <div className="text-center">
-          <h1 className=" my-4 text-capitalize" id="conciergerie">Conciergerie</h1>
+          <h1 className=" my-4 text-capitalize" id="conciergerie">
+            Conciergerie
+          </h1>
         </div>
         <h3 className="text-capitalize concierge-subheading mt-3">
           ¿QUÉ NECESITAS?
@@ -146,7 +154,9 @@ const Conciergerie = () => {
                     role="img"
                   />
                 </span>
-                <h4 className="my-3 text-hogar2 text-uppercase">{item.title}</h4>
+                <h4 className="my-3 text-hogar2 text-uppercase">
+                  {item.title}
+                </h4>
                 <ul>
                   {item.text.map((text) => {
                     return (
@@ -155,15 +165,23 @@ const Conciergerie = () => {
                           {text.content}
                         </p>
                       </li>
-                      
                     );
                   })}
                 </ul>
+
+                {item.id === "algomas" ? (
+                  <AiOutlinePlus
+                    onClick={() => setshowform((prev) => !prev)}
+                    className="fs-2"
+                    fill="#5ab4ab"
+                  />
+                ) : null}
               </div>
             );
           })}
         </div>
       </div>
+      {showform && <Contact />}
     </div>
   );
 };
