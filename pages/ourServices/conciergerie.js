@@ -115,7 +115,10 @@ const Conciergerie = () => {
   const [showform, setshowform] = useState(false);
   useEffect(() => {
     window.addEventListener("load", scrollToConciergerie);
-    return () => window.removeEventListener("load", scrollToConciergerie);
+    return () => {
+      window.removeEventListener("load", scrollToConciergerie);
+     
+    }
   });
 
   return (

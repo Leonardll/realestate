@@ -2,7 +2,7 @@
  import ShitIcon from '../../assets/images/1.svg'
  import ShitIcon2 from '../../assets/images/2.svg'
  import ShitIcon3 from '../../assets/images/3.svg'
- import { useEffect } from 'react'
+ import { useEffect,useState } from 'react'
 
 const propertyData = [
     {
@@ -72,18 +72,30 @@ const propertyData = [
 ]
 const RealEstate = () => {
  
-  const scrollToProperty = () => {
+  const scrollToConciergerie = () => {
     window.scrollTo({
       top: 1200,
       behavior: "smooth",
     });
-  }
+  };
+  const [showform, setshowform] = useState(false);
   useEffect(() => {
-    window.addEventListener("load", scrollToProperty);
-    return () => window.removeEventListener("load", scrollToProperty);
+    window.addEventListener("load", scrollToConciergerie);
+    return () => window.removeEventListener("load", scrollToConciergerie);
   });
+  // const scrollToProperty = () => {
+  //   window.scrollTo({
+  //     top: 1200,
+  //     behavior: "smooth",
+  //   });
+  // }
+
+  // useEffect(() => {
+  //   window.addEventListener("load", scrollToProperty);
+  //   return () => window.removeEventListener("load", scrollToProperty);
+  // });
     return (
-        <div className="section">
+        <div className="section" onLoad={scrollToConciergerie}>
         <div className="container">
         <div className="text-center">
         <h1 className=" my-4 text-capitalize" id='property-management'>Real Estate</h1>
