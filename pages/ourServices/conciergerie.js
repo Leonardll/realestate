@@ -106,35 +106,28 @@ const conciergerieData = [
   },
 ];
 const Conciergerie = () => {
+  
+  
   const scrollToConciergerie = () => {
     window.scrollTo({
       top: 1200,
       behavior: "smooth",
     });
   };
+
   const [showform, setshowform] = useState(false);
-  useEffect(() => {
-    window.addEventListener("load", scrollToConciergerie);
-    return () => {
-      window.removeEventListener("load", scrollToConciergerie);
+  // useEffect(() => {
+  //   window.addEventListener("load", scrollToConciergerie);
+  //   return () => {
+  //     window.removeEventListener("load", scrollToConciergerie);
       
-    }
-  });
+  //   }
+  // });
   
-  const showContactForm = () => {
-    setshowform(!showform)
-    
-  }
-  useEffect(() => {
-    window.addEventListener("click",showContactForm );
-    
-    return () => {
-      window.removeEventListener("click", showContactForm);
-      
-    }
   
-    
-  })
+ 
+  
+  
   
 
   return (
@@ -188,25 +181,26 @@ const Conciergerie = () => {
                   })}
                 </ul>
 
-                {item.id === "algomas" ? (
+                {item.id === "algomas" && (
                   <AiOutlinePlus
                   role="button"
                     onClick={() => {
-                      setshowform( !showform)
-                      console.log(showform)
+                    
+                    setshowform(!showform)     
+                    console.log(showform);
                     }}
                     className="fs-2"
                     fill="#5ab4ab"
                   />
-                ) : null}
+                )}
               </div>
             );
           })}
         </div>
-      </div>
       {showform &&
        <Contact />
 }
+      </div>
     </div>
   );
 };
