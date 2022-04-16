@@ -104,7 +104,7 @@ export const menuItems = [
                 className="d-inline-block align-text-top me-1 img-fluid"
                 src={Logo}
                 width={70}
-                height={25}
+                height={30}
                 layout="responsive"
                 alt="..."
               />

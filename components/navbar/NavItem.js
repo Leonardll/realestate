@@ -27,51 +27,48 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
       <Link
         key={item.id}
         href={item.href}
-        //passHref
+        passHref
         spy={true}
         smooth={true}
         offset={-70}
         duration={500}
       >
-        {item.submenu ? (
           <a className="nav-link rounded">
             {item.title}
-            <span>
-              <AiFillCaretDown
-                style={{ width: "1em" }}
-                fill="#5ab4ab"
-                color="#5ab4ab"
-                onClick={() => {
-                  setShow(!show);
-                  console.log(show);
-                }}
-                className=" arrow dropdown-toggle dropdown-toggle-split"
-                data-bs-toggle="dropdown"
-                aria-expanded={show ? "true" : "false"}
-                id="navbarDropdown"
-                role="button"
-              />
-            </span>
-
-            {show && (
-              <Dropdown
-                submenuItems={item.submenuItems}
-                collapse={collapse}
-                setcollapse={setcollapse}
-              />
-            )}
-          </a>
-        ) : (
-          <a
-            onClick={() => {
-              setcollapse(!collapse);
-            }}
-            className="nav-link rounded"
-          >
-            {item.title}
-          </a>
-        )}
+      {item.submenu && (
+    <span>
+      <AiFillCaretDown
+        style={{ width: "1em" }}
+        fill="#5ab4ab"
+        color="#5ab4ab"
+        onClick={() => {
+          setShow(!show);
+          console.log(show);
+        }}
+        className=" arrow dropdown-toggle dropdown-toggle-split"
+        data-bs-toggle="dropdown"
+        aria-expanded={show ? "true" : "false"}
+        id="navbarDropdown"
+        role="button"
+      />
+    </span>
+)  
+    }
+    </a>
       </Link>
+      {
+    show && (
+      <Dropdown
+        submenuItems={item.submenuItems}
+        collapse={collapse}
+        setcollapse={setcollapse}
+      />
+    )
+}
     </li>
   );
 };
+
+
+
+   

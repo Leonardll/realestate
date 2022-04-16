@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-export const Dropdown = ({ submenuItems,setcollapse }) => {
+export const Dropdown =  ({ submenuItems,setcollapse }) => {
  
   return (
     <ul
@@ -9,16 +9,14 @@ export const Dropdown = ({ submenuItems,setcollapse }) => {
     >
       {submenuItems.map((subitem) => {
         return (
-          <li key={subitem.id} href={subitem.href}>
-            <Link href={subitem.href} passHref className="dropdown-item">
+          <Link  key={subitem.id} href={subitem.href} passHref  className="dropdown-item" >
               <a
                 onClick={() => {setcollapse(false)}}
                 className="nav-link rounded"
               >
                 {subitem.title}
               </a>
-            </Link>
-          </li>
+    </Link>
         );
       })}
     </ul>
