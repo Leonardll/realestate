@@ -62,6 +62,8 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
         submenuItems={item.submenuItems}
         collapse={collapse}
         setcollapse={setcollapse}
+        show={show}
+        setShow={setShow}
       />
     )
 }
