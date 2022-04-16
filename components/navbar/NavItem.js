@@ -23,7 +23,7 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
   }, [show]);
 
   return (
-    <li ref={ref} className={item.submenu ? "nav-item dropdown" : "nav-item"}>
+    <li  ref={ref} className={item.submenu ? "nav-item dropdown" : "nav-item"}>
       <Link
         key={item.id}
         href={item.href}
@@ -33,7 +33,14 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
         offset={-70}
         duration={500}
       >
-          <a className="nav-link rounded">
+          <a className="nav-link rounded"
+           onClick={() => {
+             setTimeout(() => {
+               
+               setcollapse(!collapse)
+              }, 1500); 
+            }}
+          >
             {item.title}
       {item.submenu && (
     <span>
@@ -42,7 +49,8 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
         fill="#5ab4ab"
         color="#5ab4ab"
         onClick={() => {
-          setShow(!show);
+          setShow(!show)
+          
           console.log(show);
         }}
         className=" arrow dropdown-toggle dropdown-toggle-split"
