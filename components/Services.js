@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link"
+import {motion} from "framer-motion"
 import React from "react";
 import Hands from "../assets/images/hands.jpg";
 import Couple from "../assets/images/couple.jpg";
@@ -22,6 +23,8 @@ const serviceData = [
 
   },
 ]
+const easing = [0.6, -0.05, 0.01, 0.99];
+
 export const Services = () => {
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
@@ -41,7 +44,11 @@ export const Services = () => {
             return (
 
           <Link href={item.href} passHref key={item.id}>
-          <div className="col-12 col-md-6 p-3 p-lg-5">
+          <motion.div
+          whileHover={{ scale: 1.1, originX: 0, transition:3 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ type: 'spring', duration: 2, ease:easing, stiffness: 300}} 
+          className="col-12 col-md-6 p-3 p-lg-5">
             <Image
               className="card-img-top img-fluid"
               src={item.image}
@@ -56,7 +63,7 @@ export const Services = () => {
             <div className="p-3 text-center text-capitalize">
               <h3 className="service-heading">{item.title}</h3>
             </div>
-          </div>
+          </motion.div>
           </Link>
             )
           })
