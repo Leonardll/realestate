@@ -116,19 +116,27 @@ const Conciergerie = () => {
   };
 
   const [showform, setshowform] = useState(false);
-  // useEffect(() => {
-  //   window.addEventListener("load", scrollToConciergerie);
-  //   return () => {
-  //     window.removeEventListener("load", scrollToConciergerie);
+
+  useEffect(() => {
+    window.addEventListener("load", scrollToConciergerie);
+    return () => {
+      window.removeEventListener("load", scrollToConciergerie);
       
-  //   }
-  // });
+    }
+  });
   
+  
+  
+  const showContactForm = () => {
+    
+    return(
+      <Contact />
+    )
+    
+  }
   
  
-  
-  
-  
+
 
   return (
     <div className="section" onLoad={scrollToConciergerie}>
@@ -172,7 +180,9 @@ const Conciergerie = () => {
                 <ul>
                   {item.text.map((text) => {
                     return (
-                      <li key={text.id} className="list-unstyled">
+                      <li key={text.id} className="list-unstyled"
+                      
+                      >
                         <p className="m-0 text-muted text-list">
                           {text.content}
                         </p>
@@ -184,11 +194,9 @@ const Conciergerie = () => {
                 {item.id === "algomas" && (
                   <AiOutlinePlus
                   role="button"
-                    onClick={() => {
-                    
-                    setshowform(!showform)     
-                    console.log(showform);
-                    }}
+                  onClick={() => {
+                    console.log("clicked");
+                    setshowform(!showform)}}
                     className="fs-2"
                     fill="#5ab4ab"
                   />
@@ -197,8 +205,8 @@ const Conciergerie = () => {
             );
           })}
         </div>
-      {showform &&
-       <Contact />
+      {showform && showContactForm()
+      
 }
       </div>
     </div>
