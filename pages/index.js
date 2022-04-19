@@ -20,9 +20,7 @@ const myLoader2 = ({ src, width, quality }) => {
 export default function Home() {
   return (
     <>
-      <div
-  
-      >
+      <div>
         <Services />
         <Properties />
         <AboutUs />

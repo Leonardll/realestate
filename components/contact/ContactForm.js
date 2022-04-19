@@ -3,6 +3,7 @@ import { FormCard } from "./FormCard";
 import { AiFillMail } from "react-icons/ai";
 import { FaUser, FaPencilAlt,FaPhone} from "react-icons/fa";
 
+
 export const ContactForm = () => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,6 +18,7 @@ export const ContactForm = () => {
       placeholder: "First Name",
       ariaLabel: "firstName",
       ariaDescribedby: "firstName",
+      controlId:"validationFormik101", 
       as: null,
       fn: (e) => setFirstName(e.target.value),
     },
@@ -27,6 +29,7 @@ export const ContactForm = () => {
       placeholder: "Your Email",
       ariaLabel: "email",
       ariaDescribedby: "email",
+      controlId:"validationFormik102",
       as: null,
       fn: (e) => setEmail(e.target.value),
     },
@@ -37,6 +40,7 @@ export const ContactForm = () => {
       placeholder: "Phone",
       ariaLabel: "phone",
       ariaDescribedby: "phone",
+      controlId:"validationFormik103",
       as: null,
       fn: (e) => setPhone(e.target.value),
     },
@@ -47,6 +51,7 @@ export const ContactForm = () => {
       placeholder: "Message",
       ariaLabel: "message",
       ariaDescribedby: "message",
+      controlId:"validationFormik104",
       as: "textarea",
       fn: (e) => setMessage(e.target.value),
     },
@@ -57,7 +62,7 @@ export const ContactForm = () => {
     const data = {
       firstName,
       email,
-      number,
+      phone,
       message,
     };
     fetch("/api/contact", {
@@ -68,18 +73,21 @@ export const ContactForm = () => {
   }
 
   return (
+ 
+
     <div className="container" id="contact">
       <div className=" d-flex flex-wrap justify-content-center">
         <h1 className="text-center text-capitalise text-white my-4">Contact</h1>
       </div>
       <div className="row p-3 justify-content-center">
         <FormCard
-          AiFillMail={AiFillMail}
-          inputData={inputData}
           handleSubmit={handleSubmit}
+          inputData={inputData}
+        
         />
 
       </div>
     </div>
-  );
+  
+    );
 };

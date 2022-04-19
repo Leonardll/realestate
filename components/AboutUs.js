@@ -1,9 +1,9 @@
 export const AboutUs = () => {
   return (
-    <div className="section">
+    <div className="section" id="about-us">
       <div className="container">
-        <div className="d-flex justify-content-center">
-          <h1 className="my-4 text-capitalize" id="about-us">
+        <div className="d-flex justify-content-center mt-2">
+          <h1 className="my-4 text-capitalize">
             About Us
           </h1>
         </div>

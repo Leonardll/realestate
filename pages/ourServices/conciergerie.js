@@ -110,7 +110,7 @@ const Conciergerie = () => {
   
   const scrollToConciergerie = () => {
     window.scrollTo({
-      top: 1200,
+      top: 300,
       behavior: "smooth",
     });
   };

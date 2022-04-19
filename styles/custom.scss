@@ -21,6 +21,15 @@ main {
   margin: 0;
   padding: 0;
 }
+  .dropdown-toggle:hover {
+    color: #245564 !important;
+    transition: 2s;
+  }
+  .arrow:focus {
+    color: #245564 !important;
+    transition: 2s;
+  }
+
 .navbar-brand {
   height: 120px;
   width: 200px;
@@ -65,17 +74,17 @@ main {
       .nav-link {
         color: #5ab4ab;
         padding: 0.4rem 0.5rem;
-
-        &:hover {
-          color: #245564;
-          transition: 2s;
-        }
-
-        &:focus {
-          color: #245564;
-          transition: 2s;
-        }
       }
+        .nav-link:hover {
+          color: #245564;
+          transition: 2s;
+        }
+
+      .nav-link:focus {
+          color: #245564;
+          transition: 2s;
+        }
+      
     }
   }
 

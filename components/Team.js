@@ -7,10 +7,10 @@ import Manu from "../assets/images/manu.jpg";
 export const Team = ({isVisible}) => {
   
   return (
-    <div className="section" >
+    <div className="section" id="team" >
       <div className="container">
         <div className=" d-flex justify-content-center">
-          <h1 className="my-4  text-capitalize" id="team">
+          <h1 className="my-4  text-capitalize" >
             Team
           </h1>
         </div>

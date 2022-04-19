@@ -31,10 +31,10 @@ export const Services = () => {
   };
 
   return (
-    <div className="section">
+    <div className="section" id="services">
       <div className="container">
         <div className="d-flex justify-content-center">
-          <h1 className="my-4" id="services">
+          <h1 className="my-4">
             Services
           </h1>
         </div>

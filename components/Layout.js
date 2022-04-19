@@ -14,9 +14,9 @@ const Layout = ({ children }) => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <div className="container-fluid px-0 mw-3 m-auto scrollspy-example"
-    data-spy="scroll"
-    data-bs-target="main-nav"
-    data-offset="0"
+    data-bs-spy="scroll"
+    data-bs-target="#mainNav"
+    data-bs-offset="-130"
     tabIndex="0"
     >
       <header>

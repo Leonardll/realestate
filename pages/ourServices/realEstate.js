@@ -74,7 +74,7 @@ const RealEstate = () => {
  
   const scrollToConciergerie = () => {
     window.scrollTo({
-      top: 1200,
+      top: 300,
       behavior: "smooth",
     });
   };
@@ -83,17 +83,7 @@ const RealEstate = () => {
     window.addEventListener("load", scrollToConciergerie);
     return () => window.removeEventListener("load", scrollToConciergerie);
   });
-  // const scrollToProperty = () => {
-  //   window.scrollTo({
-  //     top: 1200,
-  //     behavior: "smooth",
-  //   });
-  // }
 
-  // useEffect(() => {
-  //   window.addEventListener("load", scrollToProperty);
-  //   return () => window.removeEventListener("load", scrollToProperty);
-  // });
     return (
         <div className="section" onLoad={scrollToConciergerie}>
         <div className="container">

@@ -26,7 +26,7 @@ const Properties = () => (
     Properties
     </h1>
     </div>
-    <div className="row d-flex">
+    <div className="row d-flex mt-2">
     {
       propertyData.map((item) => {
         return (
