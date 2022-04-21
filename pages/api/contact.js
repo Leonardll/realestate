@@ -10,13 +10,14 @@ export default (req, res) => {
   const message = `
   FirstName: ${body.firstName}\r\n
   Email: ${body.email}\r\n
-  Message: ${body.message}
+  phone:${body.phone}
+  Message: ${body.message}\r\n
 `;
 
   const data = {
     to: "info@unicohogar.com",
     from: "info@unicohogar.com",
-    subject: `New message from ${body.firstName}`,
+    subject: `New message from ${body.firstName} ${body.number}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
   };
