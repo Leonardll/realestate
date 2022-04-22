@@ -218,7 +218,7 @@ export const ContactForm = () => {
           <Button 
           type="submit"
           className="btn btn-lg btn-hogar2 text-light mb-3"
-          >Submit form</Button>
+          >Send</Button>
             </div>
         </Form>
           </div>

@@ -20,13 +20,13 @@ const easing = [0.6, -0.05, 0.01, 0.99];
 
 const Properties = () => (
   <div className="section">
-    <div className="container property">
+    <div className="container property mt-2">
     <div className="d-flex justify-content-center">
     <h1 className="my-4 text-center" id="properties">
     Properties
     </h1>
     </div>
-    <div className="row d-flex mt-2">
+    <div className="row d-flex mt-2 pt-3">
     {
       propertyData.map((item) => {
         return (
