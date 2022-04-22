@@ -38,7 +38,7 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
              setTimeout(() => {
                
                setcollapse(!collapse)
-              }, 1500); 
+              }, 2000); 
             }}
           >
             {item.title}

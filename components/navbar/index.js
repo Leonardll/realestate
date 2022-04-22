@@ -1,7 +1,7 @@
   import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Logo from "../../assets/images/UnicoHogarTrs.png";
+import Logo from "../../assets/images/UnicoHogar-Scelto_Tavola disegno 1.png";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
 
@@ -103,8 +103,8 @@ export const menuItems = [
                 //loader={myLoader}
                 className="d-inline-block align-text-top me-1 img-fluid"
                 src={Logo}
-                width={70}
-                height={30}
+                width={80}
+                height={25}
                 layout="responsive"
                 alt="..."
               />
