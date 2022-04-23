@@ -313,6 +313,15 @@ svg:not(:host).svg-inline--fa, svg:not(:root).svg-inline--fa {
   background-color: #5ab4ab;
   border: 1px solid #fff;
 }
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #245564;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(34, 73, 85, 0.5);
+}
+
 .btn-hogar {
   background-color: #5ab4ab;
 }
