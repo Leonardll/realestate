@@ -12,7 +12,7 @@ import Button from "react-bootstrap/Button"
 let schema = yup.object().shape({
   firstName: yup.string().min(3,'too short').max(15,'too long').required(' Name Required'),
   email: yup.string().email('Invalid email').required(' Email Required'),
-  phone: yup.number().min(11,'Phone must be 11 digit').max(11,'Phone must be 11 digit').required('Phone Required'),
+  phone: yup.number().min(11,'Phone must 11 digit min').required('Phone Required'),
   message: yup.string().required(),
   
 });
