@@ -17,7 +17,7 @@ export default (req, res) => {
   const data = {
     to: "info@unicohogar.com",
     from: "info@unicohogar.com",
-    subject: `New message from ${body.firstName} ${body.number}`,
+    subject: `New message from ${body.firstName} ${body.phone}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
   };
