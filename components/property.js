@@ -34,7 +34,7 @@ const Properties = () => (
   <Link href={item.href} passHref key={item.id} >
     <motion.div 
     whileHover={{ scale: 1.1, originX: 0, transition:3 }}
-    whileTap={{ scale: 0.9 }}
+    whileTap={{ scale: 0.9,originX: 0, transition:3 }}
     transition={{ type: 'spring', duration: 2, ease:easing, stiffness: 300}}
     className=" banner shadow-lg d-flex align-items-center justify-content-center col-12 col-md-6 p-3">
       <h3 className="text-center text-capitalize text-hogar2">{item.title}</h3>
