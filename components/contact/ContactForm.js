@@ -70,9 +70,8 @@ export const ContactForm = () => {
     },
   ];
 
-  async function handleSubmit(e) {
-    //e.preventDefault();
-    //e.stopPropagation();
+  async function handleSubmit() {
+ 
       const data = {
         firstName,
         email,
