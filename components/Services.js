@@ -46,7 +46,6 @@ export const Services = () => {
           <Link href={item.href} passHref key={item.id}>
           <motion.div
           whileHover={{ scale: 1.1, originX: 0, transition:3 }}
-          //whileInView={{ scale: 1.1, originX: 0, transition:3 }}
           whileTap={{ scale: 0.9, originX: 0, transition:3 }}
           transition={{ type: 'spring', duration: 2, ease:easing, stiffness: 300}} 
           className="col-12 col-md-6 p-3 p-lg-5">
