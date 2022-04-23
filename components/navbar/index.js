@@ -1,7 +1,7 @@
   import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Logo from "../../assets/images/UnicoHogar-Scelto_Tavola disegno 1.png";
+import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
 
@@ -103,8 +103,8 @@ export const menuItems = [
                 //loader={myLoader}
                 className="d-inline-block align-text-top me-1 img-fluid"
                 src={Logo}
-                width={80}
-                height={25}
+                width={90}
+                height={35}
                 layout="responsive"
                 alt="..."
               />
@@ -114,8 +114,8 @@ export const menuItems = [
           <div
             className={
               collapse
-                ? "collapse navbar-collapse mb-2"
-                : "navbar-collapse collapse show mb-2"
+                ? "collapse navbar-collapse"
+                : "navbar-collapse collapse show"
             }
             id="navbarResponsive"
           >
