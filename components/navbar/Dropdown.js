@@ -4,7 +4,7 @@ export const Dropdown =  ({ submenuItems,setcollapse, setShow }) => {
  
   return (
     <ul
-      className="dropdown-menu  dropdown-menu-start show" 
+      className="dropdown-menu shadow-lg dropdown-menu-start show" 
       aria-labelledby="navbarDropdownMenuLink"
     >
       {submenuItems.map((subitem) => {
