@@ -4,7 +4,7 @@ import Image from "next/image";
 import Cris from "../assets/images/cris.jpg";
 import Manu from "../assets/images/manu.jpg";
 
-export const Team = ({isVisible}) => {
+export const Team = () => {
   
   return (
     <div className="section" id="team" >
