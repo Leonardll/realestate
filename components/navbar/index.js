@@ -106,7 +106,7 @@ export const menuItems = [
                 width={90}
                 height={35}
                 layout="responsive"
-                alt="..."
+                alt="unico-logo"
               />
             </a>
           </Link>
