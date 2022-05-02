@@ -82,7 +82,7 @@ export const ContactForm = () => {
         method: "post",
         body: JSON.stringify(data),
       });
-      alert(JSON.stringify(data),'success')
+      alert("Message sent! Thank you\nWe will be in touch with you soon!")
      
       
     
