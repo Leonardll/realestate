@@ -29,7 +29,7 @@ export const Team = ({isVisible}) => {
                 src={Manu}
                 height={300}
                 width={250}
-                alt="..."
+                alt="team-member"
                 objectFit="cover"
                 className="card-img-top img-fluid mx-auto "
                 />
@@ -62,8 +62,9 @@ export const Team = ({isVisible}) => {
                 objectFit="cover"
                 height={300}
                 width={250}
-                alt="..."
+                alt="team-member"
                 className="card-img-top img-fluid mx-auto"
+                
               />
             </div>
           </div>

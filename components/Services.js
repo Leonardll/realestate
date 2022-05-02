@@ -59,6 +59,7 @@ export const Services = () => {
               height={300}
               width={500}
               alt={item.alt}
+              priority
             />
             <div className="p-3 text-center text-capitalize">
               <h3 className="service-heading">{item.title}</h3>
