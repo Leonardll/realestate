@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { baseUrl, fetchApi } from "../utils/fetchApi";
 import { Services } from "../components/Services";
 import { Contact } from "../components/contact/Contact";
 import { AboutUs } from "../components/AboutUs";

@@ -2,7 +2,7 @@ import Image from "next/image";
 import ShitIcon3 from "../../assets/images/3.svg";
 import ShitIcon4 from "../../assets/images/4.svg";
 import ShitIcon5 from "../../assets/images/5.svg";
-import { AiOutlinePlus } from "react-icons/ai";
+import { AiOutlinePlus , AiOutlineMinus } from "react-icons/ai";
 import { useState } from "react";
 import { Contact } from "../../components/contact/Contact";
 
@@ -192,14 +192,24 @@ const Conciergerie = () => {
                 </ul>
 
                 {item.id === "algomas" && (
-                  <AiOutlinePlus
-                  role="button"
-                  onClick={() => {
-                    console.log("clicked");
-                    setshowform(!showform)}}
-                    className="fs-2"
-                    fill="#5ab4ab"
-                  />
+                  
+                    !showform ?
+                    <AiOutlinePlus
+                    role="button"
+                    onClick={() => {
+                      setshowform(!showform)}}
+                      className="fs-2"
+                      fill="#5ab4ab"
+                    />
+                    :
+                    <AiOutlineMinus 
+                    role="button"
+                    onClick={() => {
+                      setshowform(!showform)}}
+                      className="fs-2"
+                      fill="#5ab4ab"
+                       />
+                  
                 )}
               </div>
             );
