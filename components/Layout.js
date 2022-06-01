@@ -5,7 +5,7 @@ import MastHead from "./MastHead";
 import CookieConsent from "react-cookie-consent"
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
-import { underline } from "fontawesome";
+import Link from "next/link"
 
 const Layout = ({ children }) => (
   <React.StrictMode>
@@ -32,7 +32,11 @@ const Layout = ({ children }) => (
       buttonStyle={{color:"#ffff", background:"#245564",fontSize:"1em"}}
       expires={1}
       >
-       This site uses cookies. Please See our <a style={{color:"#245564", textDecoration:"underline"}} href="/policy">privacy policy</a> for more information.
+       This site uses cookies. Please See our privacy
+       <Link href="/policy" passHref> 
+       <a style={{color:"#245564", textDecoration:"underline"}}>policy</a> 
+       </Link>
+       for more information 
       </CookieConsent>
       <ScrollToTop />
     </div>
