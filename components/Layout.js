@@ -28,8 +28,8 @@ const Layout = ({ children }) => (
       <CookieConsent 
       debug={true}
       location="bottom"
-      style={{background:"#ffff", textAlign:"center",color:"#245564", fontSize:"1em", display:"flex", alignContent:"center"}}
-      buttonStyle={{color:"#ffff", background:"#245564",fontSize:"1em"}}
+      style={{background:"#ffff", textAlign:"center",color:"#245564", fontSize:"1em", display:"flex", alignContent:"center", justifyContent:"center"}}
+      buttonStyle={{color:"#ffff", background:"#245564",fontSize:"1em",display:"flex", alignContent:"center"}}
       expires={1}
       >
        This site uses cookies. Please See our privacy
