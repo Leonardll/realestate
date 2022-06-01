@@ -1,9 +1,23 @@
+import cookie from "cookie";
+
 const mail = require("@sendgrid/mail");
 
 mail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
+  
+  res.setHeader(
+    "Set-Cookie",
+    cookie.serialize("token",req.body.token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV !== "development",
+      expires: new Date(0),
+      maxAge: 60 * 60,
+      sameSite: "strict",
+      path: "/",
+    })
+  )
   
   const body = JSON.parse(req.body);
 

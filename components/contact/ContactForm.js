@@ -17,7 +17,8 @@ let schema = yup.object().shape({
   
 });
 
-export const ContactForm = () => {
+export const ContactForm = ({token}) => {
+  console.log(token)
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -80,7 +81,12 @@ export const ContactForm = () => {
       };
       fetch("/api/contact", {
         method: "post",
-        body: JSON.stringify(data),
+        headers: {
+          "content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        data: data, 
+        token:"UnicoHogar"}),
       });
       alert("Message sent! Thank you\nWe will be in touch with you soon!")
      
@@ -227,3 +233,14 @@ export const ContactForm = () => {
   
     );
 };
+
+
+export function getServerSideProps({ req, res}) {
+  return {
+    props:
+    { 
+    token: req.cookies.token || ""
+    }
+}
+
+}

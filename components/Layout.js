@@ -2,9 +2,10 @@ import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
 import MastHead from "./MastHead";
-
+import CookieConsent from "react-cookie-consent"
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
+import { underline } from "fontawesome";
 
 const Layout = ({ children }) => (
   <React.StrictMode>
@@ -24,6 +25,15 @@ const Layout = ({ children }) => (
         <MastHead />
       </header>
       <main>{children}</main>
+      <CookieConsent 
+      debug={true}
+      location="bottom"
+      style={{background:"#ffff", textAlign:"center",color:"#245564", fontSize:"1em", display:"flex", alignContent:"center"}}
+      buttonStyle={{color:"#ffff", background:"#245564",fontSize:"1em"}}
+      expires={1}
+      >
+       This site uses cookies. Please See our <a style={{color:"#245564", textDecoration:"underline"}} href="/policy">privacy policy</a> for more information.
+      </CookieConsent>
       <ScrollToTop />
     </div>
     <footer>
