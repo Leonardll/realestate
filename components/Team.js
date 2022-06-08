@@ -54,7 +54,7 @@ export const Team = () => {
         whileInView={{opacity: 1, x:0 }}
         //animate={{ opacity: 1, x:[100,0]}}
         transition={{duration: 1, ease:"easeOut",delay:.3}}
-        className="row d-flex flex-row-reverse p-3">
+        className="row d-none d-flex flex-row-reverse p-3">
           <div className="col-lg-4 flex-row-reverse justify-content-center">
             <div className="h-100 text-center">
               <Image
@@ -68,7 +68,7 @@ export const Team = () => {
               />
             </div>
           </div>
-          <div className="col-lg-6 d-flex d-none flex-row-reverse">
+          <div className="col-lg-6 d-flex flex-row-reverse">
             <div className="team-card">
               <h4 className=" text-center text-hogar2 text-lg-start">Cristian Arcas</h4>
               <p className="lead">
