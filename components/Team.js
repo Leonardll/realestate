@@ -68,7 +68,7 @@ export const Team = () => {
               />
             </div>
           </div>
-          <div className="col-lg-6 d-flex flex-row-reverse">
+          <div className="col-lg-6 d-flex d-none flex-row-reverse">
             <div className="team-card">
               <h4 className=" text-center text-hogar2 text-lg-start">Cristian Arcas</h4>
               <p className="lead">
