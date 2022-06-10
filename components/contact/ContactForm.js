@@ -102,9 +102,9 @@ export const ContactForm = ({ token }) => {
       <div className=" d-flex flex-wrap justify-content-center">
         <h1 className="text-center text-capitalise text-white my-4">Contact</h1>
       </div>
-      <div className="container">
-      <div className=" d-flex flex-wrap justify-content-center my-4">
-        <p className="text-white">Email: <span className="fw-bold">info@unicohogar.com</span>  || Tel: <span className="fw-bold">+34 606 27 97 78</span></p>
+      <div className="container-fluid">
+      <div className=" d-flex inline-flex justify-content-center my-4">
+        <p className="text-white word-break">Email: <span className="fw-bold text-white">info@unicohogar.com</span>  || Tel: <span className="fw-bold text-white">+34 606 27 97 78</span></p>
       </div>
       </div>
       <Formik
