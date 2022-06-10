@@ -7,7 +7,10 @@ import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
 import Link from "next/link"
 
-const Layout = ({ children }) => (
+
+const Layout = ({ children }) => {
+
+  return(
   <React.StrictMode>
     <Head>
       <title>Unico Hogar</title>
@@ -34,7 +37,7 @@ const Layout = ({ children }) => (
       >
        This site uses cookies. Please See our privacy
        <Link href="/policy" passHref> 
-       <a style={{color:"#245564", textDecoration:"underline"}}>policy</a> 
+       <a style={{color:"#245564", textDecoration:"underline"}}> {' '}policy {' '}</a> 
        </Link>
        for more information 
       </CookieConsent>
@@ -44,6 +47,7 @@ const Layout = ({ children }) => (
       <Footer />
     </footer>
   </React.StrictMode>
-);
+  );
+};
 
 export default Layout;

@@ -1,9 +1,12 @@
-  import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
+import es from '../../locales/es';
+import en from '../../locales/en';
 
 export const menuItems = [
   {
@@ -73,6 +76,14 @@ export const menuItems = [
 ];
 
  const Navbar = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t = locale === 'es' ? es : en;
+
+  // const changeLanguage = (e) => {
+  //   const locale = e.target.value;
+  //   router.push(router.pathname, router.asPath, { locale });
+  // }
   const [active, setActive] = useState(false);
   const changeBackground = () => {
     //console.log(window.scrollY, active);
@@ -128,6 +139,13 @@ export const menuItems = [
                   setcollapse={setcollapse}
                 />
               ))}
+              {/* <select 
+              onChange={changeLanguage}
+              defaultValue={locale}
+              >
+                <option value="es">ES</option>
+                <option value="en">EN</option>
+              </select> */}
             </ul>
           </div>
         </div>

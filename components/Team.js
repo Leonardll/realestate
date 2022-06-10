@@ -1,10 +1,15 @@
 import React from "react";
+import { useRouter } from "next/router";
 import { motion, AnimatePresence} from "framer-motion";
 import Image from "next/image";
 import Cris from "../assets/images/cris.jpg";
 import Manu from "../assets/images/manu.jpg";
-
+import es from '../locales/es';
+import en from '../locales/en';
 export const Team = () => {
+  
+  const router = useRouter();
+  const { locale } = router;
   
   return (
     <div className="section" id="team" >
@@ -39,11 +44,7 @@ export const Team = () => {
             <div className="team-card">
               <h4 className="text-center text-hogar2 text-lg-start">Emanuele Marin</h4>
               <p className="lead">
-                Le caracteriza su implicación y su escucha activa hacia las
-                necesidades de sus clientes. Te atenderá siempre con una
-                sonrisa. Tiene don de gentes y una capacidad de comunicación
-                fuera de lo común. ¡Y en varios idiomas! Le gustan los retos y
-                superarse en cada momento. Para ti, siempre aquí y ahora.
+                {router.locale === 'es' ? es.teamText1 : en.teamText1}
               </p>
             </div>
           </div>

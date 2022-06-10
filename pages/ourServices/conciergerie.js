@@ -4,107 +4,12 @@ import ShitIcon4 from "../../assets/images/4.svg";
 import ShitIcon5 from "../../assets/images/5.svg";
 import { AiOutlinePlus , AiOutlineMinus } from "react-icons/ai";
 import { useState } from "react";
-import { Contact } from "../../components/contact/Contact";
-
+import { useRouter } from "next/router";
 import { useEffect } from "react";
-import Link from "next/link";
-const conciergerieData = [
-  {
-    id: "es personal",
-    title: "es personal",
-    icon: ShitIcon3,
-    text: [
-      {
-        id: "NIE",
-        content: "tramitar el NIE.",
-      },
-      {
-        id: "contrato",
-        content: "asesorarme con el fin de contrato.",
-      },
-      {
-        id: "suministros",
-        content: "cambio de suministros.",
-      },
-      {
-        id: "internet",
-        content: "contratar internet o línea móvil.",
-      },
-      {
-        id: "mediacion",
-        content:
-          "copia de contrato. Mediación. Mudanzas (fletes, transportes).",
-      },
-      {
-        id: "personalShopper",
-        content: "asesoramiento legal. personal shopper.",
-      },
-    ],
-  },
-  {
-    id: "hogar",
-    title: "es para mi hogar",
-    icon: ShitIcon4,
-    text: [
-      {
-        id: "tasación",
-        content: "tasación de alquiler o venta",
-      },
-      {
-        id: "impuestos",
-        content: "impuestos",
-      },
-      {
-        id: "arquitecto",
-        content: "Arquitecto (Cédula, Certificado Energético).",
-      },
-      {
-        id: "gestoria",
-        content: "Gestoría (IVA, plusvalía…)",
-      },
-      {
-        id: "seguros",
-        content: "seguros",
-      },
-      {
-        id: "gestiones",
-        content:
-          "gestiones administrativas  (reuniones de comunidad, análisis de actas).",
-      },
-      {
-        id: "llaves",
-        content: "copia de llaves.",
-      },
-      {
-        id: "IBI",
-        content: "domiciliar el IBI.",
-      },
-      {
-        id: "notarioales",
-        content: "poderes notariales.",
-      },
-      {
-        id: "reformas",
-        content: "reformas integrales (asesoramiento, presupuestos).",
-      },
-      {
-        id: "interiores.",
-        content: "diseño de interiores.",
-      },
-    ],
-  },
-  {
-    id: "algomas",
-    title: "Algo más",
-    icon: ShitIcon5,
-    text: [
-      {
-        id: "escribe",
-        content: "escribe aquí lo que sea, lo conseguiremos!",
-      },
-    ],
-  },
-];
+import { Contact } from "../../components/contact/Contact";
+import es from "../../locales/es";
+import en from "../../locales/en";
+
 const Conciergerie = () => {
   
   
@@ -125,8 +30,6 @@ const Conciergerie = () => {
     }
   });
   
-  
-  
   const showContactForm = () => {
     
     return(
@@ -134,8 +37,9 @@ const Conciergerie = () => {
     )
     
   }
-  
- 
+
+  const router = useRouter();
+  const contentData = router.locale === "es" ? es.conciergerieData : en.conciergerieData;
 
 
   return (
@@ -143,22 +47,19 @@ const Conciergerie = () => {
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="conciergerie">
-            Conciergerie
+            {router.locale === "es" ? es.conciergerieHeader : en.conciergerieHeader}
           </h1>
         </div>
         <h3 className="text-capitalize concierge-subheading mt-3">
-          ¿QUÉ NECESITAS?
+          {router.locale === "es" ? es.conciergerieTitle : en.conciergerieTitle}
         </h3>
         <p className="lead concierge-subheading-text">
-          Aquí verás varias de las gestiones que realizamos, pero si no
-          encuentras lo que buscas ¡no te alarmes! haremos lo posible para
-          solventarlo. Somos capaces de encontrar el hogar de tus sueños y hasta
-          el mejor profesor de Yoga.
+         {router.locale === "es" ? es.conciergerieText : en.conciergerieText}
         </p>
       </div>
       <div className="container">
         <div className="row text-center mt-5">
-          {conciergerieData.map((item) => {
+          {contentData.map((item) => {
             return (
               <div className="col-md-4" key={item.id}>
                 <span className="fa-stack fa-4x">
