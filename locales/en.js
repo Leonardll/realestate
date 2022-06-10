@@ -5,7 +5,7 @@ import ShitIcon4 from "../assets/images/4.svg";
 import ShitIcon5 from "../assets/images/5.svg";
 
 const en =  {
-    mastheadTitle: '/trʌst/, [tɹʌst], [tɹɐst], [t͡ʃɹ-]',
+    mastheadTitle: '/trʌst/,[tɹʌst],[tɹɐst]',
     mastheadText: '’TRUST’ refers to the hope that you have in someone or something. It’s a term that comes from the Latin word ‘confidere’, meaning to have faith (fides) in someone.',
     conciergerieHeader: "Conciergerie",
     conciergerieTitle:"What do you need?",
