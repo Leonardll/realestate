@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
-import es from '../../locales/es';
-import en from '../../locales/en';
+import es from "../../locales/es";
+import en from "../../locales/en";
 
 export const menuItems = [
   {
@@ -43,12 +43,12 @@ export const menuItems = [
       {
         id: "buy",
         title: "buy",
-        href: "https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/",
+        href: "https://www.idealista.com/pro/unico-hogar/venta-viviendas/",
       },
       {
         id: "rent",
         title: "rent",
-        href: "https://www.idealista.com/pro/unico-hogar/venta-viviendas/",
+        href: "https://www.idealista.com/pro/unico-hogar/alquiler-viviendas/",
       },
     ],
   },
@@ -75,10 +75,10 @@ export const menuItems = [
   },
 ];
 
- const Navbar = () => {
+const Navbar = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === 'es' ? es : en;
+  const t = locale === "es" ? es : en;
 
   // const changeLanguage = (e) => {
   //   const locale = e.target.value;
