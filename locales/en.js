@@ -181,11 +181,11 @@ const en = {
     },
   ],
   aboutUsText1:
-    "We are a dedicated, caring and supportive agency, with a team that is devoted to client satisfaction. We define ourselves as ‘the Real Estate Concierges’. We’re the ones you can call to take care of all the tasks you don’t want to do whether it’s because you don’t have time, you don’t know how, or you simply prefer us to manage it for you.",
+    "We are a dedicated, caring and supportive agency, with a team that is devoted to client satisfaction. We define ourselves as [‘the Real Estate Concierges’]. We’re the ones you can call to take care of all the tasks you don’t want to do whether it’s because you don’t have time, you don’t know how, or you simply prefer us to manage it for you.",
   aboutUsText2:
-    "We know you’re either here because you’re looking for the perfect place to build your home in Barcelona, or because it’s time to leave your beloved old home in professional hands. Either way, we are here to guide and advise you through every step of the journey, whether you’re selling or renting, and we’ll take care of your property with all the love it deserves.",
+    "We know you’re either here because you’re looking for the perfect place to build your home in Barcelona, or because it’s time to leave your beloved old home in professional hands. Either way, we are [here to guide and advise you] through every step of the journey, whether you’re selling or renting, and we’ll take care of your property with all the love it deserves.",
   aboutUsText3:
-    "We have more than 10 years’ experience in the sector and can offer you a professional and comprehensive real estate service. We’re here to make your life easier, so that you can forget about the “I have to’s”. We can give you advice on whatever you need, whether it’s refurbishments, interior design, decoration, rental management, valuation of investments, or anything else. We’re here for you.",
+    "We have more than 10 years’ experience in the sector and can offer you a professional and comprehensive real estate service. We’re here to [make your life easier], so that you can forget about the [“I have to’s”]. We can give you advice on whatever you need, whether it’s refurbishments, interior design, decoration, rental management, valuation of investments, or anything else. We’re here for you.",
   aboutUsText4:
     "So just tell us what you’re looking for and we’ll adapt to you, to give you a unique and tailor-made experience that covers all your needs. And don’t worry, we offer all our services in Spanish, English, French and Italian, to make you feel right at home.",
   teamMemberName1: "Emanuele Marin",
