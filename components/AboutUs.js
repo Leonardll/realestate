@@ -10,7 +10,6 @@ export const AboutUs = () => {
   const { locale } = router;
 
   let regex = /\[(.*?)\]/g;
-  console.log(aboutUsText1.match(regex.t1));
 
   const spannedText =
     locale === "es"
