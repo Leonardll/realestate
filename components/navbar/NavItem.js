@@ -23,7 +23,7 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
   }, [show]);
 
   return (
-    <li  ref={ref} className={item.submenu ? "nav-item dropdown" : "nav-item"}>
+    <li ref={ref} className={item.submenu ? "nav-item dropdown" : "nav-item"}>
       <Link
         key={item.id}
         href={item.href}
@@ -33,52 +33,46 @@ export const NavItem = ({ item, collapse, setcollapse }) => {
         offset={-70}
         duration={500}
       >
-          <a className="nav-link rounded"
-           onClick={() => {
-             setTimeout(() => {
-               
-               setcollapse(!collapse)
-              }, 2000); 
-            }}
-          >
-            {item.title}
-      {item.submenu && (
-    <span>
-      <AiFillCaretDown
-        style={{ width: "1em" }}
-        fill="#5ab4ab"
-        color="#5ab4ab"
-        onClick={() => {
-          setShow(!show)
-          
-          console.log(show);
-        }}
-        className=" arrow dropdown-toggle dropdown-toggle-split"
-        data-bs-toggle="dropdown"
-        aria-expanded={show ? "true" : "false"}
-        id="navbarDropdown"
-        role="button"
-      />
-    </span>
-)  
-    }
-    </a>
+        <a
+          className="nav-link rounded"
+          onClick={() => {
+            setTimeout(() => {
+              setcollapse(!collapse);
+            }, 2000);
+          }}
+        >
+          {item.title}
+          {item.submenu && (
+            <span>
+              <AiFillCaretDown
+                style={{ width: "1em" }}
+                fill="#5ab4ab"
+                color="#5ab4ab"
+                onClick={() => {
+                  setShow(!show);
+
+                  console.log(show);
+                }}
+                className=" arrow dropdown-toggle dropdown-toggle-split"
+                data-bs-toggle="dropdown"
+                aria-expanded={show ? "true" : "false"}
+                id="navbarDropdown"
+                role="button"
+              />
+            </span>
+          )}
+        </a>
       </Link>
-      {
-    show && (
-      <Dropdown
-        submenuItems={item.submenuItems}
-        collapse={collapse}
-        setcollapse={setcollapse}
-        show={show}
-        setShow={setShow}
-      />
-    )
-}
+
+      {show && (
+        <Dropdown
+          submenuItems={item.submenuItems}
+          collapse={collapse}
+          setcollapse={setcollapse}
+          show={show}
+          setShow={setShow}
+        />
+      )}
     </li>
   );
 };
-
-
-
-   

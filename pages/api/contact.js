@@ -6,10 +6,9 @@ mail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_API_KEY);
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default async (req, res) => {
-  
   res.setHeader(
     "Set-Cookie",
-    cookie.serialize("token",req.body.token, {
+    cookie.serialize("token", req.body.token, {
       httpOnly: true,
       secure: process.env.NODE_ENV !== "development",
       expires: new Date(0),
@@ -17,9 +16,9 @@ export default async (req, res) => {
       sameSite: "strict",
       path: "/",
     })
-  )
-  
-  const body = JSON.parse(req.body);
+  );
+
+  const body = JSON.parse(JSON.stringify(req.body));
 
   const message = `
   FirstName: ${body.firstName}\r\n
@@ -35,8 +34,15 @@ export default async (req, res) => {
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
   };
- await  mail.send(data);
-
-
-  res.status(200).json({ status: "OK" });
-}
+  try {
+    await mail.send(data);
+    console.log(body);
+    res.status(200).json({ status: "OK" });
+  } catch (error) {
+    console.log("server error", error);
+    if (error.response) {
+      console.log(error.response.body);
+    }
+    res.status(400).json({ status: "ERROR", message: error.message });
+  }
+};

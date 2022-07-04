@@ -1,0 +1,68 @@
+{
+    "propertyHeader": "Real Estate",
+    "propertyTitle": "What are you looking for?",
+    "propertyText": "These are the most popular services that we can help you with. But, remember, as real estate concierges, we can offer you a much wider range of services than what you can see here below. If there’s something that you think is missing, don’t hesitate to contact us!",
+    "propertyData": [
+        {
+            "id": "sell",
+            "title": "Sell my Property",
+            "icon": "/assets/images/1.svg",
+            "text": [
+                {
+                    "id": "appraisal",
+                    "content": "Free appraisal and market valuation."
+                },
+                {
+                    "id": "Photos",
+                    "content": "Photographs and marketing - commercialisation."
+                },
+                {
+                    "id": "profitability",
+                    "content": "Profitability calculation."
+                },
+                {
+                    "id": "tax",
+                    "content": "Tax advice."
+                }
+            ]
+        },
+        {
+            "id": "renting",
+            "title": "Rent My Property ",
+            "icon": "/../assets/images/2.svg",
+            "text": [
+                {
+                    "id": "tenant",
+                    "content": "Find your ideal tenant."
+                },
+                {
+                    "id": "contrac",
+                    "content": "Advice on ending a contract ."
+                },
+                {
+                    "id": "legal",
+                    "content": "Legal advice."
+                },
+                {
+                    "id": "renting",
+                    "content": "Propertymanagement."
+                }
+            ]
+        },
+        {
+            "id": "PERSONALSHOPPER",
+            "title": "PERSONAL SHOPPER",
+            "icon": "/../assets/images/3.svg",
+            "text": [
+                {
+                    "id": "pisoideal",
+                    "content": "We guide you in the search for your ideal property in the Barcelona market "
+                },
+                {
+                    "id": " diseñodeinteriores",
+                    "content": "We advise you on construction work, refurbishments and interior design"
+                }
+            ]
+        }
+    ]
+}

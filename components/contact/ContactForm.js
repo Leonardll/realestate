@@ -9,73 +9,24 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 
-let schema = yup.object().shape({
-  firstName: yup
-    .string()
-    .min(3, "too short")
-    .max(15, "too long")
-    .required(" Name Required"),
-  email: yup.string().email("Invalid email").required(" Email Required"),
-  phone: yup
-    .number()
-    .min(11, "Phone must 11 digit min")
-    .required("Phone Required"),
-  message: yup.string().required(),
-});
-
 export const ContactForm = ({ token }) => {
-  console.log(token);
+  let schema = yup.object().shape({
+    firstName: yup
+      .string()
+      .min(3, "too short")
+      .max(15, "too long")
+      .required(" Name Required"),
+    email: yup.string().email("Invalid email").required(" Email Required"),
+    phone: yup
+      .number()
+      .min(11, "Phone must 11 digit min")
+      .required("Phone Required"),
+    message: yup.string().required(),
+  });
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-
-  const inputData = [
-    {
-      id: "firstName",
-      icon: <FaUser fill="#245564" />,
-      type: "text",
-      placeholder: "First Name",
-      ariaLabel: "firstName",
-      ariaDescribedby: "firstName",
-      controlId: "validationFormik101",
-
-      fn: (e) => setFirstName(e.target.value),
-    },
-    {
-      id: "email",
-      icon: <AiFillMail fill="#245564" />,
-      type: "email",
-      placeholder: "Your Email",
-      ariaLabel: "email",
-      ariaDescribedby: "email",
-      controlId: "validationFormik102",
-
-      fn: (e) => setEmail(e.target.value),
-    },
-    {
-      id: "number",
-      icon: <FaPhone fill="#245564" />,
-      type: "tel",
-      placeholder: "Phone",
-      ariaLabel: "phone",
-      ariaDescribedby: "phone",
-      controlId: "validationFormik103",
-
-      fn: (e) => setPhone(e.target.value),
-    },
-    {
-      id: "message",
-      icon: <FaPencilAlt fill="#245564" />,
-      type: "text",
-      placeholder: "Message",
-      ariaLabel: "message",
-      ariaDescribedby: "message",
-      controlId: "validationFormik104",
-      as: "textarea",
-      fn: (e) => setMessage(e.target.value),
-    },
-  ];
 
   async function handleSubmit() {
     const data = {
@@ -84,16 +35,17 @@ export const ContactForm = ({ token }) => {
       phone,
       message,
     };
-    fetch("/api/contact", {
+    fetch("api/contact", {
       method: "post",
       headers: {
-        "content-Type": "application/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         data: data,
-        token: "UnicoHogar",
+        token: "unicohogar",
       }),
     });
+
     alert("Message sent! Thank you\nWe will be in touch with you soon!");
   }
 
@@ -103,13 +55,17 @@ export const ContactForm = ({ token }) => {
         <h1 className="text-center text-capitalise text-white my-4">Contact</h1>
       </div>
       <div className="container-fluid">
-      <div className=" d-flex  justify-content-center my-4">
-        <p className="text-white text-center fs-5 text-break w-100">Email: <span className="fw-bold text-white">info@unicohogar.com</span>  || Tel: <span className="fw-bold text-white">+34 606 27 97 78</span></p>
-      </div>
+        <div className=" d-flex  justify-content-center my-4">
+          <p className="text-white text-center fs-5 text-break w-100">
+            Email:{" "}
+            <span className="fw-bold text-white">info@unicohogar.com</span> ||
+            Tel: <span className="fw-bold text-white">+34 606 27 97 78</span>
+          </p>
+        </div>
       </div>
       <Formik
         validationSchema={schema}
-        onSubmit={(values, { resetForm }) => {
+        onSubmit={async (values, { resetForm }) => {
           if (schema.validate(values)) {
             handleSubmit();
             resetForm();

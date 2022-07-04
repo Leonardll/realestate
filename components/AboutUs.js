@@ -1,47 +1,24 @@
-import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 import Script from "next/script";
-import es from "../locales/es";
-import en from "../locales/en";
 
 export const AboutUs = () => {
-  const { aboutUsText1, aboutUsText2, aboutUsText3, aboutUsText4 } = en;
-  const { aboutUsEsText1, aboutUsEsText2, aboutUsEsText3, aboutUsEsText4 } = es;
-  const router = useRouter();
-  const { locale } = router;
-
+  let { t } = useTranslation();
   let regex = /\[(.*?)\]/g;
 
-  const spannedText =
-    locale === "es"
-      ? aboutUsEsText1.replace(
-          regex,
-          `<span class="fw-bold text-span">$1</span>`
-        )
-      : aboutUsText1.replace(
-          regex,
-          `<span class="fw-bold text-span">$1</span>`
-        );
+  const spannedText = t("common:aboutUsText1").replace(
+    regex,
+    `<span class="fw-bold text-span">$1</span>`
+  );
 
-  const spannedText1 =
-    locale === "es"
-      ? aboutUsEsText2.replace(
-          regex,
-          `<span class="fw-bold text-span">$1</span>`
-        )
-      : aboutUsText2.replace(
-          regex,
-          `<span class="fw-bold text-span">$1</span>`
-        );
-  const spannedText2 =
-    locale === "es"
-      ? aboutUsEsText3.replace(
-          regex,
-          `<span class="fw-bold text-span">$1</span>`
-        )
-      : aboutUsText3.replace(
-          regex,
-          `<span class="fw-bold text-span">$1</span>`
-        );
+  const spannedText1 = t("common:aboutUsText2").replace(
+    regex,
+    `<span class="fw-bold text-span">$1</span>`
+  );
+
+  const spannedText2 = t("common:aboutUsText3").replace(
+    regex,
+    `<span class="fw-bold text-span">$1</span>`
+  );
 
   return (
     <>
@@ -73,9 +50,7 @@ export const AboutUs = () => {
                 __html: spannedText2,
               }}
             />
-            <p className="lead">
-              {locale === "es" ? aboutUsEsText4 : aboutUsText4}
-            </p>
+            <p className="lead">{t("common:aboutUsText4")}</p>
           </div>
         </div>
       </div>

@@ -177,13 +177,13 @@ const es = {
       ],
     },
   ],
-  aboutUsEsText1:
+  aboutUsText1:
     "Somos una agencia cercana y con gran empatía hacia nuestros clientes. Nos definimos como [los concierges inmobiliarios], somos lapersona de confianza a quien delegas las tareas que no sabes o simplemente no quieres gestionar por falta de tiempo o interés.",
-  aboutUsEsText2:
+  aboutUsText2:
     "Sabemos que estás buscando tu lugar en Barcelona en el que construir tu hogar, o por el contrario, que estás dejando en nuestras manos el que un día lo fue. [Te acompañaremos y asesoraremos] de principio a fin, tanto para la venta o alquiler de tu piso con el cariño que merece.",
-  aboutUsEsText3:
+  aboutUsText3:
     "Contamos con más de 10 años de experiencia en el sector y queremos ofrecerte un servicio integral inmobiliario. Queremos hacer [tu vida más liviana]  y que te despreocupes de los [“tengo que…”] . Podemos asesorarte con reformas, diseño de interiores, decoración, gestión de alquileres y valoración de inversiones entre otros servicios.",
-  aboutUsEsText4:
+  aboutUsText4:
     " Dinos lo que buscas y nos adaptamos a ti para que sea una experiencia única. Y descuida, que ofrecemos un servicio en castellano, inglés, francés e italiano.",
   teamText1:
     " Le caracteriza su implicación y su escucha activa hacia las necesidades de sus clientes. Te atenderá siempre con una sonrisa. Tiene don de gentes y una capacidad de comunicación fuera de lo común. ¡Y en varios idiomas! Le gustan los retos y superarse en cada momento. Para ti, siempre aquí y ahora.",

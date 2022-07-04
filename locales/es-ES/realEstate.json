@@ -1,0 +1,71 @@
+{
+    "propertyHeader": "Real Estate",
+    "propertyTitle": "¿QUÉ BUSCAS?",
+    "propertyText":
+      "Estas son las gestiones más comunes en las que te podemos ayudar, pero recuerda, nosotros como conserje inmobiliarios te ofrecemos un servicio mucho más amplio del que tenemos aquí detallado. Si no ves reﬂejado lo que necesitas, ¡no dudes en contactarnos!",
+    "propertyData": [
+      {
+        "id": "VENDER",
+        "title": "VENDER MI PISO",
+        "icon": "/../../assets/images/1.svg",
+        "text": [
+          {
+            "id": "tasacion",
+            "content": "Tasación gratuita y valoración de mercado."
+          },
+          {
+            "id": "Fotografías",
+            "content": "Fotografías y comercialización."
+          },
+          {
+            "id": "rentabilidad",
+            "content": "Cálculo de rentabilidad."
+          },
+          {
+            "id": "fiscal",
+            "content": "Asesoramiento fiscal."
+          }
+        ]
+      },
+      {
+        "id": "ALQUILAR",
+        "title": "ALQUILAR MI PISO",
+        "icon":"/../../assets/images/2.svg" ,
+        "text": [
+          {
+            "id": "ideal",
+            "content": "Buscamos tu inquilino ideal."
+          },
+          {
+            "id": "contrato",
+            "content": "asesorarme con el fin de contrato."
+          },
+          {
+            "id": "legal.",
+            "content": "Asesoramiento legal."
+          },
+          {
+            "id": "alquileres",
+            "content": "Gestión de alquileres."
+          }
+        ]
+      },
+      {
+        "id": "PERSONALSHOPPER",
+        "title": "PERSONAL SHOPPER",
+        "icon": "",
+        "text": [
+          {
+            "id": "pisoideal",
+            "content":
+              "Te acompañamos en la búsqueda de tu piso ideal en todo el mercado de Barcelona"
+          },
+          {
+            "id": " diseñodeinteriores",
+            "content":
+              "Te asesoraremos en obras, reformas o diseño de interiores para que quede de ensueño"
+          }
+        ]
+      }
+    ]
+}

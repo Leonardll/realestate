@@ -1,0 +1,14 @@
+{
+    "locales": [
+        "es-ES",
+        "en-US"
+    ],
+    "defaultLocale": "es-ES",
+    
+    "pages": {
+        "*": ["common"],
+        "/ourServices/conciergerie": ["conciergerie"],
+        "/ourServices/realEstate": ["realEstate"]
+    }
+    
+}

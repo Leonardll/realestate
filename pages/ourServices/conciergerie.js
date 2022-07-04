@@ -1,18 +1,13 @@
 import Image from "next/image";
-import ShitIcon3 from "../../assets/images/3.svg";
-import ShitIcon4 from "../../assets/images/4.svg";
-import ShitIcon5 from "../../assets/images/5.svg";
-import { AiOutlinePlus , AiOutlineMinus } from "react-icons/ai";
+import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState } from "react";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
+import useTranslation from "next-translate/useTranslation";
 import { Contact } from "../../components/contact/Contact";
-import es from "../../locales/es";
-import en from "../../locales/en";
 
 const Conciergerie = () => {
-  
-  
+  let { t, i18n } = useTranslation("conciergerie");
+
   const scrollToConciergerie = () => {
     window.scrollTo({
       top: 300,
@@ -26,35 +21,34 @@ const Conciergerie = () => {
     window.addEventListener("load", scrollToConciergerie);
     return () => {
       window.removeEventListener("load", scrollToConciergerie);
-      
-    }
+    };
   });
-  
+
   const showContactForm = () => {
-    
-    return(
-      <Contact />
-    )
-    
-  }
+    return <Contact />;
+  };
 
-  const router = useRouter();
-  const contentData = router.locale === "es" ? es.conciergerieData : en.conciergerieData;
-
+  const contentData = t(
+    "conciergerieData",
+    { count: 1 },
+    {
+      returnObjects: true,
+    }
+  );
 
   return (
     <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="conciergerie">
-            {router.locale === "es" ? es.conciergerieHeader : en.conciergerieHeader}
+            {t("conciergerieHeader")}
           </h1>
         </div>
         <h3 className="text-capitalize concierge-subheading mt-3">
-          {router.locale === "es" ? es.conciergerieTitle : en.conciergerieTitle}
+          {t("conciergerieTitle")}
         </h3>
         <p className="lead concierge-subheading-text">
-         {router.locale === "es" ? es.conciergerieText : en.conciergerieText}
+          {t("conciergerieText")}
         </p>
       </div>
       <div className="container">
@@ -81,9 +75,7 @@ const Conciergerie = () => {
                 <ul>
                   {item.text.map((text) => {
                     return (
-                      <li key={text.id} className="list-unstyled"
-                      
-                      >
+                      <li key={text.id} className="list-unstyled">
                         <p className="m-0 text-muted text-list">
                           {text.content}
                         </p>
@@ -92,33 +84,51 @@ const Conciergerie = () => {
                   })}
                 </ul>
 
-                {item.id === "algomas" && (
-                  
-                    !showform ?
+                {item.id === "algomas" &&
+                  (!showform ? (
                     <AiOutlinePlus
-                    role="button"
-                    onClick={() => {
-                      setshowform(!showform)}}
+                      role="button"
+                      onClick={() => {
+                        setshowform(!showform);
+                      }}
                       className="fs-2"
                       fill="#5ab4ab"
                     />
-                    :
-                    <AiOutlineMinus 
-                    role="button"
-                    onClick={() => {
-                      setshowform(!showform)}}
+                  ) : (
+                    <AiOutlineMinus
+                      role="button"
+                      onClick={() => {
+                        setshowform(!showform);
+                      }}
                       className="fs-2"
                       fill="#5ab4ab"
-                       />
-                  
-                )}
+                    />
+                  ))}
+                {item.id === "else" &&
+                  (!showform ? (
+                    <AiOutlinePlus
+                      role="button"
+                      onClick={() => {
+                        setshowform(!showform);
+                      }}
+                      className="fs-2"
+                      fill="#5ab4ab"
+                    />
+                  ) : (
+                    <AiOutlineMinus
+                      role="button"
+                      onClick={() => {
+                        setshowform(!showform);
+                      }}
+                      className="fs-2"
+                      fill="#5ab4ab"
+                    />
+                  ))}
               </div>
             );
           })}
         </div>
-      {showform && showContactForm()
-      
-}
+        {showform && showContactForm()}
       </div>
     </div>
   );

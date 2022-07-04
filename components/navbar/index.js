@@ -3,6 +3,8 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
+import EsFlag from "../../assets/spain.svg";
+import enFlag from "../../assets/unionJack.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
 import es from "../../locales/es";
@@ -80,10 +82,10 @@ const Navbar = () => {
   const { locale } = router;
   const t = locale === "es" ? es : en;
 
-  // const changeLanguage = (e) => {
-  //   const locale = e.target.value;
-  //   router.push(router.pathname, router.asPath, { locale });
-  // }
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    router.push(router.pathname, router.asPath, { locale });
+  };
   const [active, setActive] = useState(false);
   const changeBackground = () => {
     //console.log(window.scrollY, active);
@@ -139,13 +141,19 @@ const Navbar = () => {
                   setcollapse={setcollapse}
                 />
               ))}
-              {/* <select 
-              onChange={changeLanguage}
-              defaultValue={locale}
+
+              <select
+                onChange={changeLanguage}
+                defaultValue={locale}
+                className="text-hogar align-items-center shadow-sm text-lg bg-transparent tracking-wide"
               >
-                <option value="es">ES</option>
-                <option value="en">EN</option>
-              </select> */}
+                <option className="text-hogar fw-2" value="es-ES">
+                  Es
+                </option>
+                <option className="text-hogar fw-2" value="en-US">
+                  En
+                </option>
+              </select>
             </ul>
           </div>
         </div>
