@@ -1,12 +1,10 @@
 import Image from "next/image";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
 const RealEstate = () => {
   let { t, i18n } = useTranslation("realEstate");
 
-  const router = useRouter();
   const contentData = t("propertyData", { count: 1 }, { returnObjects: true });
   const scrollToConciergerie = () => {
     window.scrollTo({
@@ -34,7 +32,7 @@ const RealEstate = () => {
       </div>
       <div className="container">
         <div className="row text-center mt-5">
-          {contentData.map((item) => {
+          {contentData?.map((item) => {
             return (
               <div className="col-md-4" key={item.id}>
                 <span className="fa-stack fa-4x">

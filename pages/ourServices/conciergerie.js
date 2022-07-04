@@ -53,7 +53,7 @@ const Conciergerie = () => {
       </div>
       <div className="container">
         <div className="row text-center mt-5">
-          {contentData.map((item) => {
+          {contentData?.map((item) => {
             return (
               <div className="col-md-4" key={item.id}>
                 <span className="fa-stack fa-4x">
