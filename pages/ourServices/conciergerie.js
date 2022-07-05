@@ -6,7 +6,9 @@ import useTranslation from "next-translate/useTranslation";
 import { Contact } from "../../components/contact/Contact";
 
 const Conciergerie = () => {
-  let { t, i18n } = useTranslation("conciergerie", { useSuspense: false });
+  let { t, i18n, ready } = useTranslation("conciergerie", {
+    useSuspense: true,
+  });
 
   const scrollToConciergerie = () => {
     window.scrollTo({
