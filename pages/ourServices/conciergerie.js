@@ -1,14 +1,18 @@
 import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import useTranslation from "next-translate/useTranslation";
 import { Contact } from "../../components/contact/Contact";
+import Icon1 from "/assets/images/1.svg";
+import Icon2 from "../../assets/images/2.svg";
+import Icon3 from "../../assets/images/3.svg";
 
 const Conciergerie = () => {
   let { t, i18n, ready } = useTranslation("conciergerie", {
     useSuspense: true,
   });
+
+  let myIcons = [Icon1, Icon2, Icon3];
 
   const scrollToConciergerie = () => {
     window.scrollTo({
@@ -64,15 +68,17 @@ const Conciergerie = () => {
               <div className="col-md-4" key={item.id}>
                 <span className="fa-stack fa-4x">
                   <Image
-                    layout="fill"
-                    src={item.icon}
-                    alt=""
+                    layout="responsive"
+                    src={`${item.icon}`}
+                    alt="icons"
                     className="svg-inline--fa fa-solid  fa-stack-1x fa-inverse"
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
                     data-icon="house"
                     role="img"
+                    height={300}
+                    width={300}
                     loader={myLoader}
                   />
                 </span>
@@ -142,3 +148,9 @@ const Conciergerie = () => {
 };
 
 export default Conciergerie;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["conciergerie"])),
+  },
+});

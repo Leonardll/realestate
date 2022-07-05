@@ -1,3 +1,4 @@
+
 {
   "conciergerieHeader": "Conciergerie",
     "conciergerieTitle": "¿Qué necesitas?",
@@ -7,7 +8,7 @@
         {
           "id": "es personal",
           "title": "es personal",
-          "icon": "/../../assets/images/2.svg",
+          "icon": "/assets/images/2.svg",
           "text": [
             {
               "id": "NIE",
@@ -39,7 +40,7 @@
         {
         "  ": "hogar",
           "title": "es para mi hogar",
-          "icon": "/../../assets/images/3.svg",
+          "icon": "/assets/images/3.svg",
           "text": [
             {
               "id": "tasación",
@@ -91,7 +92,7 @@
         {
           "id": "algomas",
           "title": "Algo más",
-          "icon": "/../../assets/images/5.svg",
+          "icon": "/assets/images/5.svg",
           "text": [
             {
               "id": "escribe",
