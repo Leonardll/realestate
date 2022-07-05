@@ -6,13 +6,17 @@ import useTranslation from "next-translate/useTranslation";
 import { Contact } from "../../components/contact/Contact";
 
 const Conciergerie = () => {
-  let { t, i18n } = useTranslation("conciergerie");
+  let { t, i18n } = useTranslation("conciergerie", { useSuspense: false });
 
   const scrollToConciergerie = () => {
     window.scrollTo({
       top: 300,
       behavior: "smooth",
     });
+  };
+
+  const myLoader = ({ src, width, quality }) => {
+    return `${src}?w=${width}&q=${quality || 75}`;
   };
 
   const [showform, setshowform] = useState(false);
@@ -67,6 +71,7 @@ const Conciergerie = () => {
                     data-prefix="fas"
                     data-icon="house"
                     role="img"
+                    loader={myLoader}
                   />
                 </span>
                 <h4 className="my-3 text-hogar2 text-uppercase">
