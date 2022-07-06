@@ -45,7 +45,7 @@ const Conciergerie = () => {
       returnObjects: true,
     }
   );
-
+  console.log(typeof contentData);
   return (
     <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
