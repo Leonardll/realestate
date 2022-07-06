@@ -6,7 +6,11 @@ const RealEstate = () => {
   let { t, lang } = useTranslation("realEstate");
   console.log(lang);
 
-  const contentData = t("propertyData", { count: 1 }, { returnObjects: true });
+  const contentData = t(
+    "propertyData",
+    { count: 1 },
+    { returnObjects: true, default: [] }
+  );
   const scrollToConciergerie = () => {
     window.scrollTo({
       top: 300,

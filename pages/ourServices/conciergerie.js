@@ -41,6 +41,7 @@ const Conciergerie = () => {
     { count: 1 },
     {
       returnObjects: true,
+      default: [],
     }
   );
   console.log(typeof contentData);
