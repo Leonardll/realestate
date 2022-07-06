@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import useTranslation from "next-translate/useTranslation";
 
 const RealEstate = () => {
-  let { t, i18n, ready } = useTranslation("realEstate", { useSuspense: true });
+  let { t, lang } = useTranslation("realEstate");
+  console.log(lang);
 
   const contentData = t("propertyData", { count: 1 }, { returnObjects: true });
   const scrollToConciergerie = () => {

@@ -8,10 +8,8 @@ import Icon2 from "../../assets/images/2.svg";
 import Icon3 from "../../assets/images/3.svg";
 
 const Conciergerie = () => {
-  let { t, i18n, ready } = useTranslation("conciergerie", {
-    useSuspense: true,
-  });
-
+  let { t, lang } = useTranslation("conciergerie");
+  console.log(lang);
   let myIcons = [Icon1, Icon2, Icon3];
 
   const scrollToConciergerie = () => {
