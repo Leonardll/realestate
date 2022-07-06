@@ -4,7 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 
 const RealEstate = () => {
   let { t, lang } = useTranslation("realEstate");
-  console.log(lang);
+  console.log({ lang });
 
   const contentData = t(
     "propertyData",

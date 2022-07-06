@@ -9,7 +9,7 @@ import Icon3 from "../../assets/images/3.svg";
 
 const Conciergerie = () => {
   let { t, lang } = useTranslation("conciergerie");
-  console.log(lang);
+  console.log({ lang });
   let myIcons = [Icon1, Icon2, Icon3];
 
   const scrollToConciergerie = () => {
