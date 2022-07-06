@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
 const RealEstate = () => {
+  let { locale } = useRouter();
   let { t, lang } = useTranslation("realEstate");
-  console.log({ lang });
+  console.log({ lang, locale });
 
   const contentData = t(
     "propertyData",
