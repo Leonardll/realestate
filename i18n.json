@@ -4,7 +4,7 @@
         "en-US"
     ],
     "defaultLocale": "es-ES",
-    "reloadOnPrerender": true,
+    "reloadOnPrerender": false,
     
     "pages": {
         "*": ["common"],
