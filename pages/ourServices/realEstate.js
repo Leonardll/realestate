@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 
-const RealEstate = () => {
-  let { locale } = useRouter();
+const RealEstate = ({ locale }) => {
+  //   let { locale } = useRouter();
   let { t, lang } = useTranslation("realEstate");
   console.log({ lang, locale });
 
@@ -81,3 +81,11 @@ const RealEstate = () => {
 };
 
 export default RealEstate;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    locale: locale,
+    // t: t,
+    // lang: lang,
+  },
+});

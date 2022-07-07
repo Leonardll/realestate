@@ -8,8 +8,8 @@ import Icon1 from "/assets/images/1.svg";
 import Icon2 from "../../assets/images/2.svg";
 import Icon3 from "../../assets/images/3.svg";
 
-const Conciergerie = () => {
-  let { locale } = useRouter();
+const Conciergerie = ({ locale }) => {
+  // let { locale } = useRouter();
   let { t, lang } = useTranslation("conciergerie");
   console.log({ lang, locale });
   let myIcons = [Icon1, Icon2, Icon3];
@@ -150,8 +150,10 @@ const Conciergerie = () => {
 
 export default Conciergerie;
 
-// export const getStaticProps = async ({ locale }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale, ["conciergerie"])),
-//   },
-// });
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    locale: locale,
+    // t: t,
+    // lang: lang,
+  },
+});
