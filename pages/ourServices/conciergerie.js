@@ -4,9 +4,9 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 import { Contact } from "../../components/contact/Contact";
-import Icon1 from "/assets/images/1.svg";
-import Icon2 from "../../assets/images/2.svg";
-import Icon3 from "../../assets/images/3.svg";
+import Icon1 from "../../public/1.svg";
+import Icon2 from "../../public/2.svg";
+import Icon3 from "../../public/3.svg";
 
 const Conciergerie = () => {
   let { locale } = useRouter();

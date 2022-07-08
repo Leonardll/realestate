@@ -45,7 +45,7 @@ const RealEstate = () => {
                 <span className="fa-stack fa-4x">
                   <Image
                     src={item.icon}
-                    alt="icon"
+                    alt="icon-conciergerie"
                     className="fw-3 svg-inline--fa  fa-house fa-stack-1x fa-inverse img-fluid"
                     aria-hidden="true"
                     focusable="false"

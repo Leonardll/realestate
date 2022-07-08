@@ -7,7 +7,7 @@
       {
         "id": "VENDER",
         "title": "VENDER MI PISO",
-        "icon": "/assets/images/1.svg",
+        "icon": "/public/1.svg",
         "text": [
           {
             "id": "tasacion",
@@ -30,7 +30,7 @@
       {
         "id": "ALQUILAR",
         "title": "ALQUILAR MI PISO",
-        "icon":"/assets/images/2.svg" ,
+        "icon":"/public/2.svg" ,
         "text": [
           {
             "id": "ideal",
@@ -53,7 +53,7 @@
       {
         "id": "PERSONALSHOPPER",
         "title": "PERSONAL SHOPPER",
-        "icon": "/assets/images/3.svg",
+        "icon": "/public/3.svg",
         "text": [
           {
             "id": "pisoideal",

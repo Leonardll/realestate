@@ -2,8 +2,8 @@ import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
-import Cris from "../assets/images/cris.jpg";
-import Manu from "../assets/images/manu.jpg";
+import Cris from "../public/cris.jpg";
+import Manu from "../public/manu.jpg";
 
 export const Team = () => {
   let { t } = useTranslation();
