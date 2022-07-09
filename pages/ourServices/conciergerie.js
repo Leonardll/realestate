@@ -7,7 +7,7 @@ import es from "../../locales/es-ES/conciergerie.json";
 import en from "../../locales/en-US/conciergerie.json";
 import Icon1 from "/public/1.svg";
 import Icon2 from "/public/2.svg";
-import Icon3 from "/assets/3.svg";
+import Icon3 from "/public/3.svg";
 
 const Conciergerie = () => {
   let { locale } = useRouter();
