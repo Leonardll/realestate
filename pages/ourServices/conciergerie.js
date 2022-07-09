@@ -3,17 +3,11 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { Contact } from "../../components/contact/Contact";
-<<<<<<< HEAD
-import Icon1 from "../../public/1.svg";
-import Icon2 from "../../public/2.svg";
-import Icon3 from "../../public/3.svg";
-=======
 import es from "../../locales/es-ES/conciergerie.json";
 import en from "../../locales/en-US/conciergerie.json";
 import Icon1 from "/assets/images/1.svg";
 import Icon2 from "../assets/images/2.svg";
 import Icon3 from "../assets/images/3.svg";
->>>>>>> feature
 
 const Conciergerie = () => {
   let { locale } = useRouter();
