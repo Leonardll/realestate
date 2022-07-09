@@ -1,21 +1,25 @@
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
+import es from "../locales/es-ES/common.json";
+import en from "../locales/en-US/common.json";
 import Script from "next/script";
 
 export const AboutUs = () => {
-  let { t } = useTranslation();
+  let { locale } = useRouter();
+  let t = locale === "es-ES" ? es : en;
   let regex = /\[(.*?)\]/g;
 
-  const spannedText = t("common:aboutUsText1").replace(
+  const spannedText = t.aboutUsText1.replace(
     regex,
     `<span class="fw-bold text-span">$1</span>`
   );
 
-  const spannedText1 = t("common:aboutUsText2").replace(
+  const spannedText1 = t.aboutUsText2.replace(
     regex,
     `<span class="fw-bold text-span">$1</span>`
   );
 
-  const spannedText2 = t("common:aboutUsText3").replace(
+  const spannedText2 = t.aboutUsText3.replace(
     regex,
     `<span class="fw-bold text-span">$1</span>`
   );
@@ -50,7 +54,7 @@ export const AboutUs = () => {
                 __html: spannedText2,
               }}
             />
-            <p className="lead">{t("common:aboutUsText4")}</p>
+            <p className="lead">{t.aboutUsText4}</p>
           </div>
         </div>
       </div>

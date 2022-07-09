@@ -2,16 +2,16 @@ import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import useTranslation from "next-translate/useTranslation";
 import { Contact } from "../../components/contact/Contact";
+import es from "../../locales/es-ES/conciergerie.json";
+import en from "../../locales/en-US/conciergerie.json";
 import Icon1 from "/assets/images/1.svg";
-import Icon2 from "../../assets/images/2.svg";
-import Icon3 from "../../assets/images/3.svg";
+import Icon2 from "../assets/images/2.svg";
+import Icon3 from "../assets/images/3.svg";
 
 const Conciergerie = () => {
   let { locale } = useRouter();
-  let { t, lang } = useTranslation("conciergerie");
-  console.log({ lang, locale });
+  let t = locale === "es-ES" ? es : en;
   let myIcons = [Icon1, Icon2, Icon3];
 
   const scrollToConciergerie = () => {
@@ -38,29 +38,28 @@ const Conciergerie = () => {
     return <Contact />;
   };
 
-  const contentData = t(
-    "conciergerieData",
-    { count: 1 },
-    {
-      returnObjects: true,
-      default: [],
-    }
-  );
+  const contentData = t.conciergerieData;
+  // t(
+  //   "conciergerieData",
+  //   { count: 1 },
+  //   {
+  //     returnObjects: true,
+  //     default: [],
+  //   }
+  // );
   console.log(typeof contentData);
   return (
     <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="conciergerie">
-            {t("conciergerieHeader")}
+            {t.conciergerieHeader}
           </h1>
         </div>
         <h3 className="text-capitalize concierge-subheading mt-3">
-          {t("conciergerieTitle")}
+          {t.conciergerieTitle}
         </h3>
-        <p className="lead concierge-subheading-text">
-          {t("conciergerieText")}
-        </p>
+        <p className="lead concierge-subheading-text">{t.conciergerieText}</p>
       </div>
       <div className="container">
         <div className="row text-center mt-5">

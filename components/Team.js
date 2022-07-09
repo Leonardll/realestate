@@ -1,13 +1,15 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
+import es from "../locales/es-ES/common.json";
+import en from "../locales/en-US/common.json";
 import Image from "next/image";
 import Cris from "../assets/images/cris.jpg";
 import Manu from "../assets/images/manu.jpg";
 
 export const Team = () => {
-  let { t } = useTranslation();
-
+  let { locale } = useRouter();
+  let t = locale === "es-ES" ? es : en;
   return (
     <div className="section" id="team">
       <div className="container">
@@ -40,7 +42,7 @@ export const Team = () => {
                 <h4 className="text-center text-hogar2 text-lg-start">
                   Emanuele Marin
                 </h4>
-                <p className="lead">{t("common:teamText1")}</p>
+                <p className="lead">{t.teamText1}</p>
               </div>
             </div>
           </motion.div>
