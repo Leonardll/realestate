@@ -1,18 +1,14 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import useTranslation from "next-translate/useTranslation";
-
+import es from "../../locales/es-ES/realEstate.json";
+import en from "../../locales/en-US/realEstate.json";
 const RealEstate = () => {
   let { locale } = useRouter();
-  let { t, lang } = useTranslation("realEstate");
-  console.log({ lang, locale });
+  let t = locale === "es-ES" ? es : en;
 
-  const contentData = t(
-    "propertyData",
-    { count: 1 },
-    { returnObjects: true, default: [] }
-  );
+  const contentData = t.propertyData;
+
   const scrollToConciergerie = () => {
     window.scrollTo({
       top: 300,
@@ -29,13 +25,13 @@ const RealEstate = () => {
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="property-management">
-            {t("propertyHeader")}
+            {t.propertyHeader}
           </h1>
         </div>
         <h3 className="text-capitalize property-subheading mt-3">
-          {t("propertyTitle")}
+          {t.propertyTitle}
         </h3>
-        <p className="lead property-subheading-text">{t("propertyText")}</p>
+        <p className="lead property-subheading-text">{t.propertyText}</p>
       </div>
       <div className="container">
         <div className="row text-center mt-5">
