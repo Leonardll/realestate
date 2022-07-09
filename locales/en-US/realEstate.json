@@ -6,7 +6,7 @@
         {
             "id": "sell",
             "title": "Sell my Property",
-            "icon": "/assets/images/1.svg",
+            "icon": "/public/1.svg",
             "text": [
                 {
                     "id": "appraisal",
@@ -29,7 +29,7 @@
         {
             "id": "renting",
             "title": "Rent My Property ",
-            "icon": "/assets/images/2.svg",
+            "icon": "/public/2.svg",
             "text": [
                 {
                     "id": "tenant",
@@ -52,7 +52,7 @@
         {
             "id": "PERSONALSHOPPER",
             "title": "PERSONAL SHOPPER",
-            "icon": "/assets/images/3.svg",
+            "icon": "/public/3.svg",
             "text": [
                 {
                     "id": "pisoideal",

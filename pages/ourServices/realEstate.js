@@ -3,10 +3,13 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import es from "../../locales/es-ES/realEstate.json";
 import en from "../../locales/en-US/realEstate.json";
+import Icon1 from "/public/1.svg";
+import Icon2 from "/public/2.svg";
+import Icon3 from "/public/3.svg";
 const RealEstate = () => {
   let { locale } = useRouter();
   let t = locale === "es-ES" ? es : en;
-
+  let myIcons = [Icon1, Icon2, Icon3];
   const contentData = t.propertyData;
 
   const scrollToConciergerie = () => {
@@ -35,12 +38,12 @@ const RealEstate = () => {
       </div>
       <div className="container">
         <div className="row text-center mt-5">
-          {contentData?.map((item) => {
+          {contentData?.map((item, index) => {
             return (
-              <div className="col-md-4" key={item.id}>
+              <div className="col-md-4" key={index}>
                 <span className="fa-stack fa-4x">
                   <Image
-                    src={item.icon}
+                    src={myIcons[index]}
                     alt="icon-conciergerie"
                     className="fw-3 svg-inline--fa  fa-house fa-stack-1x fa-inverse img-fluid"
                     aria-hidden="true"

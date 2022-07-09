@@ -39,15 +39,7 @@ const Conciergerie = () => {
   };
 
   const contentData = t.conciergerieData;
-  // t(
-  //   "conciergerieData",
-  //   { count: 1 },
-  //   {
-  //     returnObjects: true,
-  //     default: [],
-  //   }
-  // );
-  console.log(typeof contentData);
+
   return (
     <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
@@ -63,23 +55,24 @@ const Conciergerie = () => {
       </div>
       <div className="container">
         <div className="row text-center mt-5">
-          {contentData?.map((item) => {
+          {contentData?.map((item, index) => {
             return (
-              <div className="col-md-4" key={item.id}>
+              <div className="col-md-4" key={index}>
                 <span className="fa-stack fa-4x">
                   <Image
                     layout="responsive"
-                    src={`${item.icon}`}
+                    src={myIcons[index]}
                     alt="icons"
-                    className="svg-inline--fa fa-solid  fa-stack-1x fa-inverse"
+                    className="svg-inline--fa fa-solid  fa-stack-1x fa-inverse img-fluid"
                     aria-hidden="true"
                     focusable="false"
                     data-prefix="fas"
                     data-icon="house"
                     role="img"
+                    objectFit="cover"
                     height={300}
                     width={300}
-                    loader={myLoader}
+                    //loader={myLoader}
                   />
                 </span>
                 <h4 className="my-3 text-hogar2 text-uppercase">

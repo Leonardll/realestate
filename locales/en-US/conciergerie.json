@@ -6,7 +6,7 @@
         {
             "id": "It’s Personal",
             "title": "It’s Personal",
-            "icon": "/assets/images/2.svg",
+            "icon": "/2.svg",
             "text": [
                 {
                     "id": "NIE",
@@ -37,7 +37,7 @@
         {
             "id": "home",
             "title": "It’s For my Home",
-            "icon": "/../assets/images/3.svg",
+            "icon": "/3.svg",
             "text": [
                 {
                     "id": "taxation",
@@ -87,7 +87,7 @@
         {
             "id": "else",
             "title": "Something Else",
-            "icon": "/../assets/images/4.svg",
+            "icon": "/4.svg",
             "text": [
                 {
                     "id": "write",
