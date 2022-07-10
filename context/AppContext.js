@@ -10,7 +10,7 @@ export const ContextProvider = ({ children }) => {
   const { locale } = useRouter();
 
   // assign t as either of the translation json files localted in '../locales' according to the current locale
-  let t = locale === "es" ? es : en;
+  let t = locale === "es-ES" ? es : en;
 
   // create app context to retrieve t value across the app
   const Context = createContext(t);
@@ -23,7 +23,7 @@ export function useAppContext() {
   const { locale } = useRouter();
 
   // assign t as either of the translation json files localted in '../locales' according to the current locale
-  let t = locale === "es-ES" ? es : en;
+  let t = locale === "es" ? es : en;
 
   // create app context to retrieve t value across the app
   const Context = createContext(t);

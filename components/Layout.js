@@ -11,6 +11,7 @@ import { useAppContext } from "../context/AppContext";
 import { ContextProvider } from "../context/AppContext";
 const Layout = ({ children }) => {
   const t = useAppContext();
+
   return (
     <React.StrictMode>
       <ContextProvider>
