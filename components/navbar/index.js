@@ -7,8 +7,6 @@ import EsFlag from "../../assets/spain.svg";
 import enFlag from "../../assets/unionJack.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
-import es from "../../locales/es";
-import en from "../../locales/en";
 
 export const menuItems = [
   {
@@ -80,7 +78,6 @@ export const menuItems = [
 const Navbar = () => {
   const router = useRouter();
   const { locale } = router;
-  const t = locale === "es" ? es : en;
 
   const changeLanguage = (e) => {
     const locale = e.target.value;
