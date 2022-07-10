@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import i18n from "../next.config";
+import { i18n } from "../next.config";
 
 export default class CustomDocument extends Document {
   render() {
