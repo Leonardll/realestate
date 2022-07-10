@@ -6,68 +6,62 @@ import CookieConsent from "react-cookie-consent";
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
 import Link from "next/link";
-import en from "../locales/en";
-import { useAppContext } from "../context/AppContext";
-import { ContextProvider } from "../context/AppContext";
-const Layout = ({ children }) => {
-  const t = useAppContext();
 
+const Layout = ({ children }) => {
   return (
     <React.StrictMode>
-      <ContextProvider>
-        <Head>
-          <title>Unico Hogar</title>
-          <meta name="description" content="Real Estate & Premium Services" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <div
-          className="container-fluid px-0 mw-3 m-auto scrollspy-example"
-          data-bs-spy="scroll"
-          data-bs-target="#mainNav"
-          data-bs-offset="-130"
-          tabIndex="0"
+      <Head>
+        <title>Unico Hogar</title>
+        <meta name="description" content="Real Estate & Premium Services" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <div
+        className="container-fluid px-0 mw-3 m-auto scrollspy-example"
+        data-bs-spy="scroll"
+        data-bs-target="#mainNav"
+        data-bs-offset="-130"
+        tabIndex="0"
+      >
+        <header>
+          <Navbar />
+          <MastHead />
+        </header>
+        <main>{children}</main>
+        <CookieConsent
+          debug={true}
+          location="bottom"
+          style={{
+            background: "#ffff",
+            textAlign: "center",
+            color: "#245564",
+            fontSize: "1em",
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+          }}
+          buttonStyle={{
+            color: "#ffff",
+            background: "#245564",
+            fontSize: "1em",
+            display: "flex",
+            alignContent: "center",
+          }}
+          expires={1}
         >
-          <header>
-            <Navbar />
-            <MastHead />
-          </header>
-          <main>{children}</main>
-          <CookieConsent
-            debug={true}
-            location="bottom"
-            style={{
-              background: "#ffff",
-              textAlign: "center",
-              color: "#245564",
-              fontSize: "1em",
-              display: "flex",
-              alignContent: "center",
-              justifyContent: "center",
-            }}
-            buttonStyle={{
-              color: "#ffff",
-              background: "#245564",
-              fontSize: "1em",
-              display: "flex",
-              alignContent: "center",
-            }}
-            expires={1}
-          >
-            This site uses cookies. Please See our privacy
-            <Link href="/policy" passHref>
-              <a style={{ color: "#245564", textDecoration: "underline" }}>
-                {" "}
-                policy{" "}
-              </a>
-            </Link>
-            for more information
-          </CookieConsent>
-          <ScrollToTop />
-        </div>
-        <footer>
-          <Footer />
-        </footer>
-      </ContextProvider>
+          This site uses cookies. Please See our privacy
+          <Link href="/policy" passHref>
+            <a style={{ color: "#245564", textDecoration: "underline" }}>
+              {" "}
+              policy{" "}
+            </a>
+          </Link>
+          for more information
+        </CookieConsent>
+        <ScrollToTop />
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </React.StrictMode>
   );
 };
