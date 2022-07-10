@@ -1,5 +1,5 @@
 module.exports = {
-  debug: process.env.NODE_ENV === "development",
+  debug: true,
   locales: ["es-ES", "en-US"],
   defaultLocale: "es-ES",
   reloadOnPrerender: process.env.NODE_ENV === "development",
