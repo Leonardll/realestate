@@ -1,7 +1,8 @@
 module.exports = {
   debug: true,
-  locales: ["es-ES", "en-US"],
   defaultLocale: "es-ES",
+  locales: ["es-ES", "en-US"],
+  localeDetection: false,
   reloadOnPrerender: process.env.NODE_ENV === "development",
 
   // "pages": {
