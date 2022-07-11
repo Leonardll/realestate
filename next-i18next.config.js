@@ -1,9 +1,11 @@
 module.exports = {
   debug: true,
-  defaultLocale: "es-ES",
-  locales: ["es-ES", "en-US"],
-  localeDetection: true,
-  reloadOnPrerender: process.env.NODE_ENV === "development",
+  i18n: {
+    locales: ["es-ES", "en-US"],
+    defaultLocale: "es-ES",
+    localeDetection: false,
+    reloadOnPrerender: process.env.NODE_ENV === "development",
+  },
 
   // "pages": {
   //     "*": ["common"],

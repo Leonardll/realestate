@@ -1,0 +1,104 @@
+
+{
+  "conciergerieHeader": "Conciergerie",
+    "conciergerieTitle": "¿Qué necesitas?",
+    "conciergerieText":
+      "Aquí puedes ver los diferentes servicios que ofrecemos. Si no ves lo que estás buscando, no te preocupes, nosotros lo solucionaremos para ti. Podemos encontrarlo todo lo que necesitas, desde tu casa ideal a tu profesor de yoga perfecto.",
+    "conciergerieData": [
+        {
+          "id": "es personal",
+          "title": "es personal",
+          "icon": "/public/2.svg",
+          "text": [
+            {
+              "id": "NIE",
+              "content": "tramitar el NIE."
+            },
+            {
+              "id": "contrato",
+              "content": "asesorarme con el fin de contrato."
+            },
+            {
+              "id": "suministros",
+              "content": "cambio de suministros."
+            },
+            {
+              "id": "internet",
+              "content": "contratar internet o línea móvil."
+            },
+            {
+              "id": "mediacion",
+              "content":
+                "copia de contrato. Mediación. Mudanzas (fletes, transportes)."
+            },
+            {
+            "id": "personalShopper",
+              "content": "asesoramiento legal. personal shopper."
+            }
+          ]
+        },
+        {
+        "  ": "hogar",
+          "title": "es para mi hogar",
+          "icon": "/public/3.svg",
+          "text": [
+            {
+              "id": "tasación",
+              "content": "tasación de alquiler o venta"
+            },
+            {
+              "id": "impuestos",
+              "content": "impuestos"
+            },
+            {
+              "id": "arquitecto",
+              "content": "Arquitecto (Cédula, Certificado Energético)."
+            },
+            {
+              "id": "gestoria",
+              "content": "Gestoría (IVA, plusvalía…)"
+            },
+            {
+              "id": "seguros",
+              "content": "seguros"
+            },
+            {
+              "id": "gestiones",
+              "content":
+                "gestiones administrativas  (reuniones de comunidad, análisis de actas)."
+            },
+            {
+              "id": "llaves",
+              "content": "copia de llaves."
+            },
+            {
+              "id": "IBI",
+              "content": "domiciliar el IBI."
+            },
+            {
+              "id": "notarioales",
+              "content": "poderes notariales."
+            },
+            {
+              "id": "reformas",
+              "content": "reformas integrales (asesoramiento, presupuestos)."
+            },
+            {
+              "id": "interiores.",
+              "content": "diseño de interiores."
+            }
+          ]
+        },
+        {
+          "id": "algomas",
+          "title": "Algo más",
+          "icon": "/public/5.svg",
+          "text": [
+            {
+              "id": "escribe",
+              "content": "escribe aquí lo que sea, lo conseguiremos!"
+            }
+          ]
+        }
+      ]
+}

@@ -1,0 +1,99 @@
+{
+    "conciergerieHeader": "Conciergerie",
+    "conciergerieTitle": "What do you need?",
+    "conciergerieText": "Here you can see the various services that we offer. If you don’t see what you’re looking for, don’t worry, we will do everything we can to sort it out for you. We can find you everything you need, from your dream home to your perfect yoga teacher!",
+    "conciergerieData": [
+        {
+            "id": "It’s Personal",
+            "title": "It’s Personal",
+            "icon": "/2.svg",
+            "text": [
+                {
+                    "id": "NIE",
+                    "content": "Obtaining your NIE."
+                },
+                {
+                    "id": "contract",
+                    "content": "Advice on ending a contract."
+                },
+                {
+                    "id": "transferBills",
+                    "content": "Transferring utility bills."
+                },
+                {
+                    "id": "internet",
+                    "content": "Setting up the internet and phone line."
+                },
+                {
+                    "id": "mediation",
+                    "content": "Making a copy of the contract / Mediation / Moving House. ELIMINAR (FLETES, TRANSPORTES)."
+                },
+                {
+                    "id": "personalShopper",
+                    " content": "Legal advice. Personal Shopper."
+                }
+            ]
+        },
+        {
+            "id": "home",
+            "title": "It’s For my Home",
+            "icon": "/3.svg",
+            "text": [
+                {
+                    "id": "taxation",
+                    "content": "Appraisal of the property."
+                },
+                {
+                    "id": "taxes",
+                    "content": "Taxes."
+                },
+                {
+                    "id": "architect",
+                    "content": "Architect (certificate of habitability, energy certificates)."
+                },
+                {
+                    "id": "Financial",
+                    "content": "Financial consultant (VAT, capital gains etc)"
+                },
+                {
+                    "id": "insurance",
+                    "content": "Insurance."
+                },
+                {
+                    "id": "administration",
+                    "content": "Administrative procedures (Community meetings, the records of proceedings)."
+                },
+                {
+                    "id": "keys",
+                    "content": "Key duplication."
+                },
+                {
+                    "id": "IBI",
+                    "content": "Setting up a direct debit for the IBI (property tax)"
+                },
+                {
+                    "id": "notary",
+                    "content": "Power of notary."
+                },
+                {
+                    "id": "refurbishment",
+                    "content": "Comprehensive refurbishments (advice, budgets)."
+                },
+                {
+                    "id": "interiores."
+                }
+            ]
+        },
+        {
+            "id": "else",
+            "title": "Something Else",
+            "icon": "/4.svg",
+            "text": [
+                {
+                    "id": "write",
+                    "content": "Just write here whatever you’re looking for and we’ll get it for you!"
+                }
+            ]
+        }
+    ]
+}
