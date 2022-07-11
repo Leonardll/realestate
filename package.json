@@ -16,7 +16,7 @@
     "fontawesome": "^5.6.3",
     "formik": "^2.2.9",
     "framer-motion": "^6.2.8",
-    "i18next": "^21.8.9",
+    "i18next": "^21.8.13",
     "js-cookie": "^3.0.1",
     "millify": "^4.0.0",
     "next": "12.0.9",

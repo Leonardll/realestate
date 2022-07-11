@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import i18next from "i18next";
+import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import EsFlag from "../../assets/spain.svg";
 import enFlag from "../../assets/unionJack.svg";
 import { Button } from "./Button";
@@ -80,6 +80,7 @@ const Navbar = () => {
   console.log(
     i18next.init({
       debug: true,
+      lng: "es-ES",
     })
   );
   const router = useRouter();
