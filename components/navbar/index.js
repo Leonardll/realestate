@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
+import i18next from "i18next";
 import EsFlag from "../../assets/spain.svg";
 import enFlag from "../../assets/unionJack.svg";
 import { Button } from "./Button";
@@ -76,6 +77,11 @@ export const menuItems = [
 ];
 
 const Navbar = () => {
+  console.log(
+    i18next.init({
+      debug: true,
+    })
+  );
   const router = useRouter();
   const { locale } = router;
 
