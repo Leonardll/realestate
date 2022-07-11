@@ -35,7 +35,7 @@ export const ContactForm = ({ token }) => {
       phone,
       message,
     };
-    fetch("api/contact", {
+    const res = await fetch("api/contact", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -45,7 +45,6 @@ export const ContactForm = ({ token }) => {
         token: "unicohogar",
       }),
     });
-
     alert("Message sent! Thank you\nWe will be in touch with you soon!");
   }
 

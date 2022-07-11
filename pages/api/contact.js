@@ -36,7 +36,8 @@ export default async (req, res) => {
   };
   try {
     await mail.send(data);
-    console.log(body);
+    console.log(message);
+    console.log(data);
     res.status(200).json({ status: "OK" });
   } catch (error) {
     console.log("server error", error);
