@@ -20,6 +20,7 @@
     "js-cookie": "^3.0.1",
     "millify": "^4.0.0",
     "next": "12.0.9",
+    "next-compose-plugins": "^2.2.1",
     "next-i18next": "^11.0.0",
     "next-images": "^1.8.4",
     "next-translate": "^1.4.0",
