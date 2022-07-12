@@ -20,6 +20,7 @@ const Layout = ({ children }) => {
     router.push(router.pathname, router.asPath, { locale });
     console.log(locale);
   };
+  console.log(locale);
   return (
     <React.StrictMode>
       <Head>
