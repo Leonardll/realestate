@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import Icon1 from "/public/1.svg";
 import Icon2 from "/public/2.svg";
 import Icon3 from "/public/3.svg";
