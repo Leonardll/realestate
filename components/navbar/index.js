@@ -79,7 +79,7 @@ export const menuItems = [
 const Navbar = () => {
   const router = useRouter();
   const { locale } = router;
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation(["common", "conciergerie", "realEstate"]);
   const changeLanguage = (e) => {
     const locale = e.target.value;
     i18n.changeLanguage(locale);
