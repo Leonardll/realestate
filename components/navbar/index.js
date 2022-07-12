@@ -85,6 +85,7 @@ const Navbar = () => {
     i18n.changeLanguage(locale);
     router.push(router.pathname, router.asPath, { locale });
   };
+  console.log("locale", locale);
   const [active, setActive] = useState(false);
   const changeBackground = () => {
     //console.log(window.scrollY, active);
