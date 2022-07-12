@@ -3,14 +3,12 @@ module.exports = {
   i18n: {
     defaultLocale: "es-ES",
     locales: ["es-ES", "en-US"],
-    localeDetection: false,
+    localeDetection: true,
     reloadOnPrerender: process.env.NODE_ENV === "development",
     //react: { useSuspense: false },
+    localeSubpaths: {
+      "es-ES": "es",
+      "en-US": "en",
+    },
   },
-
-  // "pages": {
-  //     "*": ["common"],
-  //     "/ourServices/conciergerie": ["conciergerie"],
-  //     "/ourServices/realEstate": ["realEstate"]
-  // }
 };
