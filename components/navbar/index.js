@@ -81,8 +81,7 @@ const Navbar = () => {
   const { locale } = router;
   const { i18n } = useTranslation();
   const changeLanguage = (e) => {
-    const locale = e.target.value;
-    i18n.changeLanguage(locale);
+    const locale = i18n.changeLanguage(e.target.value);
     router.push(router.pathname, router.asPath, { locale });
   };
   const [active, setActive] = useState(false);
