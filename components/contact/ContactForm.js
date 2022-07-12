@@ -35,7 +35,7 @@ export const ContactForm = ({ token }) => {
       phone,
       message,
     };
-    const res = await fetch("api/contact", {
+    const res = await fetch("/api/contact", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
