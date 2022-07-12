@@ -27,7 +27,10 @@ const Layout = ({ children }) => {
       >
         <header>
           <Navbar />
-          <MastHead mastheadText={i18n.t("mastheadText")} />
+          <MastHead
+            mastheadText={t("mastheadText")}
+            mastheadTextTitle={t("mastheadTitle")}
+          />
         </header>
         <main>{children}</main>
         <CookieConsent

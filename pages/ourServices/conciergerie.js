@@ -5,8 +5,6 @@ import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "react-i18next";
 import { Contact } from "../../components/contact/Contact";
-import es from "../../locales/es-ES/conciergerie.json";
-import en from "../../locales/en-US/conciergerie.json";
 import Icon1 from "/public/1.svg";
 import Icon2 from "/public/2.svg";
 import Icon3 from "/public/3.svg";

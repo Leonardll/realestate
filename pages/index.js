@@ -26,10 +26,10 @@ export default function Home({ locale }) {
         <Services />
         <Properties />
         <AboutUs
-          aboutUsText={i18n.t("aboutUsText1")}
-          aboutUsText1={i18n.t("aboutUsText2")}
-          aboutUsText2={i18n.t("aboutUsText3")}
-          aboutUsText3={i18n.t("aboutUsText4")}
+          aboutUsText={t("aboutUsText1")}
+          aboutUsText1={t("aboutUsText2")}
+          aboutUsText2={t("aboutUsText3")}
+          aboutUsText3={t("aboutUsText4")}
         />
         <Team teamText1={t("teamText1")} />
         <Contact />
