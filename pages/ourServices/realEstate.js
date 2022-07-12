@@ -7,7 +7,7 @@ import Icon2 from "/public/2.svg";
 import Icon3 from "/public/3.svg";
 const RealEstate = () => {
   let myIcons = [Icon1, Icon2, Icon3];
-  const { t, i18n } = useTranslation("conciergerie");
+  const { t, i18n } = useTranslation("realEstate");
 
   const contentData = t("propertyData", { returnObjects: true });
 
