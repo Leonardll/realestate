@@ -142,7 +142,7 @@ const Conciergerie = () => {
   );
 };
 
-// export default Conciergerie;
+export default Conciergerie;
 
 // export const getStaticProps = async ({ locale }) => ({
 //   props: {
