@@ -1,16 +1,15 @@
 import Image from "next/image";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
-import es from "../../locales/es-ES/realEstate.json";
-import en from "../../locales/en-US/realEstate.json";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 import Icon1 from "/public/1.svg";
 import Icon2 from "/public/2.svg";
 import Icon3 from "/public/3.svg";
 const RealEstate = () => {
-  let { locale } = useRouter();
-  let t = locale === "es-ES" ? es : en;
   let myIcons = [Icon1, Icon2, Icon3];
-  const contentData = t.propertyData;
+  const { t, i18n } = useTranslation("conciergerie");
+
+  const contentData = t("propertyData", { returnObjects: true });
 
   const scrollToConciergerie = () => {
     window.scrollTo({
@@ -28,13 +27,13 @@ const RealEstate = () => {
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="property-management">
-            {t.propertyHeader}
+            {t("propertyHeader")}
           </h1>
         </div>
         <h3 className="text-capitalize property-subheading mt-3">
-          {t.propertyTitle}
+          {t("propertyTitle")}
         </h3>
-        <p className="lead property-subheading-text">{t.propertyText}</p>
+        <p className="lead property-subheading-text">{t("propertyText")}</p>
       </div>
       <div className="container">
         <div className="row text-center mt-5">
@@ -81,8 +80,8 @@ const RealEstate = () => {
 
 export default RealEstate;
 
-// export const getStaticProps = async ({ locale }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale, ["realEstate"])),
-//   },
-// });
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["realEstate"])),
+  },
+});

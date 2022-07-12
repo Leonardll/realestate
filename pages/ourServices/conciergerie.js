@@ -2,6 +2,8 @@ import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "react-i18next";
 import { Contact } from "../../components/contact/Contact";
 import es from "../../locales/es-ES/conciergerie.json";
 import en from "../../locales/en-US/conciergerie.json";
@@ -11,8 +13,8 @@ import Icon3 from "/public/3.svg";
 
 const Conciergerie = () => {
   let { locale } = useRouter();
-  let t = locale === "es-ES" ? es : en;
-  // const { t } = useTranslation(locale, "conciergerie");
+  // let t = locale === "es-ES" ? es : en;
+  const { t, i18n } = useTranslation("conciergerie");
 
   let myIcons = [Icon1, Icon2, Icon3];
 
@@ -40,20 +42,22 @@ const Conciergerie = () => {
     return <Contact />;
   };
 
-  const contentData = t.conciergerieData;
+  const contentData = t("conciergerieData", { returnObjects: true });
 
   return (
     <div className="section" onLoad={scrollToConciergerie}>
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="conciergerie">
-            {t.conciergerieHeader}
+            {t("conciergerieHeader")}
           </h1>
         </div>
         <h3 className="text-capitalize concierge-subheading mt-3">
-          {t.conciergerieTitle}
+          {t("conciergerieTitle")}
         </h3>
-        <p className="lead concierge-subheading-text">{t.conciergerieText}</p>
+        <p className="lead concierge-subheading-text">
+          {t("conciergerieText")}
+        </p>
       </div>
       <div className="container">
         <div className="row text-center mt-5">
@@ -144,8 +148,12 @@ const Conciergerie = () => {
 
 export default Conciergerie;
 
-// export const getStaticProps = async ({ locale }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale, ["conciergerie"])),
-//   },
-// });
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [
+      "common",
+      "conciergerie",
+      "conciergerieTitle",
+    ])),
+  },
+});
