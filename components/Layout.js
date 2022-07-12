@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { useRouter } from "next/router";
 import { useTranslation, Trans } from "next-i18next";
 import Footer from "./Footer";
 import MastHead from "./MastHead";
@@ -10,7 +11,15 @@ import Link from "next/link";
 
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation("common");
+  const router = useRouter();
+  const { locale } = router;
 
+  const changeLanguage = (e) => {
+    const locale = e.target.value;
+    i18n.changeLanguage(locale);
+    router.push(router.pathname, router.asPath, { locale });
+    console.log(locale);
+  };
   return (
     <React.StrictMode>
       <Head>
@@ -26,7 +35,7 @@ const Layout = ({ children }) => {
         tabIndex="0"
       >
         <header>
-          <Navbar i18n={i18n} />
+          <Navbar changeLanguage={changeLanguage} />
           <MastHead
             mastheadText={t("mastheadText")}
             mastheadTextTitle={t("mastheadTitle")}

@@ -76,16 +76,17 @@ export const menuItems = [
   },
 ];
 
-const Navbar = ({ i18n }) => {
+const Navbar = ({ changeLanguage }) => {
   const router = useRouter();
   const { locale } = router;
   // const { t, i18n } = useTranslation(["common", "conciergerie", "realEstate"]);
-  const changeLanguage = (e) => {
-    const locale = e.target.value;
-    i18n.changeLanguage(locale);
-    router.push(router.pathname, router.asPath, { locale });
-  };
-  console.log("locale", locale);
+  // const changeLanguage = (e) => {
+  //   const locale = e.target.value;
+  //   i18n.changeLanguage(locale);
+  //   router.push(router.pathname, router.asPath, { locale });
+  //   console.log("locale", locale);
+  // };
+
   const [active, setActive] = useState(false);
   const changeBackground = () => {
     //console.log(window.scrollY, active);
