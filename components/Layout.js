@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React from "react";
+import { useTranslation, Trans } from "next-i18next";
 import Footer from "./Footer";
 import MastHead from "./MastHead";
 import CookieConsent from "react-cookie-consent";
@@ -8,6 +9,8 @@ import ScrollToTop from "./ScrollTotop";
 import Link from "next/link";
 
 const Layout = ({ children }) => {
+  const { t } = useTranslation("common");
+
   return (
     <React.StrictMode>
       <Head>
@@ -24,7 +27,7 @@ const Layout = ({ children }) => {
       >
         <header>
           <Navbar />
-          <MastHead />
+          <MastHead mastheadText={t("mastheadText")} />
         </header>
         <main>{children}</main>
         <CookieConsent

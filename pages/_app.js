@@ -3,7 +3,7 @@ import "../styles/custom.scss";
 import Head from "next/head";
 import NProgress from "nprogress";
 import { appWithTranslation } from "next-i18next";
-import nextI18NextConfig from "../next-i18next.config.js";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import React from "react";
 import { Router } from "next/router";
@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
   Router.events.on("routeChangeComplete", () => {
     NProgress.done();
   });
-
+  const { locale } = useRouter();
   return (
     <React.StrictMode>
       <Head>
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }) {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <Layout className="container-fluid">
+      <Layout locale={locale} className="container-fluid">
         <Component {...pageProps} />
       </Layout>
     </React.StrictMode>

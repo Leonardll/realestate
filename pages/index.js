@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslation, Trans } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import { Services } from "../components/Services";
 import { Contact } from "../components/contact/Contact";
 import { AboutUs } from "../components/AboutUs";
@@ -16,26 +19,27 @@ const myLoader2 = ({ src, width, quality }) => {
 
 export default function Home({ locale }) {
   const router = useRouter();
-  // const { t } = useTranslation(locale, "common");
+  const { t } = useTranslation(locale, "common");
   return (
     <>
       <div>
         <Services />
         <Properties />
-        <AboutUs />
-        <Team />
+        <AboutUs
+          aboutUsText={t("aboutUsText1")}
+          aboutUsText1={t("aboutUsText2")}
+          aboutUsText2={t("aboutUsText3")}
+          aboutUsText3={t("aboutUsText4")}
+        />
+        <Team teamText1={t("teamText1")} />
         <Contact />
       </div>
     </>
   );
 }
 
-// export const getStaticProps = async ({ locale }) => ({
-//   props: {
-//     ...(await serverSideTranslations(locale, [
-//       "common",
-//       "conciergerie",
-//       "realEstate",
-//     ])),
-//   },
-// });
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
