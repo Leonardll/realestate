@@ -17,27 +17,23 @@ export default async (req, res) => {
       path: "/",
     })
   );
-
   const body = JSON.parse(JSON.stringify(req.body));
-
   const message = `
-  FirstName: ${body.firstName}\r\n
-  Email: ${body.email}\r\n
-  phone:${body.phone}
-  Message: ${body.message}\r\n
+  FirstName: ${body.data.firstName}\r\n
+  Email: ${body.data.email}\r\n
+  phone:${body.data.phone}
+  Message: ${body.data.message}\r\n
 `;
 
   const data = {
     to: "info@unicohogar.com",
     from: "info@unicohogar.com",
-    subject: `New message from ${body.firstName} ${body.phone}`,
+    subject: `New message from ${body.data.firstName} ${body.data.phone}`,
     text: message,
     html: message.replace(/\r\n/g, "<br />"),
   };
   try {
     await mail.send(data);
-    console.log(message);
-    console.log(data);
     res.status(200).json({ status: "OK" });
   } catch (error) {
     console.log("server error", error);
