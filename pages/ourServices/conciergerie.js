@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState, useEffect } from "react";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
 import { Contact } from "../../components/contact/Contact";
 import es from "../../locales/es-ES/conciergerie.json";
@@ -12,6 +13,8 @@ import Icon3 from "/public/3.svg";
 const Conciergerie = () => {
   let { locale } = useRouter();
   let t = locale === "es-ES" ? es : en;
+  // const { t } = useTranslation(locale, "conciergerie");
+
   let myIcons = [Icon1, Icon2, Icon3];
 
   const scrollToConciergerie = () => {
@@ -142,10 +145,8 @@ const Conciergerie = () => {
 
 export default Conciergerie;
 
-// export const getStaticProps = async ({ locale }) => ({
-//   props: {
-//     locale: (await locale) || "",
-//     // t: t,
-//     // lang: lang,
-//   },
-// });
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["conciergerie"])),
+  },
+});
