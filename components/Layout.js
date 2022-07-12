@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         tabIndex="0"
       >
         <header>
-          <Navbar />
+          <Navbar i18n={i18n} />
           <MastHead
             mastheadText={t("mastheadText")}
             mastheadTextTitle={t("mastheadTitle")}
