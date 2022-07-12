@@ -2,7 +2,7 @@ import "../styles/globals.scss";
 import "../styles/custom.scss";
 import Head from "next/head";
 import NProgress from "nprogress";
-import { appWithTranslation, AppWithTranslation } from "next-i18next";
+import { appWithTranslation } from "next-i18next";
 import nextI18NextConfig from "../next-i18next.config.js";
 import Layout from "../components/Layout";
 import React from "react";

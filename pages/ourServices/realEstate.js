@@ -82,8 +82,8 @@ const RealEstate = () => {
 
 export default RealEstate;
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, ["realEstate"])),
-  },
-});
+// export const getStaticProps = async ({ locale }) => ({
+//   props: {
+//     ...(await serverSideTranslations(locale, ["realEstate"])),
+//   },
+// });

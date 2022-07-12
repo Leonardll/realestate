@@ -18,13 +18,13 @@ const myLoader2 = ({ src, width, quality }) => {
 
 export default function Home({ locale }) {
   const router = useRouter();
-  const { t } = useTranslation(locale, "common");
+  // const { t } = useTranslation(locale, "common");
   return (
     <>
       <div>
         <Services />
         <Properties />
-        <AboutUs t={t("common")} />
+        <AboutUs />
         <Team />
         <Contact />
       </div>
@@ -32,12 +32,12 @@ export default function Home({ locale }) {
   );
 }
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, [
-      "common",
-      "conciergerie",
-      "realEstate",
-    ])),
-  },
-});
+// export const getStaticProps = async ({ locale }) => ({
+//   props: {
+//     ...(await serverSideTranslations(locale, [
+//       "common",
+//       "conciergerie",
+//       "realEstate",
+//     ])),
+//   },
+// });
