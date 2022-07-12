@@ -5,6 +5,7 @@ module.exports = {
     defaultLocale: "es-ES",
     localeDetection: false,
     reloadOnPrerender: process.env.NODE_ENV === "development",
+    react: { useSuspense: false },
   },
 
   // "pages": {
