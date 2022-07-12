@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState, useEffect } from "react";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useRouter } from "next/router";
 import { Contact } from "../../components/contact/Contact";
 import es from "../../locales/es-ES/conciergerie.json";

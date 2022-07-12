@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import es from "../../locales/es-ES/realEstate.json";
 import en from "../../locales/en-US/realEstate.json";
 import Icon1 from "/public/1.svg";
