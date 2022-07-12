@@ -9,7 +9,7 @@ import ScrollToTop from "./ScrollTotop";
 import Link from "next/link";
 
 const Layout = ({ children }) => {
-  const { t } = useTranslation("common");
+  const { t, i18n } = useTranslation("common");
 
   return (
     <React.StrictMode>
@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
       >
         <header>
           <Navbar />
-          <MastHead mastheadText={t("mastheadText")} />
+          <MastHead mastheadText={i18n.t("mastheadText")} />
         </header>
         <main>{children}</main>
         <CookieConsent
