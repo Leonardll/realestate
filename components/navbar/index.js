@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import { i18n } from "../../next-i18next.config";
 import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import EsFlag from "../../assets/spain.svg";
 import enFlag from "../../assets/unionJack.svg";
@@ -81,7 +82,7 @@ const Navbar = () => {
 
   const changeLanguage = (e) => {
     const locale = e.target.value;
-    router.push(router.pathname, router.asPath, { locale });
+    i18n.changeLanguage(locale);
   };
   const [active, setActive] = useState(false);
   const changeBackground = () => {
