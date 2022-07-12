@@ -38,7 +38,7 @@ export default function Home({ locale }) {
   );
 }
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({ locale = "es-ES" }) => ({
   props: {
     ...(await serverSideTranslations(locale, ["common"])),
   },

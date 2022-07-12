@@ -146,7 +146,7 @@ const Conciergerie = () => {
 
 export default Conciergerie;
 
-export const getStaticProps = async ({ locale }) => ({
+export const getStaticProps = async ({ locale = "es-ES" }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
       "common",
