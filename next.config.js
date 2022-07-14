@@ -5,20 +5,7 @@ const { i18n } = require("./next-i18next.config");
 module.exports = withImages({
   esModule: true,
   i18n,
-  // i18n: {
-  //   //   //   //   // These are all the locales you want to support in
-  //   //   //   //   // your application
-  //   locales: ["es-ES", "en-US"],
-  //   //   //   //   // This is the default locale you want to be used when visiting
-  //   //   //   //   // a non-locale prefixed path e.g. `/hello`
-  //   defaultLocale: "es-ES",
-  //   localeDetection: false,
-  //   // ns: {
-  //   //   "*": ["common"],
-  //   //   "/ourServices/conciergerie": ["conciergerie"],
-  //   //   "/ourServices/realEstate": ["realEstate"],
-  //   // },
-  // },
+
   trailingSlash: true,
   reactStrictMode: true,
   sassOptions: {
