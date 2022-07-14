@@ -12,15 +12,11 @@ import Link from "next/link";
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
-  const { locale } = router;
 
   const changeLanguage = (e) => {
     const locale = e.target.value;
-    //i18n.changeLanguage(locale);
     router.push(router.pathname, router.asPath, { locale });
-    console.log(locale);
   };
-  console.log(locale);
   return (
     <React.StrictMode>
       <Head>

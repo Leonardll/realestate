@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { Contact } from "../../components/contact/Contact";
@@ -10,8 +9,6 @@ import Icon2 from "/public/2.svg";
 import Icon3 from "/public/3.svg";
 
 const Conciergerie = () => {
-  let { locale } = useRouter();
-  // let t = locale === "es-ES" ? es : en;
   const { t, i18n } = useTranslation("conciergerie");
 
   let myIcons = [Icon1, Icon2, Icon3];

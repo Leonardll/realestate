@@ -2,10 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import { useTranslation } from "next-i18next";
-import Logo from "../../assets/images/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
-import EsFlag from "../../assets/spain.svg";
-import enFlag from "../../assets/unionJack.svg";
+import Logo from "../../public/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
 
@@ -79,13 +76,6 @@ export const menuItems = [
 const Navbar = ({ changeLanguage }) => {
   const router = useRouter();
   const { locale } = router;
-  // const { t, i18n } = useTranslation(["common", "conciergerie", "realEstate"]);
-  // const changeLanguage = (e) => {
-  //   const locale = e.target.value;
-  //   i18n.changeLanguage(locale);
-  //   router.push(router.pathname, router.asPath, { locale });
-  //   console.log("locale", locale);
-  // };
 
   const [active, setActive] = useState(false);
   const changeBackground = () => {

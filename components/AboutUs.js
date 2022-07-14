@@ -10,8 +10,6 @@ export const AboutUs = ({
   aboutUsText2,
   aboutUsText3,
 }) => {
-  let { locale } = useRouter();
-  let t = locale === "es-ES" ? es : en;
   let regex = /\[(.*?)\]/g;
 
   const spannedText = aboutUsText.replace(
