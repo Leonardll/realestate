@@ -83,3 +83,13 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
+
+export const getServerSideProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [
+      "common",
+      "conciergerie",
+      "realEstate",
+    ])),
+  },
+});
