@@ -143,7 +143,7 @@ const Navbar = ({ changeLanguage }) => {
                 </Link>
                 <Link
                   href={router.asPath}
-                  locale={router.locale === "es-ES" ? "en-US" : "es"}
+                  locale={router.locale === "es-ES" ? "en-US" : "es-ES"}
                   passHref
                 >
                   <Image
