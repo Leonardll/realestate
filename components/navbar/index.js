@@ -125,7 +125,7 @@ const Navbar = ({ changeLanguage }) => {
             id="navbarResponsive"
           >
             <ul className="navbar-nav align-items-center text-capitalize ms-auto">
-              <div className="d-flex col">
+              <div className="d-flex">
                 <Link
                   href={router.asPath}
                   locale={router.defaultLocale}
