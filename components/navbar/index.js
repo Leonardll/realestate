@@ -5,7 +5,8 @@ import { useState, useEffect } from "react";
 import Logo from "../../public/nicoHogar-Scelto_Tavola_disegno_1_1_.svg";
 import { Button } from "./Button";
 import { NavItem } from "./NavItem";
-
+import Flag from "../../public/spain.svg";
+import Flag2 from "../../public/uk.svg";
 export const menuItems = [
   {
     id: "home",
@@ -94,8 +95,8 @@ const Navbar = ({ changeLanguage }) => {
       <nav
         className={
           !active
-            ? "navbar active navbar-expand-md navbar-light bg-transp fixed-top"
-            : "navbar navbar-expand-md navbar-light bg-white fixed-top"
+            ? "navbar active navbar-expand-lg navbar-light bg-transp fixed-top"
+            : "navbar navbar-expand-lg navbar-light bg-white fixed-top"
         }
         id="mainNav"
       >
@@ -124,6 +125,37 @@ const Navbar = ({ changeLanguage }) => {
             id="navbarResponsive"
           >
             <ul className="navbar-nav align-items-center text-capitalize ms-auto">
+              <div className="d-flex col">
+                <Link
+                  href={router.asPath}
+                  locale={router.defaultLocale}
+                  passHref
+                >
+                  <Image
+                    className="p-2 img-fluid"
+                    alt="flag"
+                    src={Flag}
+                    layout="fixed"
+                    //objectFit="cover"
+                    height={40}
+                    width={40}
+                  />
+                </Link>
+                <Link
+                  href={router.asPath}
+                  locale={router.locale === "es-ES" ? "en-US" : "es"}
+                  passHref
+                >
+                  <Image
+                    className="p-2 img-fluid"
+                    alt="flag"
+                    src={Flag2}
+                    layout="fixed"
+                    height={40}
+                    width={40}
+                  />
+                </Link>
+              </div>
               {menuItems.map((item) => (
                 <NavItem
                   key={item.id}
@@ -133,7 +165,7 @@ const Navbar = ({ changeLanguage }) => {
                 />
               ))}
 
-              <select
+              {/* <select
                 onChange={changeLanguage}
                 defaultValue={locale}
                 className="text-hogar align-items-center shadow-sm text-lg bg-transparent tracking-wide"
@@ -144,7 +176,7 @@ const Navbar = ({ changeLanguage }) => {
                 <option className="text-hogar fw-2" value="en-US">
                   En
                 </option>
-              </select>
+              </select> */}
             </ul>
           </div>
         </div>
