@@ -131,29 +131,33 @@ const Navbar = ({ changeLanguage }) => {
                   locale={router.defaultLocale}
                   passHref
                 >
-                  <Image
-                    className="p-2 img-fluid"
-                    alt="flag"
-                    src={Flag}
-                    layout="fixed"
-                    //objectFit="cover"
-                    height={40}
-                    width={40}
-                  />
+                  <a>
+                    <Image
+                      className="p-2 img-fluid"
+                      alt="flag"
+                      src={Flag}
+                      layout="fixed"
+                      //objectFit="cover"
+                      height={40}
+                      width={40}
+                    />
+                  </a>
                 </Link>
                 <Link
                   href={router.asPath}
                   locale={router.locale === "es-ES" ? "en-US" : "es-ES"}
                   passHref
                 >
-                  <Image
-                    className="p-2 img-fluid"
-                    alt="flag"
-                    src={Flag2}
-                    layout="fixed"
-                    height={40}
-                    width={40}
-                  />
+                  <a>
+                    <Image
+                      className="p-2 img-fluid"
+                      alt="flag"
+                      src={Flag2}
+                      layout="fixed"
+                      height={40}
+                      width={40}
+                    />
+                  </a>
                 </Link>
               </div>
               {menuItems.map((item) => (
