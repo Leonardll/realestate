@@ -17,6 +17,11 @@ const Layout = ({ children }) => {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
   };
+  const handleAcceptCookie = () => {
+    if (process.env.GOOGLE_ANALYTICS_ID) {
+      initGA(process.env.GOOGLE_ANALYTICS_ID);
+    }
+  };
   return (
     <React.StrictMode>
       <Head>
@@ -40,6 +45,26 @@ const Layout = ({ children }) => {
         </header>
         <main>{children}</main>
         <CookieConsent
+          onAccept={() => {}}
+          onDecline={() => {}}
+          cookieName="CookieConsent"
+          cookieValue="true"
+          sameSite="strict"
+          buttonWrapperClasses="d-flex"
+          enableDeclineButton
+          declineButtonStyle={{
+            background: "#245564",
+            padding: "10px 20px",
+            borderRadius: "16px",
+            fontSize: "1em",
+            color: "#ffff",
+            display: "flex",
+            alignContent: "center",
+            justifyContent: "center",
+          }}
+          ariaAcceptLabel="Accept cookies"
+          ariaDeclineLabel="Decline cookies"
+          flipButtons
           debug={true}
           location="bottom"
           style={{
@@ -54,6 +79,8 @@ const Layout = ({ children }) => {
           buttonStyle={{
             color: "#ffff",
             background: "#245564",
+            padding: "10px 20px",
+            borderRadius: "16px",
             fontSize: "1em",
             display: "flex",
             alignContent: "center",
@@ -62,10 +89,7 @@ const Layout = ({ children }) => {
         >
           This site uses cookies. Please See our privacy
           <Link href="/policy" passHref>
-            <a style={{ color: "#245564", textDecoration: "underline" }}>
-              {" "}
-              policy{" "}
-            </a>
+            <a style={{ color: "#5ab4ab", textDecoration: "none" }}> policy </a>
           </Link>
           for more information
         </CookieConsent>
