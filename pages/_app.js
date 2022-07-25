@@ -26,9 +26,9 @@ function MyApp({ Component, pageProps }) {
     const handleRouteChange = (url) => {
       ga.pageview(url);
     };
-    Router.events.on("routeChangeStart", handleRouteChange);
+    Router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      Router.events.off("routeChangeStart", handleRouteChange);
+      Router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, []);
 
