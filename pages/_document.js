@@ -8,26 +8,7 @@ export default class CustomDocument extends Document {
       this.props.__NEXT_DATA__.locale || i18nextConfig.i18n.defaultLocale;
     return (
       <Html lang={currentLocale}>
-        <Head>
-          <script
-            strategy="afterInteractive"
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
-          />
-          <script
-            id="gtag-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: ` window.dataLayer = window.dataLayer || [];
-        function gtag(){window.dataLayer.push(arguments);}
-        gtag('js', new Date());
-      
-        gtag('config', '${process.env.GA_ID}',{
-          page_path: window.location.pathname,
-        })`,
-            }}
-          />
-        </Head>
+        <Head></Head>
         <body>
           <Main />
         </body>

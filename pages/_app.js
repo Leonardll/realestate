@@ -43,6 +43,24 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <script
+          strategy="afterInteractive"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
+        />
+        <script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: ` window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', '${process.env.GA_ID}',{
+          page_path: window.location.pathname,
+        })`,
+          }}
+        />
       </Head>
       <Layout locale={locale} className="container-fluid">
         <Component {...pageProps} />
