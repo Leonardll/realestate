@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   };
   const handleAcceptCookie = () => {
     if (process.env.GA_ID) {
-      initGA(process.env.GA_ID);
+      initGA(process.env.NEXT_PUBLIC_GA_ID);
     }
   };
   return (
