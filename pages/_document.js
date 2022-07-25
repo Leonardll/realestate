@@ -19,7 +19,7 @@ export default class CustomDocument extends Document {
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
               __html: ` window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag(){window.dataLayer.push(arguments);}
         gtag('js', new Date());
       
         gtag('config', '${process.env.GA_ID}',{
