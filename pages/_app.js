@@ -44,25 +44,25 @@ function MyApp({ Component, pageProps }) {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <Script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script
-        id="gtag-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: ` window.dataLayer = window.dataLayer || [];
+      <Layout locale={locale} className="container-fluid">
+        <Script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: ` window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
       
         gtag('config', '${process.env.GA_ID}',{
           page_path: window.location.pathname,
         })`,
-        }}
-      />
-      <Layout locale={locale} className="container-fluid">
+          }}
+        />
         <Component {...pageProps} />
       </Layout>
     </React.StrictMode>
