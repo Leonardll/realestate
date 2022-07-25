@@ -7,6 +7,7 @@ import MastHead from "./MastHead";
 import CookieConsent from "react-cookie-consent";
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
+import * as gtag from "../lib/gtag";
 import Link from "next/link";
 import Script from "next/script";
 const Layout = ({ children }) => {
@@ -22,6 +23,16 @@ const Layout = ({ children }) => {
       initGA(process.env.NEXT_PUBLIC_GA_ID);
     }
   };
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
   return (
     <React.StrictMode>
       <Head>
