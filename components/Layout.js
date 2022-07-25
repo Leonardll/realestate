@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
     router.push(router.pathname, router.asPath, { locale });
   };
   const handleAcceptCookie = () => {
-    if (process.env.GA_ID) {
+    if (process.env.NEXT_PUBLIC_GA_ID) {
       initGA(process.env.NEXT_PUBLIC_GA_ID);
     }
   };
