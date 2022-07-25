@@ -8,7 +8,7 @@ import CookieConsent from "react-cookie-consent";
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
 import Link from "next/link";
-
+import Script from "next/script";
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
@@ -29,6 +29,24 @@ const Layout = ({ children }) => {
         <meta name="description" content="Real Estate & Premium Services" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Script
+        strategy="afterInteractive"
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+      />
+      <Script
+        id="gtag-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: ` window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        window.gtag('js', new Date());
+      
+        window.gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}',{
+          page_path: window.location.pathname,
+        })`,
+        }}
+      />
       <div
         className="container-fluid px-0 mw-3 m-auto scrollspy-example"
         data-bs-spy="scroll"

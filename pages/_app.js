@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
           referrerPolicy="no-referrer"
         />
       </Head>
-      <Script
+      {/* <Script
         strategy="afterInteractive"
         async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }) {
           page_path: window.location.pathname,
         })`,
         }}
-      />
+      /> */}
       <Layout locale={locale} className="container-fluid">
         <Component {...pageProps} />
       </Layout>
