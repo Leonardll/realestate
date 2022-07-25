@@ -18,8 +18,8 @@ const Layout = ({ children }) => {
     router.push(router.pathname, router.asPath, { locale });
   };
   const handleAcceptCookie = () => {
-    if (process.env.GOOGLE_ANALYTICS_ID) {
-      initGA(process.env.GOOGLE_ANALYTICS_ID);
+    if (process.env.GA_ID) {
+      initGA(process.env.GA_ID);
     }
   };
   return (

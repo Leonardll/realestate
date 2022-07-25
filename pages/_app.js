@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 import React, { useEffect } from "react";
 import { Router } from "next/router";
 
-import * as ga from "../lib/google-analytics";
+import * as gtag from "../lib/gtag";
 function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false });
 
@@ -21,16 +21,17 @@ function MyApp({ Component, pageProps }) {
   });
 
   const { locale } = useRouter();
+  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      ga.pageview(url);
+      gtag.pageview(url);
     };
-    Router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      Router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, []);
+  }, [router.events]);
 
   return (
     <React.StrictMode>
@@ -45,7 +46,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_ID}`}
         strategy="afterInteractive"
       />
       <Script id="google-analytics" strategy="afterInteractive">
@@ -53,7 +54,7 @@ function MyApp({ Component, pageProps }) {
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
       
-        gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}')`}
+        gtag('config', '${process.env.GA_ID}')`}
       </Script>
       <Layout locale={locale} className="container-fluid">
         <Component {...pageProps} />
