@@ -45,7 +45,9 @@ const Layout = ({ children }) => {
         </header>
         <main>{children}</main>
         <CookieConsent
-          onAccept={() => {}}
+          onAccept={() => {
+            handleAcceptCookie();
+          }}
           onDecline={() => {}}
           cookieName="CookieConsent"
           cookieValue="true"
