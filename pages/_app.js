@@ -44,6 +44,7 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <Script
+        async
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
         strategy="afterInteractive"
       />
