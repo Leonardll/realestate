@@ -35,12 +35,12 @@ const Layout = ({ children }) => {
     Cookies.remove("_gid");
   };
 
-  useEffect(() => {
-    const isConsent = getCookieConsentValue();
-    if (isConsent === "true") {
-      handleAcceptCookie();
-    }
-  }, []);
+  // useEffect(() => {
+  //   const isConsent = getCookieConsentValue();
+  //   if (isConsent === "true") {
+  //     handleAcceptCookie();
+  //   }
+  // }, []);
 
   return (
     <React.StrictMode>
@@ -83,8 +83,8 @@ const Layout = ({ children }) => {
         </header>
         <main>{children}</main>
         <CookieConsent
-          onAccept={handleAcceptCookie}
-          onDecline={handleRejectCookie}
+          onAccept={() => {}}
+          onDecline={() => {}}
           cookieName="CookieConsent"
           cookieValue="true"
           sameSite="strict"
