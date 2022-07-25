@@ -57,7 +57,7 @@ function MyApp({ Component, pageProps }) {
         function gtag(){window.dataLayer.push(arguments);}
         window.gtag('js', new Date());
       
-        window.gtag('config', '${process.env.GA_ID}',{
+        window.gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}',{
           page_path: window.location.pathname,
         })`,
         }}
