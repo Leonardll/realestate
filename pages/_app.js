@@ -55,9 +55,9 @@ function MyApp({ Component, pageProps }) {
         dangerouslySetInnerHTML={{
           __html: ` window.dataLayer = window.dataLayer || [];
         function gtag(){window.dataLayer.push(arguments);}
-        gtag('js', new Date());
+        window.gtag('js', new Date());
       
-        gtag('config', '${process.env.GA_ID}',{
+        window.gtag('config', '${process.env.GA_ID}',{
           page_path: window.location.pathname,
         })`,
         }}
