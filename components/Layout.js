@@ -4,12 +4,18 @@ import { useRouter } from "next/router";
 import { useTranslation, Trans } from "next-i18next";
 import Footer from "./Footer";
 import MastHead from "./MastHead";
-import CookieConsent from "react-cookie-consent";
+import CookieConsent, {
+  Cookies,
+  getCookieConsentValue,
+  setDeclineCookie,
+} from "react-cookie-consent";
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
 import * as gtag from "../lib/gtag";
+import initGA from "../utils/ga-utils";
 import Link from "next/link";
 import Script from "next/script";
+
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
@@ -23,6 +29,28 @@ const Layout = ({ children }) => {
       initGA(process.env.NEXT_PUBLIC_GA_ID);
     }
   };
+  const handleRejectCookie = () => {
+    Cookies.remove("_ga");
+    Cookies.remove("_gat");
+    Cookies.remove("_gid");
+  };
+
+  useEffect(() => {
+    const isConsent = getCookieConsentValue();
+    if (isConsent === "true") {
+      handleAcceptCookie();
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <React.StrictMode>
@@ -65,10 +93,8 @@ const Layout = ({ children }) => {
         </header>
         <main>{children}</main>
         <CookieConsent
-          onAccept={() => {
-            handleAcceptCookie();
-          }}
-          onDecline={() => {}}
+          onAccept={handleAcceptCookie}
+          onDecline={handleRejectCookie}
           cookieName="CookieConsent"
           cookieValue="true"
           sameSite="strict"
