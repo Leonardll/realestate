@@ -1,5 +1,5 @@
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useTranslation, Trans } from "next-i18next";
 import Footer from "./Footer";
@@ -20,6 +20,7 @@ const Layout = ({ children }) => {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
 
+  const [showOptions, setShowOptions] = useState(false);
   const changeLanguage = (e) => {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
@@ -34,6 +35,7 @@ const Layout = ({ children }) => {
   const handleRejectCookie = () => {
     console.log(Cookies.set("CookieConsent", "false"));
     Cookies.remove("_ga");
+    Cookies.remove("_ga_L55NBFQKJR");
     Cookies.remove("_gat");
     Cookies.remove("_gid");
     console.log(getCookieConsentValue());
@@ -151,6 +153,22 @@ const Layout = ({ children }) => {
             <a style={{ color: "#5ab4ab", textDecoration: "none" }}> policy </a>
           </Link>
           for more information
+          {showOptions && (
+            <div className="form-check form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="flexSwitchCheckChecked"
+                checked
+              />
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckChecked"
+              >
+                Google Analytics
+              </label>
+            </div>
+          )}
         </CookieConsent>
         <ScrollToTop />
       </div>
