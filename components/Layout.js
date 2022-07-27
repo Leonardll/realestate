@@ -100,6 +100,7 @@ const Layout = ({ children }) => {
           sameSite="strict"
           buttonWrapperClasses="d-flex"
           enableDeclineButton
+          visible="byCookieValue"
           declineButtonStyle={{
             background: "#245564",
             padding: "10px 20px",
@@ -145,6 +146,7 @@ const Layout = ({ children }) => {
             display: "flex",
             alignContent: "center",
           }}
+          hideOnAccept={true}
         >
           This site uses cookies. Please See our privacy
           <Link href="/policy" passHref>
