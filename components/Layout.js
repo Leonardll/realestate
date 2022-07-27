@@ -39,10 +39,6 @@ const Layout = ({ children }) => {
     Cookies.remove("_ga");
     Cookies.remove("_gat");
     Cookies.remove("_gid");
-    console.log(getCookieConsentValue());
-    console.log("--------------");
-    console.log("declined");
-    console.log(getCookieConsentValue());
   };
 
   useEffect(() => {
