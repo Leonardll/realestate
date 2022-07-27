@@ -25,14 +25,14 @@ const Layout = ({ children }) => {
     router.push(router.pathname, router.asPath, { locale });
   };
   const handleAcceptCookie = () => {
-    console.log(Cookies.set("cookieConsent", "accepted"));
+    console.log(Cookies.set("CookieConsent", "true"));
     console.log(getCookieConsentValue());
     console.log("--------------");
     console.log("accepted");
   };
 
   const handleRejectCookie = () => {
-    console.log(Cookies.set("cookieConsent", "rejected"));
+    console.log(Cookies.set("CookieConsent", "false"));
     Cookies.remove("_ga");
     Cookies.remove("_gat");
     Cookies.remove("_gid");
