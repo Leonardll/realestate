@@ -8,6 +8,7 @@ import CookieConsent, {
   Cookies,
   getCookieConsentValue,
   setDeclineCookie,
+  resetCookieConsentValue,
 } from "react-cookie-consent";
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
@@ -24,13 +25,14 @@ const Layout = ({ children }) => {
     router.push(router.pathname, router.asPath, { locale });
   };
   const handleAcceptCookie = () => {
-    console.log(Cookies);
+    console.log(Cookies.set("cookieConsent", "accepted"));
     console.log(getCookieConsentValue());
     console.log("--------------");
     console.log("accepted");
   };
 
   const handleRejectCookie = () => {
+    console.log(Cookies.set("cookieConsent", "rejected"));
     Cookies.remove("_ga");
     Cookies.remove("_gat");
     Cookies.remove("_gid");
@@ -46,6 +48,7 @@ const Layout = ({ children }) => {
     } else {
       handleRejectCookie();
     }
+    resetCookieConsentValue();
   }, []);
 
   return (
@@ -107,10 +110,12 @@ const Layout = ({ children }) => {
             alignContent: "center",
             justifyContent: "center",
           }}
-          ariaAcceptLabel="Accept cookies"
-          ariaDeclineLabel="Decline cookies"
+          ariaAcceptLabel="Accept all cookies"
+          ariaDeclineLabel="Decline all cookies"
           flipButtons
           location="bottom"
+          buttonText="Accept all"
+          declineButtonText="Decline all"
           style={{
             background: "#ffff",
             textAlign: "center",
@@ -130,6 +135,16 @@ const Layout = ({ children }) => {
             alignContent: "center",
           }}
           expires={1}
+          ButtonComponent="button"
+          customButtonProps={{
+            color: "#ffff",
+            background: "#245564",
+            padding: "10px 20px",
+            borderRadius: "16px",
+            fontSize: "1em",
+            display: "flex",
+            alignContent: "center",
+          }}
         >
           This site uses cookies. Please See our privacy
           <Link href="/policy" passHref>
