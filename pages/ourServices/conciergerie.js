@@ -7,6 +7,7 @@ import { Contact } from "../../components/contact/Contact";
 import Icon1 from "/public/1.svg";
 import Icon2 from "/public/2.svg";
 import Icon3 from "/public/3.svg";
+import Head from "next/head";
 
 const Conciergerie = () => {
   const { t, i18n } = useTranslation("conciergerie");
@@ -41,6 +42,9 @@ const Conciergerie = () => {
 
   return (
     <div className="section" onLoad={scrollToConciergerie}>
+      <Head>
+        <title>Conciergerie</title>
+      </Head>
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="conciergerie">

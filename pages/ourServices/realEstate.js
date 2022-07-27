@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import { useEffect } from "react";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
@@ -24,6 +25,9 @@ const RealEstate = () => {
 
   return (
     <div className="section" onLoad={scrollToConciergerie}>
+      <Head>
+        <title>RealEstate</title>
+      </Head>
       <div className="container">
         <div className="text-center">
           <h1 className=" my-4 text-capitalize" id="property-management">
