@@ -12,7 +12,6 @@ import CookieConsent, {
 import Navbar from "./navbar";
 import ScrollToTop from "./ScrollTotop";
 import * as gtag from "../lib/gtag";
-import initGA from "../utils/ga-utils";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -25,22 +24,29 @@ const Layout = ({ children }) => {
     router.push(router.pathname, router.asPath, { locale });
   };
   const handleAcceptCookie = () => {
-    if (process.env.NEXT_PUBLIC_GA_ID) {
-      initGA(process.env.NEXT_PUBLIC_GA_ID);
-    }
+    console.log(Cookies);
+    console.log(getCookieConsentValue());
+    console.log("--------------");
+    console.log("accepted");
   };
+
   const handleRejectCookie = () => {
     Cookies.remove("_ga");
     Cookies.remove("_gat");
     Cookies.remove("_gid");
+    console.log(getCookieConsentValue());
+    console.log("--------------");
+    console.log("declined");
   };
 
-  // useEffect(() => {
-  //   const isConsent = getCookieConsentValue();
-  //   if (isConsent === "true") {
-  //     handleAcceptCookie;
-  //   }
-  // }, []);
+  useEffect(() => {
+    const isConsent = getCookieConsentValue();
+    if (isConsent === "true") {
+      handleAcceptCookie();
+    } else {
+      handleRejectCookie();
+    }
+  }, []);
 
   return (
     <React.StrictMode>
@@ -83,10 +89,11 @@ const Layout = ({ children }) => {
         </header>
         <main>{children}</main>
         <CookieConsent
-          onAccept={() => {}}
-          onDecline={() => {}}
+          debug={true}
+          onAccept={handleAcceptCookie}
+          onDecline={handleRejectCookie}
           cookieName="CookieConsent"
-          cookieValue="true"
+          cookieValue={getCookieConsentValue()}
           sameSite="strict"
           buttonWrapperClasses="d-flex"
           enableDeclineButton
@@ -103,7 +110,6 @@ const Layout = ({ children }) => {
           ariaAcceptLabel="Accept cookies"
           ariaDeclineLabel="Decline cookies"
           flipButtons
-          debug={true}
           location="bottom"
           style={{
             background: "#ffff",
