@@ -19,28 +19,30 @@ import Script from "next/script";
 const Layout = ({ children }) => {
   const { t, i18n } = useTranslation("common");
   const router = useRouter();
-
+  const [consent, setConsent] = useState(getCookieConsentValue());
   const [showOptions, setShowOptions] = useState(false);
   const changeLanguage = (e) => {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
   };
   const handleAcceptCookie = () => {
-    console.log(Cookies.set("CookieConsent", "true"));
-    console.log(getCookieConsentValue());
-    console.log("--------------");
-    console.log("accepted");
+    gtag.consentGranted();
+    setConsent(!getCookieConsentValue());
+    Cookies.set("CookieConsent", consent);
+    Cookies.set("consent", "true");
   };
 
   const handleRejectCookie = () => {
-    console.log(Cookies.set("CookieConsent", "false"));
+    setConsent(false);
+    Cookies.set("CookieConsent", consent);
+    gtag.consentDenied();
     Cookies.remove("_ga");
-    Cookies.remove("_ga_L55NBFQKJR");
     Cookies.remove("_gat");
     Cookies.remove("_gid");
     console.log(getCookieConsentValue());
     console.log("--------------");
     console.log("declined");
+    console.log(getCookieConsentValue());
   };
 
   useEffect(() => {
@@ -49,8 +51,8 @@ const Layout = ({ children }) => {
       handleAcceptCookie();
     } else {
       handleRejectCookie();
+      //resetCookieConsentValue();
     }
-    resetCookieConsentValue();
   }, []);
 
   return (
@@ -98,7 +100,7 @@ const Layout = ({ children }) => {
           onAccept={handleAcceptCookie}
           onDecline={handleRejectCookie}
           cookieName="CookieConsent"
-          cookieValue={getCookieConsentValue()}
+          cookieValue={consent}
           sameSite="strict"
           buttonWrapperClasses="d-flex"
           enableDeclineButton
